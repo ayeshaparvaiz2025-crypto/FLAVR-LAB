@@ -1,9 +1,16 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#262D6B">
 <title>FLAVR LAB</title>
 <meta name="description" content="FLAVR LAB makes bold snack seasonings you shake on fries, popcorn, wedges and nachos. Three flavours: ZING MODE, SMOKE SHOW and CHEESE CHAOS. Shop online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="icon" href="logo.png">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
 <style>
 /* Layout: calm sticker lab. Cream paper and soft mist bands, with one deep indigo band per rhythm.
    Logo blue and logo lime appear at full strength only on small things: buttons, chips, stickers. */
@@ -539,6 +546,80 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   .details div{grid-template-columns:1fr;gap:2px}
   .giant{-webkit-text-stroke-width:1.5px}
 }
+
+/* v2 fixes */
+.prices{background:var(--sand)}
+.price-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.pcard{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--card);border:2px solid var(--edge);border-radius:26px;padding:24px 20px;box-shadow:5px 5px 0 var(--hard)}
+.pcard.hot{background:var(--mist-lime)}
+.pcard h3{font-size:2rem}
+.pc-price{font:900 2.2rem/1 var(--font-display);margin:0}
+.pc-price s{font:600 1rem/1 var(--font-body);color:var(--ink-2);margin-left:6px}
+.pcard .save{align-self:flex-start}
+.pcard .best{position:absolute;top:-12px;right:16px;font:800 .7rem/1 var(--font-body);font-style:normal;letter-spacing:.06em;text-transform:uppercase;background:var(--lime);color:#1D2133;border:1.5px solid var(--edge);border-radius:999px;padding:5px 10px}
+.pc-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;flex:1;align-content:start;font-size:.95rem;color:var(--ink-2)}
+.pc-list b{display:block;color:var(--ink);font-size:.85rem}
+.pcard .btn{width:100%}
+.pc-notes{margin:26px auto 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;color:var(--ink-2);font-size:.92rem;text-align:center}
+@media (max-width:1100px){.price-cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.price-cards{grid-template-columns:1fr}}
+
+.size-pick{display:grid;gap:8px}
+.size-label{font-weight:700;font-size:.95rem}
+.sizes{display:flex;gap:10px;flex-wrap:wrap}
+.size{position:relative;display:grid;gap:2px;justify-items:start;min-width:120px;min-height:56px;padding:10px 16px;border-radius:16px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;text-align:left;font:inherit}
+.size b{font:900 1.35rem/1 var(--font-display);text-transform:uppercase}
+.size span{font-size:.88rem;font-weight:600;color:var(--ink-2)}
+.size[aria-checked="true"]{border-color:var(--edge);box-shadow:3px 3px 0 var(--hard)}
+.size .best{position:absolute;top:-11px;right:10px;font:800 .66rem/1 var(--font-body);font-style:normal;letter-spacing:.06em;text-transform:uppercase;background:var(--lime);color:#1D2133;border:1.5px solid var(--edge);border-radius:999px;padding:4px 8px}
+.sizes.sm .size{min-height:44px;min-width:0;padding:8px 14px}
+.sizes.sm .size b{font-size:1.1rem}
+.b-details{display:grid;gap:6px;margin:6px 0 0}
+.b-details div{display:grid;grid-template-columns:120px 1fr;gap:10px}
+.b-details dt{white-space:nowrap}
+.sizes.sm .size{white-space:nowrap;flex:1 1 auto;justify-items:center}
+.b-details dt{font-weight:700}
+.b-details dd{margin:0;color:var(--ink-2)}
+.big-price{font:900 2rem/1 var(--font-display)}
+.big-price s{font:600 1rem/1 var(--font-body);color:var(--ink-2);margin-left:8px}
+.save{display:inline-block;background:var(--lime);color:#1D2133;border:1.5px solid var(--edge);border-radius:999px;padding:4px 12px;font-weight:800;font-size:.85rem;margin:0}
+@media (max-width:420px){.b-details div{grid-template-columns:1fr;gap:0}.size{min-width:0;flex:1}}
+html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+.co-form input,.co-form textarea{font-family:inherit}
+@media (max-width:900px){.site-head{background:color-mix(in srgb,var(--paper) 97%,transparent)}}
+@media (max-width:720px){html{scroll-padding-bottom:96px}}
+
+.pay-ic{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--mist-blue);color:var(--blue-text);flex:none}
+.pay-ic svg{width:18px;height:18px}
+.pay-note{font-size:.88rem;color:var(--ink-2);min-height:1.2em;margin:2px 2px 0}
+.purpose{background:var(--paper)}
+.purpose-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.purpose-copy{display:grid;gap:18px;min-width:0}
+.purpose-copy .big{font:900 clamp(2.4rem,5.5vw,4.2rem)/.92 var(--font-display);text-transform:uppercase;margin:0}
+.purpose-copy .big span{color:var(--blue-text)}
+.pillars{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.pillars li{display:grid;grid-template-columns:48px 1fr;gap:4px 16px;align-items:start;background:var(--card);border:2px solid var(--edge);border-radius:22px;padding:18px 20px;box-shadow:4px 4px 0 var(--hard)}
+.pillars li:nth-child(2){transform:rotate(-.6deg)}
+.pillars .pi{grid-row:span 2;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;border:2px solid var(--edge);font:900 1.4rem/1 var(--font-display)}
+.pillars li:nth-child(odd) .pi{background:var(--lime);color:#1D2133}
+.pillars li:nth-child(even) .pi{background:var(--blue);color:#fff}
+.pillars h3{font-size:1.45rem}
+.pillars p{margin:0;color:var(--ink-2);font-size:.98rem}
+.buy-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+@media (max-width:980px){.taste-grid,.purpose-grid{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .again{right:8px;bottom:8px;min-height:32px;padding:4px 10px;font-size:.78rem;gap:5px;border-width:1.5px;box-shadow:2px 2px 0 #1D2133}
+  .again svg{width:12px;height:12px}
+  .plate-stage .tag{top:10px;left:10px}
+  .buy-row .btn{flex:1 1 100%}
+  .bundle-buy,.bundle-buy .btn,.bundle-buy .sizes{width:100%}
+  .reel-cta .cta-row{width:100%}
+  .reel-cta .cta-row .btn{flex:1 1 100%}
+  .form-row .btn{flex:1 1 100%}
+  .pillars li{grid-template-columns:40px 1fr;padding:16px}
+  .pillars .pi{width:40px;height:40px;font-size:1.2rem}
+  .foot{padding-bottom:110px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -546,6 +627,8 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   .art *{animation:none!important}
 }
 </style>
+</head>
+<body>
 <a class="skip" href="#main">Skip to content</a>
 <!-- shared gradients for the snack illustrations -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -575,7 +658,9 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   <div class="wrap head-row">
     <a class="logo-chip" href="#top" aria-label="FLAVR LAB home"><img src="logo.png" alt="FLAVR LAB" width="404" height="196"></a>
     <nav class="nav" aria-label="Main">
+      <a href="#purpose">Our purpose</a>
       <a href="#flavours">Flavours</a>
+      <a href="#prices">Prices</a>
       <a href="#taste">Taste Lab</a>
       <a href="#quiz">Quiz</a>
       <a href="#reels">Reels</a>
@@ -593,7 +678,9 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
     </div>
   </div>
   <div class="wrap mobile-menu" id="mobileMenu" hidden>
+    <a href="#purpose">Our purpose</a>
     <a href="#flavours">Flavours</a>
+    <a href="#prices">Prices</a>
     <a href="#taste">Taste Lab</a>
     <a href="#quiz">Find your flavour</a>
     <a href="#reels">Lab Crew reels</a>
@@ -840,6 +927,24 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   </div>
 </section>
 
+<!-- 5b. Our purpose -->
+<section class="purpose" id="purpose" aria-labelledby="purposeH">
+  <div class="wrap purpose-grid">
+    <div class="purpose-copy">
+      <span class="eyebrow">Our purpose</span>
+      <h2 id="purposeH" class="sr-only">Our purpose</h2>
+      <p class="big" aria-hidden="true">Snack time should <span>never</span> be boring.</p>
+      <p class="lede">FLAVR LAB is a small snack-seasoning brand from Pakistan. We started it for one reason: plain fries, popcorn and chips deserve better. One shake turns the snacks you already love into your own flavour experiment.</p>
+      <p class="hand tagline"><span>Your Snacks. Your Flavour. Your Rules.</span></p>
+    </div>
+    <ul class="pillars">
+      <li><span class="pi" aria-hidden="true">1</span><h3>Make it fun</h3><p>Bold flavours, loud packs and a lab you can play in. Snacking should feel like an experiment, not a routine.</p></li>
+      <li><span class="pi" aria-hidden="true">2</span><h3>Keep it honest</h3><p>Ingredients out loud, allergens in bold, and no fake reviews. What you read here is what's in the pack.</p></li>
+      <li><span class="pi" aria-hidden="true">3</span><h3>Put you in charge</h3><p>Mix, match and share your combos. The Lab Crew helps decide what we make next.</p></li>
+    </ul>
+  </div>
+</section>
+
 <!-- 6. Flavours -->
 <section id="flavours" aria-labelledby="flvH">
   <div class="wrap">
@@ -886,14 +991,19 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
           <div class="body">
             <dl class="details">
               <div><dt>Format</dt><dd>Resealable stand-up pouch</dd></div>
-              <div><dt>Net weight</dt><dd>50g</dd></div>
-              <div><dt>Allergens</dt><dd id="pAll">Added with the final recipe</dd></div>
-              <div><dt>Nutrition</dt><dd>[CONFIRM]</dd></div>
-              <div><dt>Best before and batch</dt><dd>Printed on the seal</dd></div>
-              <div><dt>Packed by</dt><dd>[CONFIRM]</dd></div>
+              <div><dt>Net weight</dt><dd id="pNet">50g</dd></div>
+              <div id="pAllRow"><dt>Allergens</dt><dd id="pAll"></dd></div>
+                            <div><dt>Best before and batch</dt><dd>Printed on the seal</dd></div>
             </dl>
           </div>
         </details>
+        <div class="size-pick">
+          <span class="size-label" id="sizeLbl">Pack size</span>
+          <div class="sizes" role="radiogroup" aria-labelledby="sizeLbl">
+            <button class="size" type="button" role="radio" aria-checked="true" data-g="50"><b>50g</b><span id="s50"></span></button>
+            <button class="size" type="button" role="radio" aria-checked="false" data-g="100" tabindex="-1"><b>100g</b><span id="s100"></span><i class="best">Best value</i></button>
+          </div>
+        </div>
         <p class="price-line" id="pPrice"></p>
         <div class="buy-row">
           <div class="stepper" role="group" aria-label="Quantity">
@@ -911,15 +1021,90 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
     <div class="bundle">
       <div class="bundle-packs"><span class="pk" data-pouch="zing"></span><span class="pk" data-pouch="smoke"></span><span class="pk" data-pouch="cheese"></span></div>
       <div class="bundle-copy">
-        <p class="eyebrow">The full lab</p>
+        <p class="eyebrow">The full lab trio</p>
         <h3>Can't pick one? Take all three.</h3>
-        <p>One ZING MODE, one SMOKE SHOW and one CHEESE CHAOS. Mix your own combos at home.</p>
+        <p>One ZING MODE, one SMOKE SHOW and one CHEESE CHAOS. Mix your own combos at home, and pay less than buying them one by one.</p>
+        <dl class="b-details">
+          <div><dt>What you get</dt><dd>3 flavours, one pouch of each</dd></div>
+          <div><dt>Pack type</dt><dd>Trio pack of resealable stand-up pouches</dd></div>
+          <div><dt>Net weight</dt><dd id="bNet">3 × 50g (150g total)</dd></div>
+        </dl>
       </div>
       <div class="bundle-buy">
-        <p class="price-line" id="bundlePrice"></p>
-        <button class="btn" type="button" id="bundleAdd">Add all three to cart</button>
+        <div class="sizes sm" role="radiogroup" aria-label="Trio pack size" id="bSizes">
+          <button class="size" type="button" role="radio" aria-checked="true" data-g="50"><b>3 × 50g</b></button>
+          <button class="size" type="button" role="radio" aria-checked="false" data-g="100" tabindex="-1"><b>3 × 100g</b></button>
+        </div>
+        <p class="price-line big-price" id="bundlePrice"></p>
+        <p class="save" id="bundleSave"></p>
+        <button class="btn" type="button" id="bundleAdd">Add the trio to cart</button>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 6b. Prices and packs -->
+<section class="prices" id="prices" aria-labelledby="pricesH">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Prices and packs</span>
+      <h2 id="pricesH">Pick your pack</h2>
+      <p class="lede">Every flavour comes in a resealable stand-up pouch. Grab one, or take the full trio and save.</p>
+    </div>
+    <div class="price-cards">
+      <article class="pcard">
+        <p class="eyebrow">Single flavour</p>
+        <h3>50g pouch</h3>
+        <p class="pc-price">Rs 150</p>
+        <ul class="pc-list">
+          <li><b>What you get</b>1 flavour of your choice</li>
+          <li><b>Pack type</b>Resealable stand-up pouch</li>
+          <li><b>Net weight</b>50g</li>
+        </ul>
+        <a class="btn ghost" href="#flavours" data-size="50">Choose a flavour</a>
+      </article>
+      <article class="pcard">
+        <i class="best">Best value</i>
+        <p class="eyebrow">Single flavour</p>
+        <h3>100g pouch</h3>
+        <p class="pc-price">Rs 299</p>
+        <ul class="pc-list">
+          <li><b>What you get</b>1 flavour of your choice</li>
+          <li><b>Pack type</b>Resealable stand-up pouch</li>
+          <li><b>Net weight</b>100g</li>
+        </ul>
+        <a class="btn ghost" href="#flavours" data-size="100">Choose a flavour</a>
+      </article>
+      <article class="pcard hot">
+        <p class="eyebrow">Full Lab Trio</p>
+        <h3>3 × 50g</h3>
+        <p class="pc-price">Rs 420 <s>Rs 450</s></p>
+        <span class="save">You save Rs 30</span>
+        <ul class="pc-list">
+          <li><b>What you get</b>ZING MODE, SMOKE SHOW and CHEESE CHAOS, one pouch of each</li>
+          <li><b>Pack type</b>Trio pack of resealable stand-up pouches</li>
+          <li><b>Net weight</b>3 × 50g (150g total)</li>
+        </ul>
+        <button class="btn" type="button" data-trio="50">Add trio to cart</button>
+      </article>
+      <article class="pcard hot">
+        <p class="eyebrow">Full Lab Trio</p>
+        <h3>3 × 100g</h3>
+        <p class="pc-price">Rs 849 <s>Rs 897</s></p>
+        <span class="save">You save Rs 48</span>
+        <ul class="pc-list">
+          <li><b>What you get</b>ZING MODE, SMOKE SHOW and CHEESE CHAOS, one pouch of each</li>
+          <li><b>Pack type</b>Trio pack of resealable stand-up pouches</li>
+          <li><b>Net weight</b>3 × 100g (300g total)</li>
+        </ul>
+        <button class="btn" type="button" data-trio="100">Add trio to cart</button>
+      </article>
+    </div>
+    <ul class="pc-notes">
+      <li>Pay by cash on delivery or debit / credit card (we send a secure payment link).</li>
+      <li>Delivery charges and timing are confirmed with you on WhatsApp.</li>
+      <li>Prices in Pakistani rupees.</li>
+    </ul>
   </div>
 </section>
 
@@ -1037,8 +1222,9 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
         <details class="acc"><summary>How do I use it?</summary><div class="body">Season warm snacks. Start with a light sprinkle, taste, then add more. Reseal the pouch after use.</div></details>
         <details class="acc"><summary>Can I mix flavours?</summary><div class="body">Yes. Try the <a href="#taste">Taste Lab</a> to see how a mashup like Smoky Zing or Cheesy Zing tastes.</div></details>
         <details class="acc"><summary>Where can I see the ingredients and allergens?</summary><div class="body">Open "What's inside" for each flavour in the <a href="#flavours">flavours section</a>. They're also printed on the pack, and the pack label is always the final word.</div></details>
+        <details class="acc"><summary>What sizes and prices do you have?</summary><div class="body">Every flavour comes in a resealable stand-up pouch: 50g for Rs 150 or 100g for Rs 299. The Full Lab Trio gives you one pouch of each flavour: 3 × 50g for Rs 420 or 3 × 100g for Rs 849. Delivery charges are confirmed with you on WhatsApp.</div></details>
         <details class="acc"><summary>How do I order?</summary><div class="body">Add flavours to your cart, tap Checkout and fill in your delivery details. Your order opens in WhatsApp so we can confirm it with you.</div></details>
-        <details class="acc"><summary>Are your seasonings halal?</summary><div class="body">We only share halal information once it's officially verified, and we won't claim anything until then. [CONFIRM]</div></details>
+        <details class="acc"><summary>Are your seasonings halal?</summary><div class="body">We only share halal information once it's officially verified, and we won't claim anything until then.</div></details>
       </div>
     </div>
   </div>
@@ -1084,7 +1270,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
     <div class="foot-row">
       <a class="logo-chip" href="#top" aria-label="Back to top, FLAVR LAB"><img src="logo.png" alt="FLAVR LAB" width="404" height="196" loading="lazy"></a>
       <nav class="foot-links" aria-label="Footer">
-        <a href="#flavours">Flavours</a><a href="#quiz">Find your flavour</a><a href="#taste">Taste Lab</a><a href="#reels">Reels</a><a href="#faq">FAQ</a><a href="#join">Newsletter</a>
+        <a href="#purpose">Our purpose</a><a href="#flavours">Flavours</a><a href="#prices">Prices</a><a href="#quiz">Find your flavour</a><a href="#taste">Taste Lab</a><a href="#reels">Reels</a><a href="#faq">FAQ</a><a href="#join">Newsletter</a>
       </nav>
     </div>
     <div style="margin-top:36px;display:grid;gap:6px">
@@ -1134,7 +1320,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
       </form>
     </div>
     <div class="cart-foot" id="cartFoot" hidden>
-      <div class="sum"><span>Subtotal</span><span id="cartSub">Rs [CONFIRM]</span></div>
+      <div class="sum"><span>Subtotal</span><span id="cartSub">Confirmed on WhatsApp</span></div>
       <button class="btn" type="button" id="checkoutBtn">Checkout</button>
       <button class="link-btn" type="button" id="clearCart">Empty cart</button>
     </div>
@@ -1155,14 +1341,14 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
       text: 'A tangy chilli lime shake for snacks that need a wake-up call. Bright, zesty and made for hot fries and fresh popcorn.',
       tags: ['Fries', 'Popcorn', 'Homemade chips'],
       // Ingredients from the 100 g trial formula, in descending order by weight. [CONFIRM] allergy advice with your supplier.
-      ing: '<p>Salt, paprika, red chilli powder, garlic powder, onion powder, sugar, citric acid, amchur (dried mango) powder, cumin powder, black pepper, oregano.</p>',
-      all: '[CONFIRM]',
+      ing: '<p>Salt, paprika, red <strong>chilli</strong> powder, <strong>garlic</strong> powder, <strong>onion</strong> powder, sugar, citric acid, amchur (dried <strong>mango</strong>) powder, cumin powder, black pepper, oregano.</p><p style="margin-top:10px"><strong>Contains: chilli, garlic, onion, mango.</strong></p>',
+      all: 'Contains: chilli, garlic, onion, mango',
       set: ['chilli', 'paprika', 'garlic', 'onion', 'pepper', 'chilli'],
       powder: ['#E2733A', '#6FA83A'], tint: 'var(--zing-tint)',
       swatch: '#D6FF43', strong: '#BFDD55', labelInk: '#1D2133', short: 'ZING', stage: '#EDF5C8', burstFill: '#F0804F',
       taste: { tangy: 5, smoky: 0, cheesy: 0, heat: 3, savoury: 3 },
       note: 'Bright and sharp first, then a chilli warmth that builds. Wakes up plain fries in one shake.',
-      altF: 'ZING MODE pouch front: lime pack, Tangy Chilli Lime', altB: 'ZING MODE pouch back: how to use, ingredients and allergy advice' },
+      altF: 'ZING MODE pouch front: lime pack, Tangy Chilli Lime', altB: 'ZING MODE pouch back: how to use, ingredients, contains chilli, garlic, onion and mango' },
     smoke: { name: 'SMOKE SHOW', desc: 'Smoky BBQ', vibe: 'Rich. Smoky. Bold.', burst: 'SMOKE!',
       text: 'Deep, smoky BBQ with a slow, warm finish. Made for potato wedges, roasted chickpeas and late-night fries.',
       tags: ['Wedges', 'Roasted chickpeas', 'Nachos'],
@@ -1187,11 +1373,12 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
       altF: 'CHEESE CHAOS pouch front: blue pack, Cheesy Jalapeno', altB: 'CHEESE CHAOS pouch back: how to use, ingredients, contains milk' }
   };
 
+  let pSize = 50; // selected pack size in grams (50 or 100)
   /* ---------- pouch artwork (front + back), drawn as SVG so it stays sharp at every size ---------- */
   const FD = 'Big Shoulders Display,Impact,sans-serif', FH = 'Caveat,cursive', FB = 'Figtree,system-ui,sans-serif', INK_ = '#1D2133';
   const POUCH = {
     zing: { bg: '#CBE35F', dark: '#AFC843', name: ['ZING', 'MODE'], size: 104, nameFill: '#1D2133', shadow: '#FFF9EC', desc: 'Tangy Chilli Lime', ink: '#1D2133', icons: ['i-chilli', 'i-lime'], dot: '#E2733A',
-      ing: 'Salt, paprika, red chilli powder, garlic powder, onion powder, sugar, citric acid, amchur (dried mango) powder, cumin powder, black pepper, oregano.', allergy: 'ALLERGY ADVICE: [CONFIRM]' },
+      ing: 'Salt, paprika, red chilli powder, garlic powder, onion powder, sugar, citric acid, amchur (dried mango) powder, cumin powder, black pepper, oregano.', allergy: 'CONTAINS: CHILLI, GARLIC, ONION, MANGO' },
     smoke: { bg: '#F17E4E', dark: '#D8652F', name: ['SMOKE', 'SHOW'], size: 94, nameFill: '#1D2133', shadow: '#FFE1D2', desc: 'Smoky BBQ', ink: '#1D2133', icons: ['i-flame', 'i-chilli'], dot: '#9A3F25',
       ing: 'Salt, paprika, powdered brown sugar, garlic powder, onion powder, tomato powder, smoked paprika, black pepper, cumin powder, mustard powder, citric acid, red chilli powder.', allergy: 'CONTAINS: MUSTARD' },
     cheese: { bg: '#5265DE', dark: '#3F51C6', name: ['CHEESE', 'CHAOS'], size: 84, nameFill: '#FFC21A', shadow: '#1D2133', desc: 'Cheesy Jalapeño', ink: '#FFF9EC', icons: ['i-jalapeno', 'i-cheese'], dot: '#F0A83A',
@@ -1200,13 +1387,13 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   const SIL = 'M34 44Q34 22 56 22H344Q366 22 366 44V556Q366 600 326 602H74Q34 600 34 556Z';
   const wrapText = (t, n) => { const out = []; let line = ''; t.split(' ').forEach(w => { if ((line + ' ' + w).trim().length > n) { out.push(line.trim()); line = w; } else line += ' ' + w; }); if (line.trim()) out.push(line.trim()); return out; };
   let pouchUid = 0;
-  function pouchInner(f, side) {
+  function pouchInner(f, side, g = 50) {
     const p = POUCH[f], d = F[f], u = ++pouchUid, k = INK_;
     let crimp = ''; for (let x = 42; x <= 358; x += 7) crimp += `M${x} 26V60`;
     let s = `<defs><clipPath id="pc${u}"><path d="${SIL}"/></clipPath><linearGradient id="pg${u}" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".24"/><stop offset=".13" stop-color="#fff" stop-opacity="0"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient><pattern id="pd${u}" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="${k}" opacity=".07"/></pattern></defs>`
       + `<path d="${SIL}" fill="${p.bg}"/><g clip-path="url(#pc${u})"><rect width="400" height="620" fill="url(#pd${u})"/>`
       + `<rect x="34" y="22" width="332" height="42" fill="${p.dark}" opacity=".5"/><path d="${crimp}" stroke="${k}" stroke-opacity=".16" stroke-width="1.4"/><path d="M34 84H366" stroke="${k}" stroke-opacity=".22" stroke-width="2" stroke-dasharray="6 5"/>`;
-    const strip = `<text x="60" y="584" font-family="${FB}" font-weight="800" font-size="12.5" letter-spacing="1.6" fill="${p.ink}">SEASONING BLEND</text><text x="340" y="584" text-anchor="end" font-family="${FB}" font-weight="800" font-size="12.5" letter-spacing="1.6" fill="${p.ink}">NET WT. 50g</text>`;
+    const strip = `<text x="60" y="584" font-family="${FB}" font-weight="800" font-size="12.5" letter-spacing="1.6" fill="${p.ink}">SEASONING BLEND</text><text x="340" y="584" text-anchor="end" font-family="${FB}" font-weight="800" font-size="12.5" letter-spacing="1.6" fill="${p.ink}">NET WT. ${g}g</text>`;
     if (side !== 'back') {
       const y1 = 292, y2 = y1 + Math.round(p.size * .9);
       const nm = (t, y) => `<text x="204" y="${y + 4}" text-anchor="middle" font-family="${FD}" font-weight="900" font-size="${p.size}" fill="${p.shadow}">${t}</text><text x="200" y="${y}" text-anchor="middle" font-family="${FD}" font-weight="900" font-size="${p.size}" fill="${p.nameFill}">${t}</text>`;
@@ -1236,7 +1423,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
         + `<path d="M70 190H330" stroke="${k}" stroke-width="1.5"/>`;
       b += head('HOW TO USE', y) + lines(how, y + 16, 10.5, 14); y += 16 + how.length * 14 + 14;
       b += head('INGREDIENTS', y) + lines(ing, y + 15, 10, 13); y += 15 + ing.length * 13 + 6;
-      b += `<rect x="70" y="${y}" width="260" height="26" rx="6" fill="none" stroke="${k}" stroke-width="2"/><text x="200" y="${y + 17}" text-anchor="middle" font-family="${FB}" font-weight="800" font-size="10.5" fill="${k}">${p.allergy}</text>`;
+      if (p.allergy) b += `<rect x="70" y="${y}" width="260" height="26" rx="6" fill="none" stroke="${k}" stroke-width="2"/><text x="200" y="${y + 17}" text-anchor="middle" font-family="${FB}" font-weight="800" font-size="10.5" fill="${k}">${p.allergy}</text>`;
       const rows = ['Energy', 'Protein', 'Fat', 'Carbohydrate', 'Sodium'];
       b += `<rect x="70" y="418" width="152" height="84" rx="6" fill="none" stroke="${k}" stroke-width="1.5"/><text x="78" y="432" font-family="${FB}" font-weight="800" font-size="8.5" fill="${k}">NUTRITION INFORMATION</text>`
         + rows.map((r, i) => `<text x="78" y="${447 + i * 12}" font-family="${FB}" font-size="8" fill="${k}">${r}</text><text x="214" y="${447 + i * 12}" text-anchor="end" font-family="${FB}" font-size="8" fill="${k}">per 100g: —</text>`).join('');
@@ -1248,8 +1435,8 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
     }
     return s + `<rect width="400" height="620" fill="url(#pg${u})"/></g><path d="${SIL}" fill="none" stroke="${INK_}" stroke-width="3"/><path d="M34 70l9 4-9 4M366 70l-9 4 9 4" fill="none" stroke="${INK_}" stroke-width="2"/>`;
   }
-  const pouchSVG = (f, side = 'front', label) =>
-    `<svg class="pouch-svg" viewBox="0 0 400 620" ${label ? `role="img" aria-label="${label}"` : 'aria-hidden="true"'}>${pouchInner(f, side)}</svg>`;
+  const pouchSVG = (f, side = 'front', label, g = 50) =>
+    `<svg class="pouch-svg" viewBox="0 0 400 620" ${label ? `role="img" aria-label="${label}"` : 'aria-hidden="true"'}>${pouchInner(f, side, g)}</svg>`;
   // Fill every [data-pouch="flavour"] (or "flavour:back") placeholder. Inside SVG it nests an <svg> at data-x/y/w.
   function fillPouches(root = document) {
     $$('[data-pouch]', root).forEach(el => {
@@ -1425,13 +1612,13 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   }
   function setPanel(f) {
     pf = f; const d = F[f];
-    $('#faceFront').innerHTML = pouchSVG(f, 'front', d.altF);
-    $('#faceBack').innerHTML = pouchSVG(f, 'back', d.altB);
+    $('#faceFront').innerHTML = pouchSVG(f, 'front', d.altF + `, ${pSize}g`, pSize);
+    $('#faceBack').innerHTML = pouchSVG(f, 'back', d.altB, pSize);
     $('#blobPath').setAttribute('fill', d.tint);
     $('#panel').dataset.flavour = f;
     $('#pName').textContent = d.name; $('#pDesc').textContent = d.desc; $('#pVibe').textContent = d.vibe; $('#pText').textContent = d.text;
     $('#pTags').innerHTML = '<b>Try it on:</b>' + d.tags.map(t => `<span>${t}</span>`).join('');
-    $('#pIng').innerHTML = d.ing; $('#pAll').textContent = d.all;
+    $('#pIng').innerHTML = d.ing; $('#pAll').textContent = d.all; $('#pAllRow').hidden = !d.all;
     $$('.thumb').forEach(t => t.setAttribute('aria-pressed', t.dataset.f === f));
     setSide(back);
     panelHooks.forEach(h => h());
@@ -1506,15 +1693,32 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   renderQ(false);
 
   /* ---------- cart ---------- */
-  // Prices are not set yet. Put real PKR prices here when they're confirmed (e.g. zing: 450) and the
-  // cart shows line totals and a subtotal. While a price is null it shows "Rs [CONFIRM]".
-  const PRICE_PKR = { zing: null, smoke: null, cheese: null }; // [CONFIRM]
+  // Prices in PKR. 100g = Rs 299, 50g = half. The trio (one of each flavour) costs a little less than buying three singles.
+  const PRICE = { 50: 150, 100: 299 };
+  const TRIO = { 50: 420, 100: 849 };
+  const SIZES = [50, 100];
   const MAX_QTY = 20;
   const pkr = n => 'Rs ' + n.toLocaleString('en-PK');
+  const fKeys = Object.keys(F);
+  // Cart keys: "zing:50", "smoke:100", "trio:50" ...
+  const item = id => {
+    const [f, g0] = id.split(':'), g = +g0;
+    if (f === 'trio') return { f, g, name: 'FULL LAB TRIO', sub: `ZING + SMOKE + CHEESE · 3 × ${g}g pouches`, price: TRIO[g], art: 'smoke', label: `${g}g × 3` };
+    return { f, g, name: F[f].name, sub: `${F[f].desc} · ${g}g pouch`, price: PRICE[g], art: f, label: `${g}g` };
+  };
+  const validId = id => { const [f, g] = id.split(':'); return (f === 'trio' || F[f]) && SIZES.includes(+g); };
   let cart = {};
-  try { const saved = JSON.parse(localStorage.getItem('flavr-cart') || '{}'); if (saved && typeof saved === 'object') Object.keys(F).forEach(k => { const q = parseInt(saved[k], 10); if (q > 0) cart[k] = Math.min(MAX_QTY, q); }); } catch (_) {}
+  try {
+    const saved = JSON.parse(localStorage.getItem('flavr-cart') || '{}');
+    if (saved && typeof saved === 'object') Object.keys(saved).forEach(k => {
+      const id = k.includes(':') ? k : k + ':50', q = parseInt(saved[k], 10);
+      if (validId(id) && q > 0) cart[id] = Math.min(MAX_QTY, (cart[id] || 0) + q);
+    });
+  } catch (_) {}
   const saveCart = () => { try { localStorage.setItem('flavr-cart', JSON.stringify(cart)); } catch (_) {} };
   const cartCount = () => Object.values(cart).reduce((a, b) => a + b, 0);
+  const cartTotal = () => Object.keys(cart).reduce((s, id) => s + item(id).price * cart[id], 0);
+  const cartIds = () => Object.keys(cart).filter(id => cart[id] > 0).sort((a, b) => (a.startsWith('trio') ? -1 : 0) - (b.startsWith('trio') ? -1 : 0));
   const cartBtn = $('#cartBtn'), countEl = $('.cart-count', cartBtn);
 
   const toastEl = $('#toast'), toastBtn = $('#toastBtn');
@@ -1526,76 +1730,82 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
     clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove('show'), 4000);
   }
   toastBtn.addEventListener('click', () => { toastEl.classList.remove('show'); if (toastAction) toastAction(); });
-  const openCart = () => { if (!cart_.open) cart_.showModal(); };
   const cart_ = $('#cart');
+  const openCart = () => { if (!cart_.open) cart_.showModal(); };
 
-  function addToCart(items, n = 1) {
-    // items: one flavour key or a list of them
-    const list = [].concat(items);
+  // items: a flavour key, a list of flavour keys, or full ids like "trio:50". g = pack size for plain flavour keys.
+  function addToCart(items, n = 1, g = pSize) {
+    const ids = [].concat(items).map(x => x.includes(':') ? x : `${x}:${g}`);
     let capped = false;
-    list.forEach(f => { const next = (cart[f] || 0) + n; capped = capped || next > MAX_QTY; cart[f] = Math.min(MAX_QTY, next); });
+    ids.forEach(id => { const next = (cart[id] || 0) + n; capped = capped || next > MAX_QTY; cart[id] = Math.min(MAX_QTY, next); });
     saveCart(); renderCart();
     countEl.classList.remove('bump'); void countEl.offsetWidth; countEl.classList.add('bump');
-    const names = list.map(f => F[f].name).join(' + ');
-    toast(capped ? `Max ${MAX_QTY} per flavour. Cart updated.` : `Added ${n > 1 ? n + ' × ' : ''}${names}`, 'View cart', openCart);
+    const names = ids.map(id => `${item(id).name} ${item(id).label}`).join(' + ');
+    toast(capped ? `Max ${MAX_QTY} per item. Cart updated.` : `Added ${n > 1 ? n + ' × ' : ''}${names}`, 'View cart', openCart);
   }
-  function setQty(f, q) {
-    if (q <= 0) delete cart[f]; else cart[f] = Math.min(MAX_QTY, q);
+  function setQty(id, q) {
+    if (q <= 0) delete cart[id]; else cart[id] = Math.min(MAX_QTY, q);
     saveCart(); renderCart();
   }
   function renderCart() {
-    const n = cartCount();
+    const n = cartCount(), ids = cartIds();
     countEl.textContent = n;
     cartBtn.setAttribute('aria-label', `Open cart, ${n} item${n === 1 ? '' : 's'}`);
     $('#cartN').textContent = n ? `(${n})` : '';
-    const keys = Object.keys(F).filter(k => cart[k]);
-    $('#cartEmpty').hidden = keys.length > 0;
-    $('#cartFoot').hidden = keys.length === 0;
-    if (!keys.length) showCheckout(false);
-    $('#cartItems').innerHTML = keys.map(k => {
-      const d = F[k], q = cart[k], p = PRICE_PKR[k];
-      return `<li class="ci"><span class="pk">${pouchSVG(k)}</span>
-        <div><b>${d.name}</b><small>${d.desc} · 50g pouch</small></div>
+    $('#cartEmpty').hidden = ids.length > 0;
+    $('#cartFoot').hidden = ids.length === 0;
+    if (!ids.length) showCheckout(false);
+    $('#cartItems').innerHTML = ids.map(id => {
+      const it = item(id), q = cart[id];
+      return `<li class="ci"><span class="pk">${pouchSVG(it.art, 'front', '', it.g)}</span>
+        <div><b>${it.name}</b><small>${it.sub} · ${pkr(it.price)} each</small></div>
         <div class="ci-row">
-          <div class="stepper" role="group" aria-label="${d.name} quantity">
-            <button type="button" data-dec="${k}" aria-label="${q === 1 ? 'Remove' : 'Decrease'} ${d.name}">${q === 1 ? '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.7 8.5h5.6l.7-8.5"/></svg>' : '−'}</button>
+          <div class="stepper" role="group" aria-label="${it.name} ${it.label} quantity">
+            <button type="button" data-dec="${id}" aria-label="${q === 1 ? 'Remove' : 'Decrease'} ${it.name} ${it.label}">${q === 1 ? '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.7 8.5h5.6l.7-8.5"/></svg>' : '−'}</button>
             <output aria-live="polite">${q}</output>
-            <button type="button" data-inc="${k}" aria-label="Increase ${d.name}" ${q >= MAX_QTY ? 'disabled' : ''}>+</button>
+            <button type="button" data-inc="${id}" aria-label="Increase ${it.name} ${it.label}" ${q >= MAX_QTY ? 'disabled' : ''}>+</button>
           </div>
-          <span class="ci-price">${p == null ? 'Rs [CONFIRM]' : pkr(p * q)}</span>
+          <span class="ci-price">${pkr(it.price * q)}</span>
         </div></li>`;
     }).join('');
-    const missing = Object.keys(F).filter(k => !cart[k]);
-    $('#quickAdd').hidden = missing.length === 0 || !$('#coForm').hidden;
+    const has = f => ids.some(id => id.startsWith(f + ':'));
+    const missing = fKeys.filter(f => !has(f));
+    $('#quickAdd').hidden = (missing.length === 0 && has('trio')) || !$('#coForm').hidden;
     $('#stickyBtn').textContent = n ? `View cart (${n})` : 'Shop now';
-    $('#quickH').textContent = keys.length ? 'Add another flavour' : 'Start with a flavour';
-    $('#addAll').hidden = keys.length > 0;
-    $('#quickList').innerHTML = missing.map(k => `<div class="qa-row"><span class="pk">${pouchSVG(k)}</span><span>${F[k].name}</span><button class="btn sm" type="button" data-add="${k}" aria-label="Add ${F[k].name} to cart">Add</button></div>`).join('');
-    const allPriced = keys.every(k => PRICE_PKR[k] != null);
-    $('#cartSub').textContent = allPriced ? pkr(keys.reduce((s, k) => s + PRICE_PKR[k] * cart[k], 0)) : 'Rs [CONFIRM]';
+    $('#quickH').textContent = ids.length ? 'Add another flavour' : 'Start with a flavour';
+    $('#addAll').hidden = has('trio');
+    $('#addAll').textContent = `Add the trio · 3 × 50g · ${pkr(TRIO[50])}`;
+    $('#quickList').innerHTML = missing.map(k => `<div class="qa-row"><span class="pk">${pouchSVG(k)}</span><span>${F[k].name}<small style="display:block;font-weight:600;color:var(--ink-2)">50g · ${pkr(PRICE[50])}</small></span><button class="btn sm" type="button" data-add="${k}:50" aria-label="Add ${F[k].name} 50g to cart">Add</button></div>`).join('');
+    $('#cartSub').textContent = pkr(cartTotal());
     if (typeof updatePanelCart === 'function') updatePanelCart();
   }
   cart_.addEventListener('click', e => {
     const t = e.target.closest('button');
     if (!t) return;
-    if (t.dataset.inc) { setQty(t.dataset.inc, cart[t.dataset.inc] + 1); $(`[data-inc="${t.dataset.inc}"]`, cart_)?.focus(); }
+    if (t.dataset.inc) { const id = t.dataset.inc; setQty(id, cart[id] + 1); $(`[data-inc="${id}"]`, cart_)?.focus(); }
     else if (t.dataset.dec) {
-      const k = t.dataset.dec; setQty(k, cart[k] - 1);
-      const again = $(`[data-dec="${k}"]`, cart_); (again || $('#cartClose')).focus();
+      const id = t.dataset.dec; setQty(id, cart[id] - 1);
+      const again = $(`[data-dec="${id}"]`, cart_); (again || $('#cartClose')).focus();
     }
     else if (t.dataset.add) { addToCart(t.dataset.add); }
   });
-  $('#addAll').addEventListener('click', () => addToCart(Object.keys(F)));
+  $('#addAll').addEventListener('click', () => addToCart('trio:50'));
   $('#stickyBtn').addEventListener('click', e => { if (cartCount()) { e.preventDefault(); openCart(); } });
   /* checkout */
-  const ORDER_WHATSAPP = ''; // [CONFIRM] business WhatsApp number in international format, digits only, e.g. '923001234567'
-  const PAYMENT_METHODS = ['Cash on delivery']; // [CONFIRM] add e.g. 'Bank transfer', 'JazzCash', 'Easypaisa'
+  const ORDER_WHATSAPP = ''; // business WhatsApp number in international format, digits only, e.g. '923001234567'
   const coForm = $('#coForm');
-  $('#coPayList').innerHTML = PAYMENT_METHODS.map((m, i) => `<label class="radio"><input type="radio" name="pay" value="${m}" ${i === 0 ? 'checked' : ''}> ${m}</label>`).join('');
+  const PAYMENT_METHODS = ['Cash on delivery', 'Debit / Credit card']; // add more e.g. 'JazzCash', 'Easypaisa'
+  const PAY_NOTES = {
+    'Cash on delivery': 'Pay in cash when your order arrives.',
+    'Debit / Credit card': 'After we confirm your order on WhatsApp, we send you a secure card payment link. We never ask for card numbers in chat.'
+  };
+  $('#coPayList').innerHTML = PAYMENT_METHODS.map((m, i) => `<label class="radio"><input type="radio" name="pay" value="${m}" ${i === 0 ? 'checked' : ''}><span class="pay-ic" aria-hidden="true">${/card/i.test(m) ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>' : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg>'}</span> ${m}</label>`).join('') + '<p class="pay-note" id="payNote"></p>';
+  const payNote = () => { const m = (coForm.querySelector('input[name=pay]:checked') || {}).value; $('#payNote').textContent = PAY_NOTES[m] || ''; };
+  $('#coPayList').addEventListener('change', payNote); payNote();
   function showCheckout(on) {
     coForm.hidden = !on;
     $('#checkoutBtn').hidden = on;
-    $('#quickAdd').hidden = on || Object.keys(F).every(k => cart[k]);
+    $('#quickAdd').hidden = on;
     if (on) { coForm.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' }); $('#coName').focus({ preventScroll: true }); }
   }
   $('#checkoutBtn').addEventListener('click', () => showCheckout(true));
@@ -1611,16 +1821,14 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
     checks.forEach(([id, ok]) => ok ? $(id).removeAttribute('aria-invalid') : $(id).setAttribute('aria-invalid', 'true'));
     const bad = checks.find(c => !c[1]);
     if (bad) { msg.className = 'msg err'; msg.textContent = bad[2]; $(bad[0]).focus(); return; }
-    const keys = Object.keys(F).filter(k => cart[k]);
-    const allPriced = keys.every(k => PRICE_PKR[k] != null);
-    const lines = keys.map(k => `• ${cart[k]} × ${F[k].name} (50g)${PRICE_PKR[k] != null ? ' – ' + pkr(PRICE_PKR[k] * cart[k]) : ''}`);
+    const lines = cartIds().map(id => { const it = item(id); return `• ${cart[id]} × ${it.name} (${it.label}) – ${pkr(it.price * cart[id])}`; });
     const text = ['Hi FLAVR LAB! I\'d like to order:', ...lines,
-      allPriced ? `Subtotal: ${pkr(keys.reduce((s, k) => s + PRICE_PKR[k] * cart[k], 0))}` : '',
+      `Subtotal: ${pkr(cartTotal())} (delivery confirmed on WhatsApp)`,
       '', `Name: ${v('#coName')}`, `Phone: ${phone}`, `City: ${v('#coCity')}`, `Address: ${v('#coAddr')}`,
-      `Payment: ${(coForm.querySelector('input[name=pay]:checked') || {}).value || PAYMENT_METHODS[0]}`].filter((l, i, a) => l !== '' || a[i - 1] !== '').join('\n');
+      (() => { const m = (coForm.querySelector('input[name=pay]:checked') || {}).value || PAYMENT_METHODS[0]; return `Payment: ${m}${/card/i.test(m) ? ' (please send me a card payment link)' : ''}`; })()].filter((l, i, a) => l !== '' || a[i - 1] !== '').join('\n');
     if (!ORDER_WHATSAPP) {
       msg.className = 'msg err';
-      msg.textContent = 'Ordering isn\'t connected yet. Add the shop\'s WhatsApp number in the site settings (ORDER_WHATSAPP).';
+      msg.textContent = 'Online ordering opens very soon. Join the Lab Crew below and we\'ll tell you the moment it\'s live.';
       return;
     }
     const url = `https://wa.me/${ORDER_WHATSAPP}?text=${encodeURIComponent(text)}`;
@@ -1635,23 +1843,47 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   });
   addEventListener('storage', e => { if (e.key === 'flavr-cart') { try { cart = JSON.parse(e.newValue || '{}') || {}; } catch (_) { cart = {}; } renderCart(); } });
 
-  // flavour panel: quantity stepper + add to cart
+  // flavour panel: size + quantity + add to cart
   let pQty = 1;
   const pQtyEl = $('#pQty');
   const setPQty = q => { pQty = Math.max(1, Math.min(MAX_QTY, q)); pQtyEl.textContent = pQty; $('#pMinus').disabled = pQty <= 1; $('#pPlus').disabled = pQty >= MAX_QTY; };
   $('#pMinus').addEventListener('click', () => setPQty(pQty - 1));
   $('#pPlus').addEventListener('click', () => setPQty(pQty + 1));
-  $('#pAdd').addEventListener('click', () => { addToCart(pf, pQty); setPQty(1); });
+  $('#pAdd').addEventListener('click', () => { addToCart(pf, pQty, pSize); setPQty(1); });
+  $('#s50').textContent = pkr(PRICE[50]); $('#s100').textContent = pkr(PRICE[100]);
+  function radioGroup(group, onPick) {
+    const btns = $$('.size', group);
+    const pick = (b, focus) => { btns.forEach(x => { const on = x === b; x.setAttribute('aria-checked', on); x.tabIndex = on ? 0 : -1; }); if (focus) b.focus(); onPick(+b.dataset.g); };
+    btns.forEach((b, i) => {
+      b.addEventListener('click', () => pick(b));
+      b.addEventListener('keydown', e => { const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key]; if (d) { e.preventDefault(); pick(btns[(i + d + btns.length) % btns.length], true); } });
+    });
+  }
+  radioGroup($('.size-pick .sizes'), g => { pSize = g; setPanel(pf); });
   function updatePanelCart() {
-    const q = cart[pf] || 0, p = PRICE_PKR[pf];
-    $('#pInCart').textContent = q ? `${q} in your cart` : '';
-    $('#pPrice').innerHTML = p == null ? 'Rs [CONFIRM] <span>· 50g pouch</span>' : `${pkr(p)} <span>· 50g pouch</span>`;
+    const q = cart[`${pf}:${pSize}`] || 0;
+    $('#pInCart').textContent = q ? `${q} × ${pSize}g in your cart` : '';
+    $('#pPrice').innerHTML = `${pkr(PRICE[pSize])} <span>· ${pSize}g resealable pouch</span>`;
+    $('#pNet').textContent = `${pSize}g`;
+    $('#pAdd').textContent = `Add ${pSize}g to cart`;
   }
   panelHooks.push(() => { setPQty(1); updatePanelCart(); });
-  $('#bundleAdd').addEventListener('click', () => addToCart(Object.keys(F)));
-  const allKeys = Object.keys(F);
-  $('#bundlePrice').innerHTML = `${allKeys.every(k => PRICE_PKR[k] != null) ? pkr(allKeys.reduce((s, k) => s + PRICE_PKR[k], 0)) : 'Rs [CONFIRM]'} <span>· 3 × 50g pouches</span>`;
+  // trio bundle
+  let bSize = 50;
+  function renderBundle() {
+    const full = PRICE[bSize] * 3, save = full - TRIO[bSize];
+    $('#bundlePrice').innerHTML = `${pkr(TRIO[bSize])}<s aria-label="instead of ${pkr(full)}">${pkr(full)}</s>`;
+    $('#bundleSave').textContent = `You save ${pkr(save)}`;
+    $('#bNet').textContent = `3 × ${bSize}g (${bSize * 3}g total)`;
+    $$('.bundle-packs [data-pouch]').forEach(el => { el.innerHTML = pouchSVG(el.dataset.pouch, 'front', '', bSize); });
+  }
+  radioGroup($('#bSizes'), g => { bSize = g; renderBundle(); });
+  $('#bundleAdd').addEventListener('click', () => addToCart(`trio:${bSize}`));
+  $$('[data-trio]').forEach(b => b.addEventListener('click', () => addToCart(`trio:${b.dataset.trio}`)));
+  $$('#prices [data-size]').forEach(a => a.addEventListener('click', () => { const t = $(`.size-pick .size[data-g="${a.dataset.size}"]`); if (t) t.click(); }));
+  renderBundle();
   setPQty(1);
+  updatePanelCart();
   renderCart();
 
   /* ---------- taste lab ---------- */
