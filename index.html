@@ -675,6 +675,21 @@ h1,h2,h3,.tagline{text-wrap:balance}
   .hcard p{font-size:.92rem}
   .foot{padding-top:56px}
 }
+/* Balanced layouts: buy buttons fill the row; on desktop the shorter column stays in view */
+.panel .buy-row #pAdd{flex:1 1 auto}
+.panel .buy-row #watchBtn{flex:1 1 100%}
+@media (min-width:981px){
+  h1{font-size:clamp(3.4rem,5.8vw,5.6rem)}
+  .flv-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .flv-grid{align-items:stretch}
+  .viewer{align-content:center;background:var(--card);border:1.5px solid var(--line);border-radius:30px;padding:32px 24px 26px;box-shadow:var(--shadow)}
+  .pouch-zone{width:min(100%,440px)}
+  .tilt{width:68%}
+  .panel{padding:36px 36px 32px}
+  .panel h3{font-size:clamp(3rem,5vw,4.4rem)}
+  .verdict{position:sticky;top:96px}
+  .faq-grid>.sec-head{position:sticky;top:110px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
