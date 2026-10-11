@@ -1,0 +1,2178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#262D6B">
+<title>FLAVR LAB</title>
+<meta name="description" content="FLAVR LAB makes bold snack seasonings you shake on fries, popcorn, wedges and nachos. Three flavours: ZING MODE, SMOKE SHOW and CHEESE CHAOS. Shop online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Caveat:wght@600;700&family=Figtree:wght@400;500;600;700;800&display=swap">
+<link rel="icon" href="logo.png">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style>
+/* Layout: calm sticker lab. Cream paper and soft mist bands, with one deep indigo band per rhythm.
+   Logo blue and logo lime appear at full strength only on small things: buttons, chips, stickers. */
+:root{
+  --paper:#F8F7F2; --card:#FFFFFF; --sand:#F0EDE3;
+  --ink:#1D2133; --ink-2:#4B5167; --line:rgba(29,33,51,.13);
+  --blue:#4153D6; --blue-text:#3343B8; --mist-blue:#E7EAFA;
+  --lime:#C9E36B; --mist-lime:#F1F6DC; --spark:#EE8A5B;
+  --strike:#868A9A;--deep:#262D6B; --on-deep:#F3F2EC; --on-deep-2:#C5C9E6;
+  --btn:#4153D6; --btn-ink:#FFFFFF; --btn-alt:#C9E36B; --btn-alt-ink:#1D2133;
+  --edge:#1D2133; --hard:#1D2133;
+  --zing-tint:#EBF4C4; --smoke-tint:#FBE1D2; --cheese-tint:#E1E5FB;
+  --shadow:0 1px 2px rgba(29,33,51,.05),0 14px 34px -16px rgba(29,33,51,.22);
+  --font-display:"Big Shoulders Display","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-hand:"Caveat","Segoe Print","Comic Sans MS",cursive;
+  --gutter:clamp(16px,4vw,40px); --wrap:1180px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#13162A; --card:#1C2038; --sand:#181B31;
+  --ink:#ECEEF6; --ink-2:#B4B9CF; --line:rgba(236,238,246,.14);
+  --blue:#8E9CFF; --blue-text:#A9B4FF; --mist-blue:#1B2043;
+  --lime:#C9E36B; --mist-lime:#1B2216; --spark:#F29A6E;
+  --strike:#F3F4F8; --deep:#0D1022; --on-deep:#F3F2EC; --on-deep-2:#B9BEDA;
+  --btn:#C9E36B; --btn-ink:#14172A; --btn-alt:#A9B4FF; --btn-alt-ink:#14172A;
+  --edge:#0A0C18; --hard:#05060F;
+  --zing-tint:#283117; --smoke-tint:#35231A; --cheese-tint:#1F2448;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 34px -16px rgba(0,0,0,.6);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#13162A; --card:#1C2038; --sand:#181B31;
+  --ink:#ECEEF6; --ink-2:#B4B9CF; --line:rgba(236,238,246,.14);
+  --blue:#8E9CFF; --blue-text:#A9B4FF; --mist-blue:#1B2043;
+  --lime:#C9E36B; --mist-lime:#1B2216; --spark:#F29A6E;
+  --strike:#F3F4F8; --deep:#0D1022; --on-deep:#F3F2EC; --on-deep-2:#B9BEDA;
+  --btn:#C9E36B; --btn-ink:#14172A; --btn-alt:#A9B4FF; --btn-alt-ink:#14172A;
+  --edge:#0A0C18; --hard:#05060F;
+  --zing-tint:#283117; --smoke-tint:#35231A; --cheese-tint:#1F2448;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 14px 34px -16px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--font-body);overflow-x:hidden}
+img{max-width:100%;display:block}
+button,input{font:inherit;color:inherit}
+a{color:var(--blue-text)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:10px}
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--card);padding:10px 16px;border-radius:12px;border:2px solid var(--edge)}
+.skip:focus{top:12px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gutter)}
+section{padding-block:clamp(64px,9vw,112px)}
+
+/* type scale */
+h1,h2,h3{font-family:var(--font-display);font-weight:900;text-transform:uppercase;line-height:.9;letter-spacing:.005em;margin:0;text-wrap:balance}
+h1{font-size:clamp(3.1rem,8.4vw,6.4rem)}
+h2{font-size:clamp(2.5rem,6vw,4.4rem)}
+h3{font-size:clamp(1.6rem,3vw,2.1rem);line-height:.95}
+p{margin:0}
+.lede{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--ink-2);max-width:56ch}
+.eyebrow{font:700 .8rem/1 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.hand{font-family:var(--font-hand);font-weight:700}
+.sec-head{display:grid;gap:14px;margin-bottom:clamp(32px,5vw,52px);max-width:720px}
+.sec-head.center{margin-inline:auto;text-align:center;justify-items:center}
+
+/* buttons */
+.btn{--b:var(--btn);--bi:var(--btn-ink);display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 24px;border-radius:999px;border:2px solid var(--edge);background:var(--b);color:var(--bi);font-weight:700;font-size:1rem;text-decoration:none;cursor:pointer;box-shadow:3px 3px 0 var(--hard);transition:transform .15s ease,box-shadow .15s ease,background-color .2s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--hard)}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--hard)}
+.btn.alt{--b:var(--btn-alt);--bi:var(--btn-alt-ink)}
+.btn.ghost{--b:var(--card);--bi:var(--ink)}
+.btn.sm{min-height:44px;padding:8px 18px;font-size:.95rem}
+.on-deep .btn,.btn.lime{--b:#C9E36B;--bi:#1D2133;border-color:#0A0C18;box-shadow:3px 3px 0 #0A0C18}
+
+/* ticker */
+.ticker{background:var(--deep);color:var(--on-deep);overflow:hidden;font-weight:600;font-size:.9rem;letter-spacing:.02em}
+.ticker-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.ticker-track span{display:inline-flex;align-items:center;gap:18px;padding:9px 0 9px 18px;white-space:nowrap}
+.star{color:#C9E36B}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* header */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.head-row{display:flex;align-items:center;gap:16px;min-height:72px}
+.logo-chip{display:inline-flex;align-items:center;background:#FBF8EF;border:2px solid var(--edge);border-radius:18px;padding:5px 12px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--hard);flex:none}
+.logo-chip img{height:46px;width:auto}
+.nav{display:flex;gap:4px;margin-left:auto}
+.nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:10px 14px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+.nav a:hover{background:var(--mist-blue)}
+.head-actions{display:flex;align-items:center;gap:10px}
+.icon-btn{position:relative;width:48px;height:48px;border-radius:50%;border:2px solid var(--edge);background:var(--card);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
+.icon-btn svg{width:22px;height:22px}
+.cart-count{position:absolute;top:-6px;right:-6px;min-width:22px;height:22px;border-radius:999px;background:var(--lime);color:#1D2133;border:2px solid var(--edge);font:800 .72rem/18px var(--font-body);text-align:center;padding-inline:4px}
+.menu-btn{display:none}
+.mobile-menu{border-top:1px solid var(--line);padding-block:12px 20px}
+.mobile-menu a{display:flex;align-items:center;min-height:48px;padding-inline:4px;color:var(--ink);text-decoration:none;font-weight:600;font-size:1.1rem;border-bottom:1px solid var(--line)}
+.mobile-menu .btn{margin-top:16px;width:100%}
+@media (max-width:900px){
+  .nav{display:none}
+  .menu-btn{display:grid}
+  .head-actions{margin-left:auto}
+  .head-actions .wl{display:none}
+  .logo-chip img{height:38px}
+}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,80px) clamp(56px,8vw,96px)}
+.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.pill{display:inline-flex;align-items:center;gap:10px;justify-self:start;background:var(--mist-lime);border:1.5px solid color-mix(in srgb,var(--ink) 25%,transparent);padding:7px 16px 7px 12px;border-radius:999px;font-weight:600;font-size:.92rem}
+.pulse{width:10px;height:10px;border-radius:50%;background:#7FAF2A;box-shadow:0 0 0 0 rgba(127,175,42,.55);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(127,175,42,0)}100%{box-shadow:0 0 0 0 rgba(127,175,42,0)}}
+.h1-strike{color:var(--strike);background:linear-gradient(var(--blue),var(--blue)) no-repeat 0 52%/100% .085em;-webkit-box-decoration-break:clone;box-decoration-break:clone;border-radius:4px;animation:strike .9s .5s cubic-bezier(.6,0,.2,1) both}
+@keyframes strike{from{background-size:0 .085em}}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.switch{display:grid;gap:10px}
+.switch-label{font-weight:700;font-size:.9rem;color:var(--ink-2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:44px;padding:8px 16px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ink) 30%,transparent);background:var(--card);font-weight:700;font-size:.9rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:background-color .2s,border-color .2s}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"],.chip[aria-checked="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip .sw{width:12px;height:12px;border-radius:50%;border:1.5px solid rgba(29,33,51,.6)}
+.perfect{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center}
+.perfect li{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:.92rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-2)}
+.perfect span{width:30px;height:30px;border-radius:50%;background:var(--mist-lime);display:grid;place-items:center}
+.perfect svg{width:22px;height:22px}
+.perfect li+li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--line);margin-right:10px}
+.bundle{margin-top:clamp(40px,6vw,64px);display:grid;grid-template-columns:auto 1fr auto;gap:20px 36px;align-items:center;background:var(--sand);border-radius:30px;padding:clamp(22px,3.5vw,36px);border:1.5px solid var(--line)}
+.bundle-packs{display:flex;align-items:flex-end}
+.bundle-packs .pk{width:72px;filter:drop-shadow(0 10px 12px rgba(29,33,51,.2))}
+.bundle-packs .pk:nth-child(1){transform:rotate(-9deg) translateX(14px)}
+.bundle-packs .pk:nth-child(2){width:86px;position:relative;z-index:1}
+.bundle-packs .pk:nth-child(3){transform:rotate(9deg) translateX(-14px)}
+.bundle-copy{display:grid;gap:8px;min-width:0}
+.bundle-copy h3{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+.bundle-copy p:last-child{color:var(--ink-2)}
+.bundle-buy{display:grid;gap:10px;justify-items:start}
+@media (max-width:860px){.bundle{grid-template-columns:1fr;justify-items:start}}
+.tagline{font-size:1.75rem;line-height:1.1;color:var(--ink);justify-self:start}
+.tagline span{background:linear-gradient(transparent 72%,color-mix(in srgb,var(--blue) 35%,transparent) 72%)}
+
+/* stage */
+.stage-wrap{position:relative;min-width:0}
+.stage{--f-bg:#EDF5C8;--f-strong:#BFDD55;--f-powder:#E2733A;--f-fleck:#6FA83A;--f-burst:#F0804F;
+  --a-ink:#1D2133;--a-cream:#FFF9EC;--a-blue:#4153D6;--a-lime:#C9E36B;
+  position:relative;border-radius:32px;border:2px solid var(--edge);background:var(--f-bg);box-shadow:8px 8px 0 var(--hard);overflow:hidden;transition:background-color .45s ease;color:#1D2133;display:flex;flex-direction:column}
+.stage[data-flavour="smoke"]{--f-bg:#FBE0D1;--f-strong:#F0804F;--f-powder:#9A3F25;--f-fleck:#5A2416;--f-burst:#C9E36B}
+.stage[data-flavour="cheese"]{--f-bg:#E0E4FB;--f-strong:#5163DD;--f-powder:#F0A83A;--f-fleck:#4FA24A;--f-burst:#F6C343}
+.stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(29,33,51,.09) 1.2px,transparent 1.4px);background-size:14px 14px;pointer-events:none}
+.stage-top{position:relative;display:flex;justify-content:space-between;align-items:center;padding:14px 14px 0}
+.tag{font:700 .72rem/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:#1D2133;background:rgba(255,255,255,.85);border:1.5px solid rgba(29,33,51,.35);padding:7px 10px;border-radius:999px}
+.pp{width:44px;height:44px;border-radius:50%;border:2px solid #1D2133;background:#FFF9EC;display:grid;place-items:center;cursor:pointer;color:#1D2133}
+.pp svg{width:16px;height:16px}
+.art{position:relative;display:block;width:100%;height:auto;aspect-ratio:400/320;cursor:crosshair;touch-action:manipulation}
+.sprinkle{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.cap{position:relative;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:center;margin:0 12px 12px;padding:12px 14px;background:rgba(255,255,255,.86);border:1.5px solid rgba(29,33,51,.3);border-radius:20px}
+.cap-no{grid-row:span 2;width:42px;height:42px;border-radius:50%;background:#1D2133;color:#FFF9EC;display:grid;place-items:center;font:800 .95rem/1 var(--font-body)}
+.cap-title{font:900 1.35rem/1 var(--font-display);text-transform:uppercase}
+.cap-text{font-size:.92rem;line-height:1.35;color:#3B4157}
+.dots{grid-column:1/-1;display:flex;gap:0;justify-content:center;margin:-4px 0 -8px}
+.dot{width:44px;height:44px;flex:0 1 44px;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0}
+.dot::after{content:"";width:10px;height:10px;border-radius:999px;background:rgba(29,33,51,.25);transition:width .3s,background-color .3s}
+.dot[aria-current="step"]::after{width:26px;background:#1D2133}
+.stage-note{margin-top:14px;text-align:center;font-size:.9rem;color:var(--ink-2)}
+.badge-rot{position:absolute;top:-30px;right:-22px;width:112px;height:112px;z-index:3;pointer-events:none}
+.badge-rot .ring{animation:spin 16s linear infinite;transform-origin:56px 56px}
+
+/* stage art animation system */
+/* only animated (classed) nodes pivot on their own box; plain transform="" attributes keep SVG semantics */
+.art [class]{transform-box:fill-box;transform-origin:center}
+.scene{opacity:0;transition:opacity .35s ease}
+.scene.on{opacity:1}
+.scene:not(.on):not(.leaving) *{animation:none!important}
+.stage.paused .art *,.stage.paused .art{animation-play-state:paused!important}
+.ln{stroke:var(--a-ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.powder{fill:var(--f-powder)}
+.fleck{fill:var(--f-fleck)}
+.strong{fill:var(--f-strong)}
+.burst{fill:var(--f-burst)}
+.drop{animation:drop 1s cubic-bezier(.3,.6,.3,1) var(--d,0s) both}
+@keyframes drop{0%{transform:translateY(-240px) rotate(-25deg);opacity:0}10%{opacity:1}55%{transform:translateY(0) rotate(0)}68%{transform:translateY(-14px)}80%,100%{transform:translateY(0)}}
+.hop{animation:hop 1.1s ease-in var(--d,0s) both}
+@keyframes hop{0%{transform:translateY(-90px);opacity:0}15%{opacity:1}60%{transform:translateY(16px) scale(1)}100%{transform:translateY(44px) scale(.15);opacity:0}}
+.spin{animation:spin .55s linear infinite}
+.spin-slow{animation:spin 3.2s linear infinite}
+.spin-rays{animation:spin 22s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.flow{stroke:var(--f-powder);stroke-width:9;stroke-linecap:round;stroke-dasharray:1 9;fill:none;animation:flow .35s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-20}}
+.win-grind{animation:flow .35s linear infinite,winGrind 4.4s linear both}
+@keyframes winGrind{0%,18%{opacity:0}22%,100%{opacity:1}}
+.win-pour{animation:flow .35s linear infinite,winPour 4.6s linear both}
+@keyframes winPour{0%,4%{opacity:0}8%,52%{opacity:1}58%,100%{opacity:0}}
+.win-pack{animation:flow .35s linear infinite,winPack 4.6s linear both}
+@keyframes winPack{0%,22%{opacity:0}25%,46%{opacity:1}50%,100%{opacity:0}}
+.fill-up{transform-origin:50% 100%;animation:fillUp 3s 1.1s cubic-bezier(.4,0,.3,1) both}
+@keyframes fillUp{from{transform:scaleY(0)}}
+.rise{animation:rise 3s .3s cubic-bezier(.4,0,.3,1) both}
+@keyframes rise{from{transform:translateY(118px)}}
+.wave{animation:waveX 1.6s linear infinite}
+@keyframes waveX{to{transform:translateX(-80px)}}
+.puff{animation:puff 1.8s ease-out var(--d,0s) infinite both}
+@keyframes puff{0%{transform:translateY(0) scale(.5);opacity:0}25%{opacity:.85}100%{transform:translateY(-44px) scale(1.5);opacity:0}}
+.blink{animation:blinkL 1.1s steps(1) infinite var(--d,0s)}
+@keyframes blinkL{50%{opacity:.25}}
+.slide-in{animation:slideIn 1s cubic-bezier(.3,.7,.3,1) both}
+@keyframes slideIn{from{transform:translateX(-290px)}}
+.press{animation:press 4.6s ease-in-out both}
+@keyframes press{0%,50%{transform:translateY(-72px)}58%,66%{transform:translateY(0)}76%,100%{transform:translateY(-72px)}}
+.flash{animation:flash 4.6s linear both}
+@keyframes flash{0%,57%{opacity:0}61%{opacity:1}72%,100%{opacity:0}}
+.pop{animation:pop .6s cubic-bezier(.3,1.6,.5,1) var(--d,0s) both}
+@keyframes pop{0%{transform:scale(0) rotate(-20deg);opacity:0}60%{transform:scale(1.12) rotate(5deg);opacity:1}100%{transform:scale(1)}}
+.wobble{transform-origin:50% 0%;animation:wobble .36s ease-in-out infinite}
+@keyframes wobble{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(9deg) translateY(5px)}}
+.fall{animation:fall .9s ease-in var(--d,0s) infinite both}
+@keyframes fall{0%{transform:translateY(0);opacity:0}15%{opacity:1}100%{transform:translateY(74px);opacity:0}}
+.appear{animation:appear .3s ease-out var(--d,0s) both}
+@keyframes appear{from{opacity:0;transform:scale(0)}}
+.bounce-in{animation:bounceIn 1.1s cubic-bezier(.3,.7,.3,1) var(--d,0s) both}
+@keyframes bounceIn{0%{transform:translateY(-170px);opacity:0}45%{transform:translateY(0);opacity:1}62%{transform:translateY(-22px)}78%,100%{transform:translateY(0)}}
+.confetti{animation:confetti var(--t,3s) linear var(--d,0s) infinite both}
+@keyframes confetti{0%{transform:translateY(-30px) rotate(0)}100%{transform:translateY(360px) rotate(600deg)}}
+.steam{animation:steam 2s ease-out var(--d,0s) infinite both}
+@keyframes steam{0%{transform:translateY(0);opacity:0}30%{opacity:.7}100%{transform:translateY(-30px);opacity:0}}
+.twinkle{animation:twinkle 1.6s ease-in-out var(--d,0s) infinite both}
+@keyframes twinkle{0%,100%{transform:scale(.55);opacity:.4}50%{transform:scale(1.1);opacity:1}}
+.fade-note{animation:appear .5s ease-out var(--d,1.4s) both}
+
+/* flavour band */
+.band{background:var(--deep);padding-block:22px;overflow:hidden;border-block:1px solid rgba(255,255,255,.06)}
+.band-track{display:flex;width:max-content;animation:marquee 34s linear infinite}
+.band-track span{font:900 clamp(2.4rem,6vw,4.4rem)/1 var(--font-display);text-transform:uppercase;padding-right:44px;white-space:nowrap;display:inline-flex;align-items:center;gap:44px}
+.band-track .c1{color:#C9E36B}.band-track .c2{color:var(--on-deep)}.band-track .c3{color:#AEB8FF}
+.band-track i{font-style:normal;color:rgba(255,255,255,.35);font-size:.5em}
+
+/* steps */
+.steps{background:var(--sand)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,32px)}
+.tile{position:relative;background:var(--card);border:1.5px solid var(--line);border-radius:26px;padding:26px;box-shadow:var(--shadow);display:grid;gap:14px;align-content:start}
+.tile:nth-child(1){transform:rotate(-1.2deg)}.tile:nth-child(3){transform:rotate(1deg)}
+.num{position:absolute;top:-16px;left:22px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:900 1.25rem/1 var(--font-display);border:2px solid var(--edge)}
+.num.b{background:#4153D6;color:#fff}.num.l{background:#C9E36B;color:#1D2133}
+.plate{height:150px;border-radius:20px;display:grid;place-items:center;overflow:hidden}
+.plate.tb{background:var(--mist-blue)}.plate.tl{background:var(--mist-lime)}
+.plate svg{height:112px;width:auto}
+.packs{display:flex;align-items:flex-end}
+.pouch-svg{display:block;width:100%;height:auto;overflow:visible}
+.packs .pk:nth-child(1){transform:rotate(-10deg) translateX(10px)}
+.packs .pk:nth-child(2){width:68px;position:relative;z-index:1}
+.packs .pk:nth-child(3){transform:rotate(10deg) translateX(-10px)}
+.tile p{color:var(--ink-2)}
+
+/* flavours */
+.flv-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.viewer{display:grid;gap:18px;justify-items:center;min-width:0}
+.pouch-zone{position:relative;width:min(100%,420px);aspect-ratio:1/1.05;display:grid;place-items:center;perspective:1200px}
+.blob{position:absolute;inset:4% 2%;width:96%;height:92%;transition:fill .35s}
+.tilt{position:relative;width:64%;transition:transform .25s ease-out;transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transform-style:preserve-3d}
+.flip{position:relative;width:100%;aspect-ratio:400/620;transform-style:preserve-3d;transition:transform .85s cubic-bezier(.45,.05,.3,1);cursor:pointer;border:0;background:none;padding:0;display:block}
+.flip.back{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;filter:drop-shadow(0 18px 22px rgba(29,33,51,.25))}
+.face .pouch-svg{width:100%;height:100%}
+.face.b{transform:rotateY(180deg)}
+.concept{position:absolute;bottom:4%;left:50%;transform:translateX(-50%);white-space:nowrap}
+.seg{display:inline-flex;padding:4px;border-radius:999px;background:var(--card);border:1.5px solid var(--line)}
+.seg button{min-height:44px;min-width:88px;border-radius:999px;border:0;background:none;font-weight:700;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.thumbs{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.thumb{display:grid;justify-items:center;gap:6px;padding:8px 10px 10px;border-radius:18px;border:1.5px solid var(--line);background:var(--card);cursor:pointer;min-width:96px;font-weight:700;font-size:.875rem;letter-spacing:.02em;transition:border-color .2s,transform .2s}
+.thumb .pk{width:40px}
+.thumb[aria-pressed="true"]{border:2px solid var(--ink);transform:translateY(-3px)}
+.hint{font-size:.9rem;color:var(--ink-2)}
+.panel{--p:var(--zing-tint);background:var(--p);border-radius:30px;padding:clamp(24px,3.5vw,40px);border:1.5px solid var(--line);transition:background-color .35s ease;display:grid;gap:18px;min-width:0}
+.panel[data-flavour="smoke"]{--p:var(--smoke-tint)}.panel[data-flavour="cheese"]{--p:var(--cheese-tint)}
+.panel h3{font-size:clamp(3rem,7vw,5.2rem);line-height:.85}
+.desc-pill{justify-self:start;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:6px 16px;font-weight:700}
+.vibe{font-size:1.7rem;line-height:1}
+.tags{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tags b{font-size:.9rem;margin-right:4px}
+.tags span{background:color-mix(in srgb,var(--card) 70%,transparent);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.9rem;font-weight:600}
+.acc{background:var(--card);border-radius:20px;border:1.5px solid var(--line);overflow:hidden}
+.acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:12px 20px;font-weight:800}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:"+";font:800 1.5rem/1 var(--font-body);transition:transform .25s}
+.acc[open] summary::after{transform:rotate(45deg)}
+.acc .body{padding:0 20px 20px;color:var(--ink-2);font-size:.98rem}
+.acc .body strong{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.details{display:grid;gap:0;margin:0}
+.details div{display:grid;grid-template-columns:minmax(110px,40%) 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.details dt{font-weight:700;color:var(--ink)}
+.details dd{margin:0}
+.small{font-size:.88rem;color:var(--ink-2)}
+
+/* quiz */
+.quiz{background:var(--mist-blue)}
+.quiz-card{max-width:760px;margin-inline:auto;background:var(--card);border:1.5px solid var(--line);border-radius:30px;padding:clamp(22px,4vw,44px);box-shadow:var(--shadow);display:grid;gap:22px}
+.progress{height:10px;border-radius:999px;background:var(--mist-blue);overflow:hidden}
+.progress i{display:block;height:100%;width:25%;background:var(--blue);border-radius:999px;transition:width .4s ease}
+.q-count{font-weight:700;color:var(--ink-2);font-size:.9rem}
+.q-title{font:900 clamp(1.9rem,4vw,2.6rem)/1 var(--font-display);text-transform:uppercase;outline:none}
+.answers{display:grid;gap:12px}
+.answer{display:flex;align-items:center;gap:14px;min-height:60px;padding:14px 18px;text-align:left;border-radius:18px;border:1.5px solid var(--line);background:var(--paper);cursor:pointer;font-weight:600;font-size:1.02rem;transition:border-color .2s,transform .15s,background-color .2s}
+.answer:hover{border-color:var(--ink);transform:translateX(3px)}
+.answer b{flex:none;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--mist-blue);font-weight:800}
+.result{display:grid;gap:16px;justify-items:start}
+.result .pk{width:96px;filter:drop-shadow(0 10px 14px rgba(29,33,51,.2))}
+.result-top{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+
+/* taste lab */
+.taste{background:var(--mist-lime)}
+.taste-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,48px);align-items:start}
+.taste-left{display:grid;gap:24px;min-width:0}
+.plate-stage{--t1:#EDF5C8;position:relative;border-radius:30px;border:2px solid var(--edge);background:var(--t1);box-shadow:6px 6px 0 var(--hard);overflow:hidden;transition:background-color .4s ease}
+.plate-stage::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(29,33,51,.09) 1.2px,transparent 1.4px);background-size:14px 14px;pointer-events:none}
+.plate-stage svg{position:relative;display:block;width:100%;height:auto;aspect-ratio:400/330}
+.plate-stage canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.plate-stage .tag{position:absolute;top:14px;left:14px;z-index:1}
+.again{position:absolute;right:12px;bottom:12px;z-index:1;min-height:44px;padding:8px 16px;border-radius:999px;border:2px solid #1D2133;background:#FFF9EC;color:#1D2133;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.again svg{width:16px;height:16px}
+.plate-stage [class]{transform-box:fill-box;transform-origin:center}
+.plate-stage .sh{transform-origin:50% 0%}
+.plate-stage.shaking .sh{animation:wobble .3s ease-in-out infinite}
+.seas{opacity:0;transition:opacity .2s ease}
+.seas.on{opacity:1}
+.pickers{display:grid;gap:20px}
+.picker h3{font-size:1.4rem;margin-bottom:10px;display:flex;gap:4px 12px;align-items:baseline;flex-wrap:wrap}
+.picker h3 small{font:600 .9rem/1.3 var(--font-body);text-transform:none;color:var(--ink-2)}
+.verdict{background:var(--card);border:1.5px solid var(--line);border-radius:30px;padding:clamp(22px,3vw,34px);box-shadow:var(--shadow);display:grid;gap:16px;min-width:0}
+.verdict h3{font-size:clamp(2rem,4vw,2.8rem)}
+.v-note{font-size:1.1rem;line-height:1.5}
+.meters{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.meters li{display:grid;grid-template-columns:78px 1fr 36px;gap:12px;align-items:center;font-weight:700;font-size:.95rem}
+.bar{height:12px;border-radius:999px;background:var(--mist-blue);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:999px;background:var(--blue);transition:width .7s cubic-bezier(.3,.7,.3,1)}
+.meters li span:last-child{color:var(--ink-2);font-variant-numeric:tabular-nums;text-align:right;font-weight:600}
+.share-msg{min-height:1.4em;font-size:.95rem;font-weight:600}
+.buy-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* reels */
+.reels{background:var(--deep);color:var(--on-deep)}
+.reels h2{color:var(--on-deep)}
+.reels .lede{color:var(--on-deep-2)}
+.reels .eyebrow{color:#C9E36B}
+.reel-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 10px 20px 4px;margin-inline:-4px;scrollbar-width:thin}
+.reel{position:relative;aspect-ratio:9/16;border-radius:26px;overflow:hidden;border:2px solid #0A0C18;background:#EDF5C8;scroll-snap-align:start;box-shadow:6px 6px 0 #05060F;color:#fff;margin:0}
+.reel>svg,.reel>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.reel::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(29,33,51,.08) 1.2px,transparent 1.4px);background-size:12px 12px;pointer-events:none}
+.reel .tag{position:absolute;top:12px;left:12px;z-index:2}
+.reel-ui{position:absolute;inset:auto 0 0 0;padding:70px 64px 16px 14px;background:linear-gradient(transparent,rgba(10,12,24,.82) 55%);display:grid;gap:4px;z-index:2}
+.reel-ui b{font-size:1rem}
+.reel-ui p{font-size:.92rem;line-height:1.35}
+.reel-ui small{font-size:.875rem;opacity:.9;display:flex;gap:6px;align-items:center}
+.reel-side{position:absolute;right:10px;bottom:22px;display:grid;gap:12px;z-index:3}
+.reel-side span,.reel-side button{width:40px;height:40px;border-radius:50%;background:rgba(10,12,24,.5);border:0;color:#fff;display:grid;place-items:center}
+.reel-side button{width:44px;height:44px;cursor:pointer}
+.reel-side svg{width:20px;height:20px}
+.reel [class]{transform-box:fill-box;transform-origin:center}
+.reel-ui{pointer-events:none}
+.reel-play{position:absolute;inset:0;z-index:2;border:0;background:none;cursor:pointer;display:grid;place-items:center;padding:0;color:#1D2133}
+.reel-play svg{width:58px;height:58px;padding:16px;border-radius:50%;background:rgba(255,255,255,.88);box-shadow:0 10px 26px -8px rgba(10,12,24,.5);transition:opacity .25s,transform .25s}
+.reel.playing .reel-play svg{opacity:0;transform:scale(.8)}
+.reel-play:focus-visible{outline-offset:-6px}
+.reel-bar{position:absolute;top:8px;left:12px;right:12px;height:3px;border-radius:3px;background:rgba(255,255,255,.4);z-index:3;overflow:hidden;pointer-events:none}
+.reel-bar i{display:block;height:100%;background:#fff;transform:scaleX(0);transform-origin:left;transition:transform .25s linear}
+.reel .tag{top:20px}
+.reel.motion .reel-bar i{transition:none;animation:mProg 10s linear infinite}
+.reel.motion .m *,.reel.motion .reel-bar i{animation-duration:10s;animation-iteration-count:infinite;animation-fill-mode:both;animation-timing-function:ease-in-out}
+.reel.motion .m .fall{animation-duration:.9s;animation-timing-function:ease-in}
+.reel.motion .m .m-wob{animation:wobble .3s ease-in-out infinite;transform-origin:50% 0%}
+.reel.m-paused .m *,.reel.m-paused .reel-bar i{animation-play-state:paused!important}
+.m-fries{animation-name:mFries}.m-dots{animation-name:mDots}.m-zing{animation-name:mZing}.m-shaker{animation-name:mShaker}.m-powder{animation-name:mPowder}
+.m-row{animation-name:mRow}.m-end{animation-name:mEnd}.m-ta{animation-name:mTA}.m-tb{animation-name:mTB}.m-tc{animation-name:mTC}
+.reel.motion .reel-bar i{animation-name:mProg;animation-timing-function:linear}
+@keyframes mProg{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes mFries{0%,50%{opacity:1}54%,100%{opacity:0}}
+@keyframes mDots{0%,31%{opacity:0}42%,50%{opacity:1}54%,100%{opacity:0}}
+@keyframes mZing{0%,26%{opacity:0;transform:translateY(-140px)}31%{opacity:1;transform:translateY(0)}34%{transform:translateY(-10px)}37%,50%{opacity:1;transform:translateY(0)}54%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mShaker{0%,25%{opacity:0;transform:translateY(-50px)}29%,48%{opacity:1;transform:translateY(0)}52%,100%{opacity:0;transform:translateY(-50px)}}
+@keyframes mPowder{0%,29%{opacity:0}31%,48%{opacity:1}50%,100%{opacity:0}}
+@keyframes mRow{0%,53%{opacity:0;transform:translateY(50px)}58%{opacity:1;transform:translateY(-6px)}61%,76%{opacity:1;transform:translateY(0)}79%,100%{opacity:0;transform:translateY(0)}}
+@keyframes mEnd{0%,78%{opacity:0;transform:scale(.85)}82%,97%{opacity:1;transform:scale(1)}100%{opacity:0}}
+@keyframes mTA{0%,22%{opacity:1}26%,100%{opacity:0}}
+@keyframes mTB{0%,25%{opacity:0}29%,49%{opacity:1}52%,100%{opacity:0}}
+@keyframes mTC{0%,52%{opacity:0}56%,75%{opacity:1}78%,100%{opacity:0}}
+.r-bob{animation:rBob 2.4s ease-in-out infinite}
+@keyframes rBob{50%{transform:translateY(-4px) rotate(-1deg)}}
+.r-eyes{animation:rBlink 3.6s infinite}
+@keyframes rBlink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.r-wob{transform-origin:50% 0%;animation:wobble .34s ease-in-out infinite}
+.r-nom{animation:rNom 1.8s ease-in-out infinite}
+@keyframes rNom{0%,100%{transform:translate(12px,16px) rotate(10deg)}40%,62%{transform:translate(0,0)}}
+.r-toss{animation:rToss 1.6s cubic-bezier(.3,.7,.4,1) var(--d,0s) infinite both}
+@keyframes rToss{0%{transform:translateY(0);opacity:0}15%{opacity:1}50%{transform:translateY(-70px) rotate(160deg)}100%{transform:translateY(0) rotate(320deg);opacity:0}}
+.r-pulse{animation:rPulse 1.4s ease-in-out infinite}
+@keyframes rPulse{50%{transform:scale(1.1) rotate(4deg)}}
+.reel-cta{margin-top:28px;display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:24px}
+.reel-cta p{color:var(--on-deep);max-width:54ch}
+.hashtag{font:900 clamp(1.8rem,4vw,2.4rem)/1 var(--font-display);color:#C9E36B;margin-bottom:8px!important}
+.on-deep .btn.ghost{--b:transparent;--bi:var(--on-deep);border-color:var(--on-deep);box-shadow:none}
+@media (min-width:1100px){.reel-row{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;padding-right:4px}}
+
+/* cart */
+.drawer-scroll{flex:1;overflow-y:auto;display:grid;align-content:start;gap:20px;padding-block:18px;margin-inline:-4px;padding-inline:4px}
+.drawer-empty{display:grid;justify-items:center;text-align:center;gap:10px;padding-block:20px 4px}
+.drawer-empty .empty{font:900 2.2rem/1 var(--font-display);text-transform:uppercase}
+.drawer-empty p{color:var(--ink-2);max-width:32ch}
+.cart-items{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ci{display:grid;grid-template-columns:56px 1fr;gap:8px 14px;align-items:center;padding:12px 14px;border:1.5px solid var(--line);border-radius:20px;background:var(--card)}
+.ci .pk{width:50px;grid-row:span 2}
+.ci b{display:block;font:900 1.3rem/1 var(--font-display);text-transform:uppercase}
+.ci small{color:var(--ink-2);font-size:.875rem}
+.ci-row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.ci-price{font-weight:700;font-size:.92rem;font-variant-numeric:tabular-nums}
+.stepper{display:inline-flex;align-items:center;border:2px solid var(--edge);border-radius:999px;background:var(--card);flex:none}
+.stepper button{width:44px;height:44px;border:0;background:none;font:800 1.25rem/1 var(--font-body);cursor:pointer;border-radius:999px;color:var(--ink)}
+.stepper button:disabled{opacity:.35;cursor:not-allowed}
+.stepper output{min-width:30px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+.link-btn{border:0;background:none;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;cursor:pointer;min-height:44px;padding:0 6px;font-size:.92rem;font-weight:600}
+.quick{display:grid;gap:10px}
+.qa-row{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:6px 6px 6px 10px;border-radius:16px;background:var(--sand)}
+.qa-row .pk{width:32px}
+.qa-row span{font-weight:800;font-size:.95rem}
+.cart-foot{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:12px}
+.sum{display:flex;justify-content:space-between;align-items:baseline;font-weight:800;font-size:1.05rem}
+.sum span:last-child{font-variant-numeric:tabular-nums}
+.co-form{display:grid;gap:8px;padding:18px;border-radius:22px;background:var(--sand);scroll-margin-top:8px}
+.co-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:4px}
+.co-head h3{font-size:1.6rem}
+.co-form label{font-weight:700;font-size:.95rem}
+.co-form input,.co-form textarea{width:100%;min-height:48px;padding:11px 14px;border-radius:14px;border:2px solid var(--edge);background:var(--card);color:var(--ink);font-size:1rem;margin-bottom:6px;resize:vertical}
+.co-form [aria-invalid="true"]{border-color:#C4412B}
+.co-pay{border:0;margin:4px 0 0;padding:0;display:grid;gap:6px}
+.co-pay legend{font-weight:700;font-size:.95rem;margin-bottom:6px;padding:0}
+.co-form .radio{display:flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border-radius:14px;background:var(--card);border:1.5px solid var(--line);font-weight:600;cursor:pointer}
+.co-form .radio input{width:20px;height:20px;min-height:0;margin:0;accent-color:var(--blue)}
+.cart-n{font:700 1rem/1 var(--font-body);color:var(--ink-2);text-transform:none}
+.price-line{font-weight:700}
+.price-line span{color:var(--ink-2);font-weight:600}
+.in-cart{font-weight:700;color:var(--blue-text);min-height:1.4em}
+.cart-count.bump{animation:bump .45s ease}
+@keyframes bump{40%{transform:scale(1.4)}}
+.toast{position:fixed;left:50%;bottom:calc(86px + env(safe-area-inset-bottom,0px));z-index:70;transform:translate(-50%,24px);opacity:0;visibility:hidden;background:var(--ink);color:var(--paper);border-radius:999px;padding:6px 6px 6px 20px;display:flex;align-items:center;gap:14px;font-weight:700;box-shadow:0 18px 40px -12px rgba(0,0,0,.45);transition:transform .3s ease,opacity .3s ease,visibility 0s .3s;max-width:calc(100% - 32px);width:max-content}
+.toast.show{transform:translate(-50%,0);opacity:1;visibility:visible;transition:transform .3s ease,opacity .3s ease}
+.toast span{min-width:0}
+.toast .btn{flex:none}
+@media (min-width:721px){.toast{bottom:calc(28px + env(safe-area-inset-bottom,0px))}}
+
+/* honest + faq */
+.honest{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:clamp(56px,8vw,88px)}
+.hcard{border:2px solid var(--edge);border-radius:24px;padding:24px;display:grid;gap:10px;align-content:start;background:var(--card)}
+.hcard:nth-child(2){border-radius:24px 8px 24px 24px}
+.hcard svg{width:40px;height:40px}
+.hcard h3{font-size:1.55rem}
+.hcard p{color:var(--ink-2)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,4vw,56px);align-items:start}
+.faq-list{display:grid;gap:12px;min-width:0}
+.faq-list .acc summary{font-size:1.05rem}
+
+/* waitlist */
+.join{background:var(--mist-blue)}
+.join-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:center}
+.join-copy{display:grid;gap:20px;min-width:0}
+.form{display:grid;gap:12px;max-width:520px}
+.form label{font-weight:700}
+.form-row{display:flex;gap:10px;flex-wrap:wrap}
+.form input{flex:1 1 220px;min-height:52px;padding:12px 18px;border-radius:999px;border:2px solid var(--edge);background:var(--card);font-size:1rem;color:var(--ink)}
+.form input[aria-invalid="true"]{border-color:#C4412B}
+.msg{min-height:1.5em;font-weight:600}
+.msg.err{color:#B53A25}
+.msg.ok{color:var(--ink)}
+:root[data-theme="dark"] .msg.err{color:#FF9A85}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .msg.err{color:#FF9A85}}
+.vote{position:relative;background:var(--card);border:2px solid var(--edge);border-radius:28px;padding:30px 26px;display:grid;gap:16px;box-shadow:6px 6px 0 var(--hard);transform:rotate(1deg)}
+.vote h3{font-size:1.9rem}
+.vote .opts{display:grid;gap:10px}
+.vote .opts .chip{justify-content:flex-start;min-height:50px;font-size:1rem}
+.st{position:absolute;width:74px;height:74px}
+.st.a{top:-32px;right:-22px;transform:rotate(12deg)}
+.st.b{bottom:-28px;left:-22px;transform:rotate(-10deg)}
+.vote h3{padding-right:36px}
+
+/* footer */
+.foot{background:var(--deep);color:var(--on-deep);padding-block:72px 40px;overflow:hidden}
+.giant{font:900 clamp(3.4rem,13vw,11rem)/.85 var(--font-display);text-transform:uppercase;color:transparent;-webkit-text-stroke:2px rgba(243,242,236,.7);margin:0 0 48px;letter-spacing:.01em}
+.giant span{color:#C9E36B;-webkit-text-stroke:0}
+.foot-row{display:flex;flex-wrap:wrap;gap:28px 48px;align-items:flex-start;justify-content:space-between}
+.foot-links{display:flex;flex-wrap:wrap;gap:4px 8px}
+.foot-links a{color:var(--on-deep);text-decoration:none;font-weight:600;min-height:44px;display:inline-flex;align-items:center;padding-inline:10px;border-radius:999px}
+.foot-links a:hover{background:rgba(255,255,255,.08)}
+.foot small{display:block;color:var(--on-deep-2);font-size:.88rem;line-height:1.6}
+.foot .logo-chip{box-shadow:3px 3px 0 #05060F;border-color:#05060F}
+
+/* sticky mobile CTA */
+.sticky-cta{position:fixed;left:16px;right:16px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;transform:translateY(140%);transition:transform .35s ease;display:none}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{width:100%}
+@media (max-width:720px){.sticky-cta{display:block}}
+
+/* cart drawer */
+dialog.drawer{margin:0 0 0 auto;height:100%;max-height:100%;width:min(420px,100%);border:0;border-left:2px solid var(--edge);padding:0;background:var(--paper);color:var(--ink)}
+dialog.drawer[open]{animation:drawerIn .3s ease-out}
+dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
+@keyframes drawerIn{from{transform:translateX(100%)}}
+.drawer-in{display:flex;flex-direction:column;height:100%;padding:calc(20px + env(safe-area-inset-top,0px)) 24px calc(24px + env(safe-area-inset-bottom,0px))}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.drawer-head h2{font-size:2rem}
+.drawer-body{flex:1;display:grid;place-content:center;justify-items:center;text-align:center;gap:16px;padding-block:24px}
+.drawer-body .empty{font:900 2.2rem/1 var(--font-display);text-transform:uppercase}
+.drawer-body p{color:var(--ink-2);max-width:32ch}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid,.flv-grid,.mix-grid,.join-grid,.faq-grid{grid-template-columns:1fr}
+  .stage-wrap{max-width:560px;width:100%;margin-inline:auto}
+}
+@media (max-width:760px){
+  .tiles,.honest{grid-template-columns:1fr}
+  .tile:nth-child(n){transform:none}
+  .badge-rot{width:88px;height:88px;top:-24px;right:-8px}
+  .badge-rot svg{width:88px;height:88px}
+  .vote{transform:none}
+  .st{width:60px;height:60px}
+  .st.a{right:-6px}.st.b{left:-6px}
+}
+@media (max-width:420px){
+  .cta-row .btn{flex:1 1 100%}
+  .details div{grid-template-columns:1fr;gap:2px}
+  .giant{-webkit-text-stroke-width:1.5px}
+}
+
+/* v2 fixes */
+.size-pick{display:grid;gap:8px}
+.size-label{font-weight:700;font-size:.95rem}
+.sizes{display:flex;gap:10px;flex-wrap:wrap}
+.size{position:relative;display:grid;gap:2px;justify-items:start;min-width:120px;min-height:56px;padding:10px 16px;border-radius:16px;border:2px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;text-align:left;font:inherit}
+.size b{font:900 1.35rem/1 var(--font-display);text-transform:uppercase}
+.size span{font-size:.88rem;font-weight:600;color:var(--ink-2)}
+.size[aria-checked="true"]{border-color:var(--edge);box-shadow:3px 3px 0 var(--hard)}
+.size .best{position:absolute;top:-11px;right:10px;font:800 .66rem/1 var(--font-body);font-style:normal;letter-spacing:.06em;text-transform:uppercase;background:var(--lime);color:#1D2133;border:1.5px solid var(--edge);border-radius:999px;padding:4px 8px}
+.sizes.sm .size{min-height:44px;min-width:0;padding:8px 14px}
+.sizes.sm .size b{font-size:1.1rem}
+.b-details{display:grid;gap:6px;margin:6px 0 0}
+.b-details div{display:grid;grid-template-columns:120px 1fr;gap:10px}
+.b-details dt{white-space:nowrap}
+.sizes.sm .size{white-space:nowrap;flex:1 1 auto;justify-items:center}
+.b-details dt{font-weight:700}
+.b-details dd{margin:0;color:var(--ink-2)}
+.big-price{font:900 2rem/1 var(--font-display)}
+.big-price s{font:600 1rem/1 var(--font-body);color:var(--ink-2);margin-left:8px}
+.save{display:inline-block;background:var(--lime);color:#1D2133;border:1.5px solid var(--edge);border-radius:999px;padding:4px 12px;font-weight:800;font-size:.85rem;margin:0}
+@media (max-width:420px){.b-details div{grid-template-columns:1fr;gap:0}.size{min-width:0;flex:1}}
+html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
+.co-form input,.co-form textarea{font-family:inherit}
+@media (max-width:900px){.site-head{background:color-mix(in srgb,var(--paper) 97%,transparent)}}
+@media (max-width:720px){html{scroll-padding-bottom:96px}}
+
+.pay-ic{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:8px;background:var(--mist-blue);color:var(--blue-text);flex:none}
+.pay-ic svg{width:18px;height:18px}
+.pay-note{font-size:.88rem;color:var(--ink-2);min-height:1.2em;margin:2px 2px 0}
+.purpose{background:var(--paper)}
+.purpose-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.purpose-copy{display:grid;gap:18px;min-width:0}
+.purpose-copy .big{font:900 clamp(2.4rem,5.5vw,4.2rem)/.92 var(--font-display);text-transform:uppercase;margin:0}
+.purpose-copy .big span{color:var(--blue-text)}
+.pillars{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.pillars li{display:grid;grid-template-columns:48px 1fr;gap:4px 16px;align-items:start;background:var(--card);border:2px solid var(--edge);border-radius:22px;padding:18px 20px;box-shadow:4px 4px 0 var(--hard)}
+.pillars li:nth-child(2){transform:rotate(-.6deg)}
+.pillars .pi{grid-row:span 2;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;border:2px solid var(--edge);font:900 1.4rem/1 var(--font-display)}
+.pillars li:nth-child(odd) .pi{background:var(--lime);color:#1D2133}
+.pillars li:nth-child(even) .pi{background:var(--blue);color:#fff}
+.pillars h3{font-size:1.45rem}
+.pillars p{margin:0;color:var(--ink-2);font-size:.98rem}
+.buy-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+@media (max-width:980px){.taste-grid,.purpose-grid{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .again{right:10px;bottom:10px;min-height:38px;padding:6px 12px;font-size:.85rem;gap:6px;box-shadow:2px 2px 0 #1D2133}
+  .again svg{width:14px;height:14px}
+  .plate-stage .tag{top:10px;left:10px}
+  .buy-row .btn{flex:1 1 100%}
+  .bundle-buy,.bundle-buy .btn,.bundle-buy .sizes{width:100%}
+  .reel-cta .cta-row{width:100%}
+  .reel-cta .cta-row .btn{flex:1 1 100%}
+  .form-row .btn{flex:1 1 100%}
+  .pillars li{grid-template-columns:40px 1fr;padding:16px}
+  .pillars .pi{width:40px;height:40px;font-size:1.2rem}
+  .foot{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .ticker-track,.band-track{animation:none!important}
+  .art *{animation:none!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<!-- shared gradients for the snack illustrations -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <linearGradient id="gFry" x1="0" x2="1"><stop offset="0" stop-color="#FFE08A"/><stop offset=".55" stop-color="#F6C453"/><stop offset="1" stop-color="#E3A33A"/></linearGradient>
+  <linearGradient id="gFryB" x1="0" x2="1"><stop offset="0" stop-color="#F3CF70"/><stop offset="1" stop-color="#D99834"/></linearGradient>
+  <linearGradient id="gCarton" x1="0" x2="1"><stop offset="0" stop-color="#5D6EE6"/><stop offset=".6" stop-color="#4C5DDA"/><stop offset="1" stop-color="#3B4BC0"/></linearGradient>
+  <linearGradient id="gBowl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFDF7"/><stop offset="1" stop-color="#EDE3CF"/></linearGradient>
+  <radialGradient id="gWedge" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#FCE3A0"/><stop offset=".6" stop-color="#F0BB5C"/><stop offset="1" stop-color="#D99036"/></radialGradient>
+  <radialGradient id="gPop" cx=".38" cy=".32" r=".75"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#FFF4D2"/><stop offset="1" stop-color="#EBCF8C"/></radialGradient>
+  <radialGradient id="gChip" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#FCE29A"/><stop offset=".7" stop-color="#F2C566"/><stop offset="1" stop-color="#DDA04A"/></radialGradient>
+  <radialGradient id="gPea" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#F3D193"/><stop offset=".7" stop-color="#D9A45A"/><stop offset="1" stop-color="#B9813C"/></radialGradient>
+  <linearGradient id="gNacho" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FCD877"/><stop offset="1" stop-color="#E8A63B"/></linearGradient>
+  <linearGradient id="gPasta" x1="0" x2="1"><stop offset="0" stop-color="#FBE29A"/><stop offset="1" stop-color="#E5B456"/></linearGradient>
+  <radialGradient id="gSalsa" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#F27B5E"/><stop offset="1" stop-color="#C9432E"/></radialGradient>
+</defs></svg>
+
+<!-- 1. Ticker -->
+<div class="ticker" aria-label="Announcements">
+  <div class="ticker-track">
+    <span>The Flavour Lab is opening soon <b class="star" aria-hidden="true">✦</b> No boring bites <b class="star" aria-hidden="true">✦</b> Three flavours <b class="star" aria-hidden="true">✦</b> Your snacks. Your flavour. Your rules. <b class="star" aria-hidden="true">✦</b> Shop the lab <b class="star" aria-hidden="true">✦</b></span>
+    <span aria-hidden="true">The Flavour Lab is opening soon <b class="star">✦</b> No boring bites <b class="star">✦</b> Three flavours <b class="star">✦</b> Your snacks. Your flavour. Your rules. <b class="star">✦</b> Shop the lab <b class="star">✦</b></span>
+  </div>
+</div>
+
+<!-- 2. Header -->
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="logo-chip" href="#top" aria-label="FLAVR LAB home"><img src="logo.png" alt="FLAVR LAB" width="404" height="196"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#purpose">Our purpose</a>
+      <a href="#flavours">Flavours</a>
+      <a href="#taste">Taste Lab</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#reels">Reels</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn sm wl" href="#flavours">Shop now</a>
+      <button class="icon-btn" id="cartBtn" type="button" aria-label="Open cart, 0 items" aria-haspopup="dialog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
+        <span class="cart-count" aria-hidden="true">0</span>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="wrap mobile-menu" id="mobileMenu" hidden>
+    <a href="#purpose">Our purpose</a>
+    <a href="#flavours">Flavours</a>
+    <a href="#taste">Taste Lab</a>
+    <a href="#quiz">Find your flavour</a>
+    <a href="#reels">Lab Crew reels</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn" href="#flavours">Shop now</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- 3. Hero -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="pill"><i class="pulse" aria-hidden="true"></i>Three flavours. Fresh from the lab.</span>
+      <h1><span class="h1-strike">Boring snacks?</span><span class="sr-only"> (crossed out)</span><br>Not in this lab.</h1>
+      <p class="lede">FLAVR LAB makes bold seasonings you shake on fries, popcorn, wedges and whatever's in your snack drawer. Pick a flavour. Run your own experiment.</p>
+      <div class="cta-row">
+        <a class="btn" href="#flavours">Shop the flavours</a>
+        <a class="btn ghost" href="#taste">Taste before you buy</a>
+      </div>
+      <ul class="perfect" aria-label="Perfect for">
+        <li><span data-art="fries"></span>Fries</li><li><span data-art="popcorn"></span>Popcorn</li><li><span data-art="chips"></span>Chips</li><li><span data-art="wedges"></span>Wedges</li><li class="more">&amp; more</li>
+      </ul>
+      <div class="switch">
+        <span class="switch-label" id="watchLabel">Watch it in:</span>
+        <div class="chips" role="radiogroup" aria-labelledby="watchLabel" id="heroSwitch">
+          <button class="chip" type="button" role="radio" aria-checked="true" data-f="zing"><i class="sw" style="background:#D6FF43"></i>ZING MODE</button>
+          <button class="chip" type="button" role="radio" aria-checked="false" data-f="smoke" tabindex="-1"><i class="sw" style="background:#FF642E"></i>SMOKE SHOW</button>
+          <button class="chip" type="button" role="radio" aria-checked="false" data-f="cheese" tabindex="-1"><i class="sw" style="background:#4257F5"></i>CHEESE CHAOS</button>
+        </div>
+      </div>
+      <p class="hand tagline"><span>Your Snacks. Your Flavour. Your Rules.</span></p>
+    </div>
+
+    <div class="stage-wrap">
+      <svg class="badge-rot" viewBox="0 0 112 112" aria-hidden="true">
+        <circle cx="56" cy="56" r="52" fill="#C9E36B" stroke="#1D2133" stroke-width="2.5"/>
+        <g class="ring"><path id="bp" d="M56 56 m-38 0 a38 38 0 1 1 76 0 a38 38 0 1 1 -76 0" fill="none"/>
+        <text font-family="Figtree,system-ui,sans-serif" font-weight="800" font-size="12.5" letter-spacing="2.2" fill="#1D2133"><textPath href="#bp">NO BORING BITES ✦ NO BORING BITES ✦</textPath></text></g>
+        <g transform="translate(43 38)"><path d="M9 0h8v9l9 16a3 3 0 0 1-2.6 4.5H2.6A3 3 0 0 1 0 25L9 9z" fill="#4153D6" stroke="#1D2133" stroke-width="2"/><path d="M4 20h18l2.5 5a2 2 0 0 1-1.8 2.8H3.3A2 2 0 0 1 1.5 25z" fill="#C9E36B"/></g>
+      </svg>
+      <figure class="stage" id="stage" data-flavour="zing" aria-roledescription="animation" aria-label="How FLAVR LAB seasoning is made, an animation in six steps" style="margin:0">
+        <div class="stage-top">
+          <span class="tag">How it's made</span>
+          <button class="pp" id="ppBtn" type="button" aria-label="Pause animation">
+            <svg id="ppIcon" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
+          </button>
+        </div>
+        <div style="position:relative">
+        <svg class="art" id="art" viewBox="0 0 400 320" role="img" aria-labelledby="capTitle capText">
+          <defs>
+            <symbol id="i-chilli" viewBox="0 0 48 48"><path d="M15 12c-5 11 1 26 19 30 4 1 6-2 3-4-10-5-14-14-13-25z" fill="#E5483B" class="ln"/><path d="M15 12c-1-4 2-7 6-6 2 1 3 3 3 7-3-2-6-2-9-1z" fill="#4FA24A" class="ln"/><path d="M20 6c0-2 1-4 3-4" fill="none" class="ln"/><path d="M19 20c0 5 2 9 6 13" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round"/></symbol>
+            <symbol id="i-lime" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" fill="#8DC63F" class="ln"/><circle cx="24" cy="24" r="13.5" fill="#DDF19A"/><g stroke="#8DC63F" stroke-width="2.4"><path d="M24 11v26M12.7 17.5l22.6 13M12.7 30.5l22.6-13"/></g><circle cx="24" cy="24" r="2.4" fill="#fff"/></symbol>
+            <symbol id="i-tomato" viewBox="0 0 48 48"><circle cx="24" cy="27" r="17" fill="#E8523F" class="ln"/><path d="M24 9l3 5 6-1-4 4 1 5-6-3-6 3 1-5-4-4 6 1z" fill="#4FA24A" class="ln" stroke-width="2"/><ellipse cx="16" cy="25" rx="3.5" ry="5" fill="#fff" opacity=".45" transform="rotate(20 16 25)"/></symbol>
+            <symbol id="i-garlic" viewBox="0 0 48 48"><path d="M24 6c5 6 16 11 16 23 0 9-8 14-16 14S8 38 8 29C8 17 19 12 24 6z" fill="#FFF6E6" class="ln"/><path d="M24 14c-5 9-5 20 0 29M24 14c5 9 5 20 0 29M17 20c-4 7-4 15 0 21M31 20c4 7 4 15 0 21" fill="none" stroke="#1D2133" stroke-width="1.4" stroke-opacity=".55"/></symbol>
+            <symbol id="i-onion" viewBox="0 0 48 48"><path d="M24 5c3 6 17 11 17 23 0 9-8 15-17 15S7 37 7 28C7 16 21 11 24 5z" fill="#D58CBF" class="ln"/><path d="M24 12c-6 8-7 22 0 31M24 12c6 8 7 22 0 31" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="1.8"/><path d="M21 43l-2 3M27 43l2 3" class="ln" fill="none" stroke-width="1.6"/></symbol>
+            <symbol id="i-pepper" viewBox="0 0 48 48"><circle cx="17" cy="20" r="8" fill="#3A3330" class="ln" stroke-width="2"/><circle cx="31" cy="18" r="7" fill="#4A3F3A" class="ln" stroke-width="2"/><circle cx="24" cy="32" r="8.5" fill="#3A3330" class="ln" stroke-width="2"/><circle cx="14" cy="17" r="2" fill="#fff" opacity=".4"/><circle cx="21" cy="29" r="2" fill="#fff" opacity=".4"/></symbol>
+            <symbol id="i-paprika" viewBox="0 0 48 48"><ellipse cx="24" cy="36" rx="19" ry="7" fill="#FFF6E6" class="ln"/><path d="M9 34c3-12 9-18 15-18s12 6 15 18c-9 3-21 3-30 0z" fill="#C8442D" class="ln"/><circle cx="20" cy="26" r="1.4" fill="#fff" opacity=".6"/><circle cx="28" cy="29" r="1.2" fill="#fff" opacity=".6"/></symbol>
+            <symbol id="i-cheese" viewBox="0 0 48 48"><path d="M5 34l33-20 6 3v19z" fill="#F6C343" class="ln"/><path d="M5 34l33-20 6 3-33 17z" fill="#FFD866" class="ln"/><circle cx="22" cy="31" r="3" fill="#E3A52A"/><circle cx="34" cy="29" r="2.2" fill="#E3A52A"/><circle cx="39" cy="22" r="1.6" fill="#E3A52A"/></symbol>
+            <symbol id="i-jalapeno" viewBox="0 0 48 48"><path d="M14 13c-6 12 0 27 18 29 5 1 7-3 3-5-9-6-11-14-10-24z" fill="#4FA24A" class="ln"/><path d="M14 13c-1-4 2-7 6-6 2 1 3 3 3 6-3-1-6-1-9 0z" fill="#2F7A35" class="ln"/><path d="M19 20c0 6 3 11 8 15" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="2.5" stroke-linecap="round"/></symbol>
+            <symbol id="i-flame" viewBox="0 0 48 48"><path d="M24 4c3 8 12 12 12 24a12 12 0 0 1-24 0c0-6 3-9 5-12 1 4 3 6 5 6-2-6 0-12 2-18z" fill="#2A2224" stroke="#1D2133" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 26c2 3 5 5 5 9a5 5 0 0 1-10 0c0-3 2-5 5-9z" fill="#F6C343"/></symbol> viewBox="0 0 20 20"><path d="M10 0l2.4 7.6L20 10l-7.6 2.4L10 20l-2.4-7.6L0 10l7.6-2.4z" fill="#fff" stroke="#1D2133" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+            <clipPath id="flaskClip"><path d="M182 118v-46h36v46l58 140c5 14-2 26-17 26H141c-15 0-22-12-17-26z"/></clipPath>
+            <clipPath id="jarClip"><rect x="162" y="262" width="76" height="46" rx="9"/></clipPath>
+          </defs>
+
+          <!-- Scene 1: Pick -->
+          <g class="scene" data-scene="0">
+            <use href="#i-spark" x="70" y="80" width="18" height="18" class="twinkle" style="--d:.2s"/>
+            <use href="#i-spark" x="318" y="66" width="14" height="14" class="twinkle" style="--d:.8s"/>
+            <use href="#i-spark" x="336" y="168" width="16" height="16" class="twinkle" style="--d:1.3s"/>
+            <ellipse cx="200" cy="302" rx="124" ry="10" fill="#1D2133" opacity=".12"/>
+            <path d="M84 214c4 62 46 88 116 88s112-26 116-88z" class="strong ln"/>
+            <path d="M104 246c22 26 56 36 96 36" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="200" cy="214" rx="116" ry="22" fill="#FFF9EC" class="ln"/>
+            <ellipse cx="200" cy="216" rx="100" ry="15" fill="#F1E3C6"/>
+            <g class="drop" style="--d:.1s"><use class="ing" data-i="0" href="#i-chilli" x="102" y="170" width="48" height="48"/></g>
+            <g class="drop" style="--d:.5s"><use class="ing" data-i="1" href="#i-lime" x="140" y="180" width="48" height="48"/></g>
+            <g class="drop" style="--d:.9s"><use class="ing" data-i="2" href="#i-chilli" x="178" y="170" width="48" height="48"/></g>
+            <g class="drop" style="--d:1.3s"><use class="ing" data-i="3" href="#i-lime" x="214" y="182" width="48" height="48"/></g>
+            <g class="drop" style="--d:1.7s"><use class="ing" data-i="4" href="#i-chilli" x="250" y="172" width="48" height="48"/></g>
+            <g class="drop" style="--d:2.1s"><use class="ing" data-i="5" href="#i-lime" x="160" y="150" width="44" height="44"/></g>
+            <text x="200" y="58" text-anchor="middle" class="hand fade-note" style="--d:2.6s" font-size="30" fill="#1D2133">pick. drop. batch.</text>
+          </g>
+
+          <!-- Scene 2: Grind -->
+          <g class="scene" data-scene="1">
+            <g class="hop" style="--d:0s"><use class="ing" data-i="0" href="#i-chilli" x="164" y="30" width="34" height="34"/></g>
+            <g class="hop" style="--d:.35s"><use class="ing" data-i="1" href="#i-lime" x="186" y="26" width="34" height="34"/></g>
+            <g class="hop" style="--d:.7s"><use class="ing" data-i="3" href="#i-lime" x="204" y="32" width="34" height="34"/></g>
+            <path d="M144 62h112l-26 50h-60z" fill="#FFF9EC" class="ln"/>
+            <path d="M152 70h96" class="ln" fill="none" stroke-width="1.6" opacity=".4"/>
+            <rect x="132" y="108" width="136" height="124" rx="20" fill="#4153D6" class="ln"/>
+            <rect x="146" y="120" width="10" height="100" rx="5" fill="#fff" opacity=".22"/>
+            <circle cx="200" cy="164" r="36" fill="#FFF9EC" class="ln"/>
+            <circle cx="200" cy="164" r="30" class="strong" opacity=".35"/>
+            <g class="spin-slow"><circle cx="200" cy="140" r="3" class="powder"/><circle cx="222" cy="168" r="2.5" class="powder"/><circle cx="186" cy="186" r="3" class="powder"/><circle cx="178" cy="156" r="2" class="fleck"/><circle cx="212" cy="148" r="2" class="powder"/></g>
+            <g class="spin"><rect x="176" y="160" width="48" height="8" rx="4" fill="#1D2133"/><rect x="196" y="140" width="8" height="48" rx="4" fill="#1D2133"/><circle cx="200" cy="164" r="6" fill="#C9E36B" stroke="#1D2133" stroke-width="2"/></g>
+            <circle cx="152" cy="218" r="5" fill="#C9E36B" class="blink"/>
+            <circle cx="168" cy="218" r="5" fill="#EE8A5B" class="blink" style="--d:.5s"/>
+            <rect x="226" y="212" width="28" height="10" rx="5" fill="#FFF9EC" opacity=".8"/>
+            <rect x="188" y="230" width="24" height="16" rx="3" fill="#1D2133"/>
+            <line x1="200" y1="248" x2="200" y2="300" class="flow win-grind"/>
+            <rect x="160" y="260" width="80" height="50" rx="11" fill="#fff" fill-opacity=".6" class="ln"/>
+            <g clip-path="url(#jarClip)"><rect x="160" y="262" width="80" height="48" class="powder fill-up"/></g>
+            <rect x="168" y="268" width="6" height="34" rx="3" fill="#fff" opacity=".6"/>
+            <text x="300" y="110" class="hand fade-note" style="--d:1.6s" font-size="28" fill="#1D2133">fine &amp;</text>
+            <text x="306" y="136" class="hand fade-note" style="--d:1.9s" font-size="28" fill="#1D2133">even</text>
+          </g>
+
+          <!-- Scene 3: Blend -->
+          <g class="scene" data-scene="2">
+            <line x1="200" y1="-6" x2="200" y2="106" class="flow win-pour"/>
+            <g clip-path="url(#flaskClip)">
+              <rect x="110" y="56" width="180" height="240" fill="#fff" fill-opacity=".55"/>
+              <g transform="translate(0 168)"><g class="rise"><g class="wave"><path d="M80 10q20-10 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0V140H80z" class="powder"/><path d="M80 10q20-10 40 0t40 0 40 0 40 0 40 0 40 0 40 0 40 0" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="3"/></g>
+                <g class="spin-slow"><circle cx="170" cy="40" r="3" class="fleck"/><circle cx="226" cy="58" r="2.5" fill="#fff" opacity=".7"/><circle cx="196" cy="80" r="3.5" class="fleck"/><circle cx="160" cy="76" r="2.5" fill="#fff" opacity=".6"/><circle cx="236" cy="30" r="2" class="fleck"/></g></g></g>
+            </g>
+            <path d="M182 118v-46h36v46l58 140c5 14-2 26-17 26H141c-15 0-22-12-17-26z" fill="none" class="ln" stroke-width="3"/>
+            <rect x="172" y="60" width="56" height="14" rx="7" fill="#4153D6" class="ln"/>
+            <path d="M150 196l-12 30" stroke="#fff" stroke-opacity=".6" stroke-width="6" stroke-linecap="round"/>
+            <g fill="#fff" stroke="#1D2133" stroke-width="1.6"><circle class="puff" style="--d:0s" cx="190" cy="52" r="7"/><circle class="puff" style="--d:.6s" cx="210" cy="50" r="8"/><circle class="puff" style="--d:1.2s" cx="200" cy="54" r="6"/></g>
+            <g class="powder"><circle class="puff" style="--d:.3s" cx="182" cy="56" r="4"/><circle class="puff" style="--d:.9s" cx="218" cy="56" r="4"/></g>
+            <path d="M84 100l-10-6M88 86l-12 0M302 100l10-6M298 86l12 0" class="ln" stroke="#EE8A5B" stroke-width="3.5" fill="none"/>
+            <text x="300" y="196" class="hand fade-note" style="--d:1.2s" font-size="27" fill="#1D2133">stir.</text>
+            <text x="304" y="222" class="hand fade-note" style="--d:1.8s" font-size="27" fill="#1D2133">taste.</text>
+            <text x="308" y="248" class="hand fade-note" style="--d:2.4s" font-size="27" fill="#1D2133">tweak.</text>
+          </g>
+
+          <!-- Scene 4: Pack -->
+          <g class="scene" data-scene="3">
+            <path d="M156 8h88l-30 46h-28z" fill="#4153D6" class="ln"/>
+            <rect x="192" y="52" width="16" height="16" rx="3" fill="#1D2133"/>
+            <line x1="200" y1="70" x2="200" y2="122" class="flow win-pack"/>
+            <g class="slide-in">
+              <g class="pouch-slot" data-pouch="zing" data-x="146" data-y="100" data-w="108"></g>
+            </g>
+            <g class="press"><rect x="132" y="96" width="136" height="16" rx="8" fill="#1D2133"/><rect x="190" y="70" width="20" height="28" fill="#1D2133"/></g>
+            <rect class="flash" x="140" y="104" width="120" height="8" rx="4" fill="#FFE27A"/>
+            <rect x="24" y="270" width="352" height="20" rx="10" fill="#1D2133"/>
+            <line x1="34" y1="268" x2="366" y2="268" stroke="#4B5167" stroke-width="3" stroke-dasharray="10 10" class="flow" style="stroke:#4B5167;stroke-width:3;stroke-dasharray:10 10"/>
+            <g fill="#FFF9EC"><circle cx="46" cy="280" r="5"/><circle cx="106" cy="280" r="5"/><circle cx="166" cy="280" r="5"/><circle cx="234" cy="280" r="5"/><circle cx="294" cy="280" r="5"/><circle cx="354" cy="280" r="5"/></g>
+            <rect x="60" y="290" width="12" height="26" fill="#1D2133"/><rect x="328" y="290" width="12" height="26" fill="#1D2133"/>
+            <g class="pop" style="--d:3.3s"><circle cx="300" cy="150" r="24" fill="#C9E36B" class="ln"/><path d="M289 150l8 8 15-16" fill="none" class="ln" stroke-width="4"/></g>
+            <text x="300" y="198" text-anchor="middle" class="hand fade-note" style="--d:3.5s" font-size="28" fill="#1D2133">sealed!</text>
+            <text x="78" y="150" text-anchor="middle" class="hand fade-note" style="--d:1.2s" font-size="26" fill="#1D2133">fill…</text>
+          </g>
+
+          <!-- Scene 5: Shake -->
+          <g class="scene" data-scene="4">
+            <g transform="translate(176 34)"><g class="wobble">
+              <rect x="0" y="0" width="58" height="76" rx="14" fill="#FFF9EC" class="ln"/>
+              <rect x="0" y="22" width="58" height="30" class="strong ln"/>
+              <text x="29" y="42" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="13" fill="#1D2133">FLAVR</text>
+              <rect x="4" y="74" width="50" height="16" rx="5" fill="#1D2133"/>
+              <g fill="#FFF9EC"><circle cx="17" cy="82" r="2"/><circle cx="29" cy="82" r="2"/><circle cx="41" cy="82" r="2"/></g>
+            </g></g>
+            <g class="powder"><circle class="fall" style="--d:0s" cx="196" cy="134" r="3"/><circle class="fall" style="--d:.2s" cx="206" cy="132" r="2.5"/><circle class="fall" style="--d:.45s" cx="214" cy="136" r="3"/><circle class="fall" style="--d:.65s" cx="200" cy="130" r="2"/><circle class="fall" style="--d:.3s" cx="222" cy="134" r="2"/></g>
+            <g class="fleck"><circle class="fall" style="--d:.1s" cx="210" cy="132" r="2"/><circle class="fall" style="--d:.55s" cx="192" cy="136" r="1.8"/></g>
+            <g fill="none" stroke="#1D2133" stroke-opacity=".35" stroke-width="2.5" stroke-linecap="round"><path class="steam" style="--d:0s" d="M150 196c-6-8 6-12 0-20"/><path class="steam" style="--d:.7s" d="M252 194c-6-8 6-12 0-20"/></g>
+            <g class="ln" fill="#F2C14E" stroke-width="2.2">
+              <rect x="152" y="196" width="13" height="58" rx="4" transform="rotate(-12 158 225)"/>
+              <rect x="170" y="186" width="13" height="66" rx="4" transform="rotate(-5 176 219)"/>
+              <rect x="188" y="180" width="13" height="70" rx="4"/>
+              <rect x="206" y="184" width="13" height="68" rx="4" transform="rotate(6 212 218)"/>
+              <rect x="224" y="190" width="13" height="62" rx="4" transform="rotate(11 230 221)"/>
+              <rect x="240" y="200" width="13" height="56" rx="4" transform="rotate(17 246 228)"/>
+            </g>
+            <g class="powder"><circle class="appear" style="--d:.6s" cx="176" cy="196" r="2.6"/><circle class="appear" style="--d:.8s" cx="194" cy="190" r="2.6"/><circle class="appear" style="--d:1s" cx="212" cy="194" r="2.6"/><circle class="appear" style="--d:1.2s" cx="230" cy="200" r="2.6"/><circle class="appear" style="--d:1.4s" cx="160" cy="206" r="2.4"/><circle class="appear" style="--d:1.6s" cx="198" cy="204" r="2.4"/><circle class="appear" style="--d:1.8s" cx="244" cy="210" r="2.4"/><circle class="appear" style="--d:2s" cx="216" cy="210" r="2.2"/></g>
+            <g class="fleck"><circle class="appear" style="--d:1.1s" cx="186" cy="200" r="1.8"/><circle class="appear" style="--d:1.7s" cx="226" cy="190" r="1.8"/></g>
+            <path d="M138 222h124l-12 82h-100z" fill="#4153D6" class="ln"/>
+            <path d="M144 244h112" stroke="#FFF9EC" stroke-width="7"/>
+            <circle cx="200" cy="276" r="13" fill="#FFF9EC" class="ln" stroke-width="2"/><path d="M194 274a6 6 0 0 0 12 0" fill="none" stroke="#1D2133" stroke-width="2" stroke-linecap="round"/>
+            <g class="pop" style="--d:2.4s"><g transform="translate(314 92)"><path d="M0-46l11 18 20-9-3 21 21 6-17 13 12 18-21 1-2 21-15-14-15 14-2-21-21-1 12-18-17-13 21-6-3-21 20 9z" class="burst ln"/>
+            <text id="burstWord" y="6" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="19" fill="#1D2133">ZING!</text></g></g>
+            <use href="#i-spark" x="70" y="140" width="16" height="16" class="twinkle" style="--d:.4s"/>
+            <use href="#i-spark" x="96" y="96" width="12" height="12" class="twinkle" style="--d:1s"/>
+            <text x="82" y="64" text-anchor="middle" class="hand fade-note" style="--d:1.4s" font-size="26" fill="#1D2133">shake.</text>
+            <text x="86" y="88" text-anchor="middle" class="hand fade-note" style="--d:1.9s" font-size="26" fill="#1D2133">taste.</text>
+          </g>
+
+          <!-- Scene 6: Enjoy -->
+          <g class="scene" data-scene="5">
+            <g class="spin-rays" fill="#fff" opacity=".45">
+              <path d="M200 182L186-80h28z"/><path d="M200 182L186-80h28z" transform="rotate(30 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(60 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(90 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(120 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(150 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(180 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(210 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(240 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(270 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(300 200 182)"/><path d="M200 182L186-80h28z" transform="rotate(330 200 182)"/>
+            </g>
+            <g id="confetti"></g>
+            <ellipse cx="200" cy="296" rx="150" ry="10" fill="#1D2133" opacity=".12"/>
+            <g class="bounce-in" style="--d:.1s"><g data-pouch="zing" data-x="58" data-y="158" data-w="90"></g></g>
+            <g class="bounce-in" style="--d:.6s"><g data-pouch="cheese" data-x="252" data-y="158" data-w="90"></g></g>
+            <g class="bounce-in" style="--d:.35s"><g data-pouch="smoke" data-x="143" data-y="120" data-w="114"></g></g>
+            <text x="200" y="64" text-anchor="middle" class="hand fade-note" style="--d:1.2s" font-size="31" fill="#1D2133">Your Snacks. Your Flavour.</text>
+            <text x="200" y="98" text-anchor="middle" class="hand fade-note" style="--d:1.5s" font-size="31" fill="#1D2133">Your Rules.</text>
+          </g>
+        </svg>
+        <canvas class="sprinkle" id="sprinkle" aria-hidden="true"></canvas>
+        </div>
+        <figcaption class="cap" aria-live="polite">
+          <span class="cap-no" id="capNo">1</span>
+          <span class="cap-title" id="capTitle">Pick</span>
+          <span class="cap-text" id="capText">Each batch starts with the flavour's ingredients.</span>
+          <span class="dots" id="dots"></span>
+        </figcaption>
+      </figure>
+      <p class="stage-note">Tap the stage to sprinkle</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Flavour band -->
+<div class="band on-deep" aria-label="Flavours: ZING MODE, SMOKE SHOW, CHEESE CHAOS">
+  <div class="band-track" aria-hidden="true">
+    <span><b class="c1">Zing Mode</b><i>✦</i><b class="c2">Smoke Show</b><i>✦</i><b class="c3">Cheese Chaos</b><i>✦</i><b class="c1">No Boring Bites</b><i>✦</i></span>
+    <span><b class="c1">Zing Mode</b><i>✦</i><b class="c2">Smoke Show</b><i>✦</i><b class="c3">Cheese Chaos</b><i>✦</i><b class="c1">No Boring Bites</b><i>✦</i></span>
+  </div>
+</div>
+
+<!-- 5. Steps -->
+<section class="steps" aria-labelledby="stepsH">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">How it works</span>
+      <h2 id="stepsH">Choose. Sprinkle. Enjoy.</h2>
+    </div>
+    <ol class="tiles" style="list-style:none;margin:0;padding:0">
+      <li class="tile">
+        <span class="num b">1</span>
+        <div class="plate tb"><div class="packs"><span class="pk" data-pouch="zing"></span><span class="pk" data-pouch="smoke"></span><span class="pk" data-pouch="cheese"></span></div></div>
+        <h3>Choose</h3>
+        <p>Pick ZING MODE, SMOKE SHOW or CHEESE CHAOS. Or take the quiz.</p>
+      </li>
+      <li class="tile">
+        <span class="num l">2</span>
+        <div class="plate tl"><svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(150 60 46)"><rect x="38" y="16" width="44" height="58" rx="11" fill="#FFF9EC" stroke="#1D2133" stroke-width="2.5"/><rect x="38" y="32" width="44" height="22" fill="#C9E36B" stroke="#1D2133" stroke-width="2.5"/><rect x="41" y="72" width="38" height="12" rx="4" fill="#1D2133"/></g><g fill="#E2733A"><circle cx="52" cy="92" r="3"/><circle cx="62" cy="100" r="2.5"/><circle cx="46" cy="106" r="2.5"/><circle cx="58" cy="112" r="2"/></g></svg></div>
+        <h3>Sprinkle</h3>
+        <p>Shake a light layer on warm snacks. Taste, then add more.</p>
+      </li>
+      <li class="tile">
+        <span class="num b">3</span>
+        <div class="plate tb"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44" fill="#C9E36B" stroke="#1D2133" stroke-width="2.5"/><path d="M42 50q4-6 8 0M70 50q4-6 8 0" fill="none" stroke="#1D2133" stroke-width="3" stroke-linecap="round"/><path d="M40 66q20 24 40 0z" fill="#1D2133"/><path d="M48 72q12 9 24 0" fill="#EE8A5B"/><circle cx="36" cy="64" r="5" fill="#EE8A5B" opacity=".5"/><circle cx="84" cy="64" r="5" fill="#EE8A5B" opacity=".5"/></svg></div>
+        <h3>Enjoy</h3>
+        <p>Crunch. Grin. Repeat. No boring bites.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5b. Our purpose -->
+<section class="purpose" id="purpose" aria-labelledby="purposeH">
+  <div class="wrap purpose-grid">
+    <div class="purpose-copy">
+      <span class="eyebrow">Our purpose</span>
+      <h2 id="purposeH" class="sr-only">Our purpose</h2>
+      <p class="big" aria-hidden="true">Snack time should <span>never</span> be boring.</p>
+      <p class="lede">FLAVR LAB is a small snack-seasoning brand from Pakistan. We started it for one reason: plain fries, popcorn and chips deserve better. One shake turns the snacks you already love into your own flavour experiment.</p>
+      <p class="hand tagline"><span>Your Snacks. Your Flavour. Your Rules.</span></p>
+    </div>
+    <ul class="pillars">
+      <li><span class="pi" aria-hidden="true">1</span><h3>Make it fun</h3><p>Bold flavours, loud packs and a lab you can play in. Snacking should feel like an experiment, not a routine.</p></li>
+      <li><span class="pi" aria-hidden="true">2</span><h3>Keep it honest</h3><p>Ingredients out loud, allergens in bold, and no fake reviews. What you read here is what's in the pack.</p></li>
+      <li><span class="pi" aria-hidden="true">3</span><h3>Put you in charge</h3><p>Mix, match and share your combos. The Lab Crew helps decide what we make next.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. Flavours -->
+<section id="flavours" aria-labelledby="flvH">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The line-up</span>
+      <h2 id="flvH">Three flavours. Zero boring bites.</h2>
+    </div>
+    <div class="flv-grid">
+      <div class="viewer">
+        <div class="pouch-zone" id="pouchZone">
+          <svg class="blob" viewBox="0 0 200 200" preserveAspectRatio="none" aria-hidden="true"><path id="blobPath" fill="var(--zing-tint)" d="M44 18c30-16 82-14 116 6s38 66 26 104-48 66-92 66S14 168 8 124 14 34 44 18z"/></svg>
+          <div class="tilt" id="tilt">
+            <button class="flip" id="flip" type="button" aria-label="Flip the ZING MODE pack to see the back">
+              <span class="face f" id="faceFront"></span>
+              <span class="face b" id="faceBack"></span>
+            </button>
+          </div>
+          
+        </div>
+        <div class="seg" role="group" aria-label="Pack side">
+          <button type="button" id="sideFront" aria-pressed="true">Front</button>
+          <button type="button" id="sideBack" aria-pressed="false">Back</button>
+        </div>
+        <div class="thumbs" role="group" aria-label="Choose a flavour">
+          <button class="thumb" type="button" data-f="zing" aria-pressed="true"><span class="pk" data-pouch="zing"></span>ZING MODE</button>
+          <button class="thumb" type="button" data-f="smoke" aria-pressed="false"><span class="pk" data-pouch="smoke"></span>SMOKE SHOW</button>
+          <button class="thumb" type="button" data-f="cheese" aria-pressed="false"><span class="pk" data-pouch="cheese"></span>CHEESE CHAOS</button>
+        </div>
+        <p class="hint">Tap the pack to flip it</p>
+      </div>
+
+      <div class="panel" id="panel" data-flavour="zing" aria-live="polite">
+        <h3 id="pName">Zing Mode</h3>
+        <span class="desc-pill" id="pDesc">Tangy Chilli Lime</span>
+        <p class="hand vibe" id="pVibe">Tangy. Zesty. Bold.</p>
+        <p id="pText">A tangy chilli lime shake for snacks that need a wake-up call. Bright, zesty and made for hot fries and fresh popcorn.</p>
+        <div class="tags" id="pTags"></div>
+        <details class="acc" open>
+          <summary>What's inside</summary>
+          <div class="body" id="pIng"></div>
+        </details>
+        <details class="acc">
+          <summary>Pack details</summary>
+          <div class="body">
+            <dl class="details">
+              <div><dt>Format</dt><dd>Resealable stand-up pouch</dd></div>
+              <div><dt>Net weight</dt><dd id="pNet">50g</dd></div>
+              <div id="pAllRow"><dt>Allergens</dt><dd id="pAll"></dd></div>
+                            <div><dt>Best before and batch</dt><dd>Printed on the seal</dd></div>
+            </dl>
+          </div>
+        </details>
+        <div class="size-pick">
+          <span class="size-label" id="sizeLbl">Pack size</span>
+          <div class="sizes" role="radiogroup" aria-labelledby="sizeLbl">
+            <button class="size" type="button" role="radio" aria-checked="true" data-g="50"><b>50g</b><span id="s50"></span></button>
+            <button class="size" type="button" role="radio" aria-checked="false" data-g="100" tabindex="-1"><b>100g</b><span id="s100"></span><i class="best">Best value</i></button>
+          </div>
+        </div>
+        <p class="price-line" id="pPrice"></p>
+        <div class="buy-row">
+          <div class="stepper" role="group" aria-label="Quantity">
+            <button type="button" id="pMinus" aria-label="Decrease quantity">−</button>
+            <output id="pQty" aria-live="polite">1</output>
+            <button type="button" id="pPlus" aria-label="Increase quantity">+</button>
+          </div>
+          <button class="btn" type="button" id="pAdd">Add to cart</button>
+          <button class="btn ghost" type="button" id="watchBtn">Watch it in the lab</button>
+        </div>
+        <p class="in-cart" id="pInCart" aria-live="polite"></p>
+        <p class="small">Always check the pack for the latest ingredients and allergens. The pack label is the final word.</p>
+      </div>
+    </div>
+    <div class="bundle">
+      <div class="bundle-packs"><span class="pk" data-pouch="zing"></span><span class="pk" data-pouch="smoke"></span><span class="pk" data-pouch="cheese"></span></div>
+      <div class="bundle-copy">
+        <p class="eyebrow">The full lab trio</p>
+        <h3>Can't pick one? Take all three.</h3>
+        <p>One ZING MODE, one SMOKE SHOW and one CHEESE CHAOS. Mix your own combos at home, and pay less than buying them one by one.</p>
+        <dl class="b-details">
+          <div><dt>What you get</dt><dd>3 flavours, one pouch of each</dd></div>
+          <div><dt>Pack type</dt><dd>Trio pack of resealable stand-up pouches</dd></div>
+          <div><dt>Net weight</dt><dd id="bNet">3 × 50g (150g total)</dd></div>
+        </dl>
+      </div>
+      <div class="bundle-buy">
+        <div class="sizes sm" role="radiogroup" aria-label="Trio pack size" id="bSizes">
+          <button class="size" type="button" role="radio" aria-checked="true" data-g="50"><b>3 × 50g</b></button>
+          <button class="size" type="button" role="radio" aria-checked="false" data-g="100" tabindex="-1"><b>3 × 100g</b></button>
+        </div>
+        <p class="price-line big-price" id="bundlePrice"></p>
+        <p class="save" id="bundleSave"></p>
+        <button class="btn" type="button" id="bundleAdd">Add the trio to cart</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Quiz -->
+<section class="quiz" id="quiz" aria-labelledby="quizH">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Flavour finder</span>
+      <h2 id="quizH">Which FLAVR are you?</h2>
+      <p class="lede">Four quick questions. One flavour match.</p>
+    </div>
+    <div class="quiz-card" id="quizCard"></div>
+  </div>
+</section>
+
+<!-- 8. Taste lab: pick a snack + up to two seasonings, see them shaken on and what to expect -->
+<section class="taste" id="taste" aria-labelledby="tasteH">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Taste lab</span>
+      <h2 id="tasteH">Shake it. Taste it.</h2>
+      <p class="lede">Pick a snack and one or two seasonings. We shake them on and tell you what to expect before you buy.</p>
+    </div>
+    <div class="taste-grid">
+      <div class="taste-left">
+        <div class="plate-stage" id="plateStage">
+          <span class="tag">Lab estimate</span>
+          <svg id="plateSvg" viewBox="0 0 400 330" role="img" aria-label="ZING MODE shaken on fries"></svg>
+          <canvas id="plateCanvas" aria-hidden="true"></canvas>
+          <button class="again" type="button" id="shakeAgain"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9"/><path d="M13.5 2.5v3h-3"/></svg>Shake again</button>
+        </div>
+        <div class="pickers">
+          <div class="picker">
+            <h3 id="snackH">1. Pick a snack</h3>
+            <div class="chips" id="snackChips" role="radiogroup" aria-labelledby="snackH"></div>
+          </div>
+          <div class="picker">
+            <h3 id="flavH">2. Pick seasonings <small>One or two. A third swaps out the oldest.</small></h3>
+            <div class="chips" id="flavChips" role="group" aria-labelledby="flavH"></div>
+          </div>
+        </div>
+      </div>
+      <div class="verdict">
+        <div aria-live="polite" style="display:grid;gap:14px">
+          <p class="eyebrow">How it tastes</p>
+          <h3 id="vName">ZING MODE on fries</h3>
+          <p class="v-note" id="vNote"></p>
+        </div>
+        <ul class="meters" id="meters" aria-label="Taste profile, out of 5"></ul>
+        <p class="small"><b>Lab tip:</b> <span id="vTip"></span></p>
+        <p class="small" id="vPick"></p>
+        <div class="buy-row">
+          <button class="btn" type="button" id="mixAdd">Add this mix to cart</button>
+          <button class="btn ghost" type="button" id="shareBtn">Share my mix</button>
+        </div>
+        <p class="share-msg" id="shareMsg" role="status"></p>
+        <p class="small">Taste notes are our estimate, based on each recipe and flavour description. Every taste bud is different, so start light and tweak.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Lab Crew reels (UGC). Real videos are set in the REELS list in the script. -->
+<section class="reels on-deep" id="reels" aria-labelledby="reelsH">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">#NoBoringBites</span>
+      <h2 id="reelsH">Lab Crew reels</h2>
+      <p class="lede">Shake, film, tag. This is where the Lab Crew shows off its snack experiments.</p>
+    </div>
+    <div class="reel-row" id="reelRow" role="region" aria-label="Reels. Scroll sideways for more." tabindex="0"></div>
+    <div class="reel-cta">
+      <div>
+        <p class="hashtag">#NoBoringBites</p>
+        <p>Film your first shake, tag <b class="handle">@flavrlab</b> and use the hashtag. Our favourite videos get featured right here.</p>
+      </div>
+      <div class="cta-row">
+        <button class="btn" type="button" id="copyTag">Copy the hashtag</button>
+        <a class="btn ghost" href="#join">Join the Lab Crew</a>
+      </div>
+    </div>
+    <p class="share-msg" id="tagMsg" role="status" style="margin-top:10px;color:var(--on-deep)"></p>
+  </div>
+</section>
+
+<!-- 10. Honest strip + FAQ -->
+<section id="faq" aria-labelledby="faqH">
+  <div class="wrap">
+    <div class="honest">
+      <div class="hcard">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="4" width="26" height="32" rx="5" fill="#E7EAFA" stroke="#1D2133" stroke-width="2.2"/><path d="M13 14h14M13 20h14M13 26h9" stroke="#1D2133" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <h3>Ingredients, out loud</h3>
+        <p>Every ingredient is listed on this page and on the pack, allergens in bold.</p>
+      </div>
+      <div class="hcard">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 5l4.5 9.5 10.5 1.2-7.8 7.1 2.2 10.3L20 28l-9.4 5.1 2.2-10.3L5 15.7l10.5-1.2z" fill="#F1F6DC" stroke="#1D2133" stroke-width="2.2" stroke-linejoin="round"/><path d="M8 34L34 8" stroke="#1D2133" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <h3>No fake reviews</h3>
+        <p>Every review we show comes from a real buyer. We never make them up.</p>
+      </div>
+      <div class="hcard">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M16 4h8v10l9 16a4 4 0 0 1-3.5 6h-19A4 4 0 0 1 7 30l9-16z" fill="#E7EAFA" stroke="#1D2133" stroke-width="2.2" stroke-linejoin="round"/><path d="M11 24h18" stroke="#1D2133" stroke-width="2"/><path d="M15 30l3 3 7-7" fill="none" stroke="#4153D6" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>Tested first</h3>
+        <p>Flavours get tasted and tweaked in small batches before anything ships.</p>
+      </div>
+    </div>
+    <div class="faq-grid">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow">Questions</span>
+        <h2 id="faqH">Lab FAQ</h2>
+        <p class="lede">Can't find your answer? Join the Lab Crew and ask us when we open.</p>
+      </div>
+      <div class="faq-list">
+        <details class="acc"><summary>What is FLAVR LAB?</summary><div class="body">A snack-seasoning brand from Pakistan. You shake it on fries, popcorn, potato wedges, nachos, homemade chips and roasted chickpeas. Pick a flavour and run your own experiment.</div></details>
+        <details class="acc"><summary>What can I put it on?</summary><div class="body">Fries, popcorn, potato wedges, nachos, homemade chips and roasted chickpeas. After that, it's your experiment.</div></details>
+        <details class="acc"><summary>How do I use it?</summary><div class="body">Season warm snacks. Start with a light sprinkle, taste, then add more. Reseal the pouch after use.</div></details>
+        <details class="acc"><summary>Can I mix flavours?</summary><div class="body">Yes. Try the <a href="#taste">Taste Lab</a> to see how a mashup like Smoky Zing or Cheesy Zing tastes.</div></details>
+        <details class="acc"><summary>Where can I see the ingredients and allergens?</summary><div class="body">Open "What's inside" for each flavour in the <a href="#flavours">flavours section</a>. They're also printed on the pack, and the pack label is always the final word.</div></details>
+        <details class="acc"><summary>What sizes and prices do you have?</summary><div class="body">Every flavour comes in a resealable stand-up pouch: 50g for Rs 150 or 100g for Rs 299. The Full Lab Trio gives you one pouch of each flavour: 3 × 50g for Rs 420 or 3 × 100g for Rs 849. Delivery charges are confirmed with you on WhatsApp.</div></details>
+        <details class="acc"><summary>How do I order?</summary><div class="body">Add flavours to your cart, tap Checkout and fill in your delivery details. Your order opens in WhatsApp so we can confirm it with you.</div></details>
+        <details class="acc"><summary>Are your seasonings halal?</summary><div class="body">We only share halal information once it's officially verified, and we won't claim anything until then.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Join -->
+<section class="join" id="join" aria-labelledby="joinH">
+  <div class="wrap join-grid">
+    <div class="join-copy">
+      <span class="eyebrow">Newsletter</span>
+      <h2 id="joinH">Join the Lab Crew</h2>
+      <p class="lede">New flavours, recipes and snack experiments, straight to your inbox.</p>
+      <!-- No backend yet: this form only validates in the browser. Connect it to your email tool (e.g. Mailchimp, Klaviyo or a form endpoint) in the submit handler below. -->
+      <form class="form" id="wlForm" novalidate>
+        <label for="wlEmail">Email address</label>
+        <div class="form-row">
+          <input id="wlEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-describedby="wlMsg wlFine">
+          <button class="btn" type="submit">Join the Lab Crew</button>
+        </div>
+        <p class="msg" id="wlMsg" role="status"></p>
+        <p class="small" id="wlFine">We only email about FLAVR LAB. Unsubscribe anytime.</p>
+      </form>
+    </div>
+    <div class="vote" aria-labelledby="voteH">
+      <svg class="st a" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="37" fill="#fff" stroke="#1D2133" stroke-width="2"/><circle cx="40" cy="40" r="30" fill="#C9E36B"/><circle cx="31" cy="35" r="3.5" fill="#1D2133"/><circle cx="49" cy="35" r="3.5" fill="#1D2133"/><path d="M28 46q12 12 24 0" fill="none" stroke="#1D2133" stroke-width="3.5" stroke-linecap="round"/></svg>
+      <svg class="st b" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="37" fill="#fff" stroke="#1D2133" stroke-width="2"/><circle cx="40" cy="40" r="30" fill="#1D2133"/><path d="M34 22h12v10l11 20a3 3 0 0 1-2.6 4.5H25.6A3 3 0 0 1 23 52l11-20z" fill="none" stroke="#C9E36B" stroke-width="3.5" stroke-linejoin="round"/><circle cx="36" cy="48" r="2.5" fill="#C9E36B"/><circle cx="45" cy="44" r="2" fill="#C9E36B"/></svg>
+      <h3 id="voteH">Which FLAVR should we feature next?</h3>
+      <div class="opts" role="group" aria-labelledby="voteH">
+        <button class="chip" type="button" data-v="ZING MODE" aria-pressed="false"><i class="sw" style="background:#D6FF43"></i>Team ZING</button>
+        <button class="chip" type="button" data-v="SMOKE SHOW" aria-pressed="false"><i class="sw" style="background:#FF642E"></i>Team SMOKE</button>
+        <button class="chip" type="button" data-v="CHEESE CHAOS" aria-pressed="false"><i class="sw" style="background:#4257F5"></i>Team CHEESE</button>
+      </div>
+      <p class="msg ok" id="voteMsg" role="status"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- 12. Footer -->
+<footer class="foot on-deep" id="foot">
+  <div class="wrap">
+    <p class="giant" aria-hidden="true">No boring <span>bites</span></p>
+    <div class="foot-row">
+      <a class="logo-chip" href="#top" aria-label="Back to top, FLAVR LAB"><img src="logo.png" alt="FLAVR LAB" width="404" height="196" loading="lazy"></a>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#purpose">Our purpose</a><a href="#flavours">Flavours</a><a href="#quiz">Find your flavour</a><a href="#taste">Taste Lab</a><a href="#reels">Reels</a><a href="#faq">FAQ</a><a href="#join">Newsletter</a>
+      </nav>
+    </div>
+    <div style="margin-top:36px;display:grid;gap:6px">
+      <small>Snacks shown are serving suggestions. Snacks not included.</small>
+      
+      <small>© 2026 FLAVR LAB. Your Snacks. Your Flavour. Your Rules.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- 13. Sticky mobile CTA -->
+<div class="sticky-cta" id="stickyCta"><a class="btn" href="#flavours" id="stickyBtn">Shop now</a></div>
+
+<dialog class="drawer" id="cart" aria-labelledby="cartH">
+  <div class="drawer-in">
+    <div class="drawer-head">
+      <h2 id="cartH">Your cart <span class="cart-n" id="cartN"></span></h2>
+      <button class="icon-btn" type="button" id="cartClose" aria-label="Close cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="drawer-scroll">
+      <div class="drawer-empty" id="cartEmpty">
+        <p class="empty">Your cart is empty. Boring.</p>
+        <p>Pick a flavour below to start your first experiment.</p>
+      </div>
+      <ul class="cart-items" id="cartItems" aria-label="Items in your cart"></ul>
+      <div class="quick" id="quickAdd">
+        <p class="eyebrow" id="quickH">Add a flavour</p>
+        <div class="quick" id="quickList"></div>
+        <button class="btn ghost sm" type="button" id="addAll">Add all three flavours</button>
+      </div>
+      <!-- Checkout: sends the order to the business WhatsApp (ORDER_WHATSAPP in the script). Swap for a real
+           payment/order backend (e.g. Shopify, WooCommerce) later if needed. -->
+      <form class="co-form" id="coForm" hidden novalidate>
+        <div class="co-head"><h3>Delivery details</h3><button class="link-btn" type="button" id="coBack">Back to cart</button></div>
+        <label for="coName">Full name</label>
+        <input id="coName" name="name" autocomplete="name" required>
+        <label for="coPhone">Mobile number</label>
+        <input id="coPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="03XX XXXXXXX" required>
+        <label for="coCity">City</label>
+        <input id="coCity" name="city" autocomplete="address-level2" required>
+        <label for="coAddr">Delivery address</label>
+        <textarea id="coAddr" name="address" rows="3" autocomplete="street-address" required></textarea>
+        <fieldset class="co-pay"><legend>Payment</legend><div id="coPayList"></div></fieldset>
+        <p class="msg" id="coMsg" role="status"></p>
+        <button class="btn" type="submit">Place order on WhatsApp</button>
+        <p class="small">Your order opens in WhatsApp with everything filled in. Tap send and we'll confirm delivery charges and timing with you.</p>
+      </form>
+    </div>
+    <div class="cart-foot" id="cartFoot" hidden>
+      <div class="sum"><span>Subtotal</span><span id="cartSub">Confirmed on WhatsApp</span></div>
+      <button class="btn" type="button" id="checkoutBtn">Checkout</button>
+      <button class="link-btn" type="button" id="clearCart">Empty cart</button>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button class="btn sm lime" type="button" id="toastBtn">View cart</button></div>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- data ---------- */
+  const F = {
+    zing: { name: 'ZING MODE', desc: 'Tangy Chilli Lime', vibe: 'Tangy. Zesty. Bold.', burst: 'ZING!',
+      text: 'A tangy chilli lime shake for snacks that need a wake-up call. Bright, zesty and made for hot fries and fresh popcorn.',
+      tags: ['Fries', 'Popcorn', 'Homemade chips'],
+      // Ingredients from the 100 g trial formula, in descending order by weight. [CONFIRM] allergy advice with your supplier.
+      ing: '<p>Salt, paprika, red <strong>chilli</strong> powder, <strong>garlic</strong> powder, <strong>onion</strong> powder, sugar, citric acid, amchur (dried <strong>mango</strong>) powder, cumin powder, black pepper, oregano.</p><p style="margin-top:10px"><strong>Contains: chilli, garlic, onion, mango.</strong></p>',
+      all: 'Contains: chilli, garlic, onion, mango',
+      set: ['chilli', 'paprika', 'garlic', 'onion', 'pepper', 'chilli'],
+      powder: ['#E2733A', '#6FA83A'], tint: 'var(--zing-tint)',
+      swatch: '#D6FF43', strong: '#BFDD55', labelInk: '#1D2133', short: 'ZING', stage: '#EDF5C8', burstFill: '#F0804F',
+      taste: { tangy: 5, smoky: 0, cheesy: 0, heat: 3, savoury: 3 },
+      note: 'Bright and sharp first, then a chilli warmth that builds. Wakes up plain fries in one shake.',
+      altF: 'ZING MODE pouch front: lime pack, Tangy Chilli Lime', altB: 'ZING MODE pouch back: how to use, ingredients, contains chilli, garlic, onion and mango' },
+    smoke: { name: 'SMOKE SHOW', desc: 'Smoky BBQ', vibe: 'Rich. Smoky. Bold.', burst: 'SMOKE!',
+      text: 'Deep, smoky BBQ with a slow, warm finish. Made for potato wedges, roasted chickpeas and late-night fries.',
+      tags: ['Wedges', 'Roasted chickpeas', 'Nachos'],
+      ing: '<p>Salt, paprika, powdered brown sugar, garlic powder, onion powder, tomato powder, smoked paprika, black pepper, cumin powder, <strong>mustard</strong> powder, citric acid, red chilli powder.</p><p style="margin-top:10px"><strong>Contains: mustard.</strong></p>',
+      all: 'Contains: mustard',
+      set: ['tomato', 'garlic', 'onion', 'paprika', 'pepper', 'chilli'],
+      powder: ['#9A3F25', '#5A2416'], tint: 'var(--smoke-tint)',
+      swatch: '#FF642E', strong: '#F0804F', labelInk: '#1D2133', short: 'SMOKE', stage: '#FBE0D1', burstFill: '#C9E36B',
+      taste: { tangy: 1, smoky: 5, cheesy: 0, heat: 2, savoury: 4 },
+      note: 'Deep and smoky with a little sweetness, then a gentle pepper warmth. Tastes like a BBQ night.',
+      altF: 'SMOKE SHOW pouch front: orange pack, Smoky BBQ', altB: 'SMOKE SHOW pouch back: how to use, ingredients, contains mustard' },
+    cheese: { name: 'CHEESE CHAOS', desc: 'Cheesy Jalapeno', vibe: 'Cheesy. Punchy. Playful.', burst: 'CHAOS!',
+      text: 'Cheddar-style cheesiness with a jalapeno kick. Loud, playful and made for nachos, fries and popcorn nights.',
+      tags: ['Nachos', 'Fries', 'Popcorn'],
+      ing: '<p>Cheddar cheese powder (<strong>milk</strong>), maltodextrin, salt, whey powder (<strong>milk</strong>), onion powder, jalapeno powder, garlic powder, yeast extract, citric acid, paprika powder, anti-caking agent (silicon dioxide), powdered sugar.</p><p style="margin-top:10px"><strong>Contains: milk.</strong></p>',
+      all: 'Contains: milk',
+      set: ['cheese', 'jalapeno', 'onion', 'garlic', 'paprika', 'cheese'],
+      powder: ['#F0A83A', '#4FA24A'], tint: 'var(--cheese-tint)',
+      swatch: '#4257F5', strong: '#5163DD', labelInk: '#FFC21A', short: 'CHEESE', stage: '#E0E4FB', burstFill: '#F6C343',
+      taste: { tangy: 1, smoky: 0, cheesy: 5, heat: 2, savoury: 4 },
+      note: 'Rich, cheesy and salty, with a jalapeno kick right at the end. Loud in the best way.',
+      altF: 'CHEESE CHAOS pouch front: blue pack, Cheesy Jalapeno', altB: 'CHEESE CHAOS pouch back: how to use, ingredients, contains milk' }
+  };
+
+  let pSize = 50; // selected pack size in grams (50 or 100)
+  /* ---------- pouch artwork (front + back), drawn as SVG so it stays sharp at every size ---------- */
+  const FD = 'Big Shoulders Display,Impact,sans-serif', FH = 'Caveat,cursive', FB = 'Figtree,system-ui,sans-serif', INK_ = '#1D2133';
+  const POUCH = {
+    zing: { bg: '#CBE35F', dark: '#AFC843', name: ['ZING', 'MODE'], size: 104, nameFill: '#1D2133', shadow: '#FFF9EC', desc: 'Tangy Chilli Lime', ink: '#1D2133', icons: ['i-chilli', 'i-lime'], dot: '#E2733A',
+      ing: 'Salt, paprika, red chilli powder, garlic powder, onion powder, sugar, citric acid, amchur (dried mango) powder, cumin powder, black pepper, oregano.', allergy: 'CONTAINS: CHILLI, GARLIC, ONION, MANGO' },
+    smoke: { bg: '#F17E4E', dark: '#D8652F', name: ['SMOKE', 'SHOW'], size: 94, nameFill: '#1D2133', shadow: '#FFE1D2', desc: 'Smoky BBQ', ink: '#1D2133', icons: ['i-flame', 'i-chilli'], dot: '#9A3F25',
+      ing: 'Salt, paprika, powdered brown sugar, garlic powder, onion powder, tomato powder, smoked paprika, black pepper, cumin powder, mustard powder, citric acid, red chilli powder.', allergy: 'CONTAINS: MUSTARD' },
+    cheese: { bg: '#5265DE', dark: '#3F51C6', name: ['CHEESE', 'CHAOS'], size: 84, nameFill: '#FFC21A', shadow: '#1D2133', desc: 'Cheesy Jalapeño', ink: '#FFF9EC', icons: ['i-jalapeno', 'i-cheese'], dot: '#F0A83A',
+      ing: 'Cheddar cheese powder (milk), maltodextrin, salt, whey powder (milk), onion powder, jalapeno powder, garlic powder, yeast extract, citric acid, paprika powder, anti-caking agent (silicon dioxide), powdered sugar.', allergy: 'CONTAINS: MILK' }
+  };
+  const SIL = 'M34 44Q34 22 56 22H344Q366 22 366 44V556Q366 600 326 602H74Q34 600 34 556Z';
+  const wrapText = (t, n) => { const out = []; let line = ''; t.split(' ').forEach(w => { if ((line + ' ' + w).trim().length > n) { out.push(line.trim()); line = w; } else line += ' ' + w; }); if (line.trim()) out.push(line.trim()); return out; };
+  let pouchUid = 0;
+  function pouchInner(f, side, g = 50) {
+    const p = POUCH[f], d = F[f], u = ++pouchUid, k = INK_;
+    let crimp = ''; for (let x = 42; x <= 358; x += 7) crimp += `M${x} 26V60`;
+    let s = `<defs><clipPath id="pc${u}"><path d="${SIL}"/></clipPath><linearGradient id="pg${u}" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".24"/><stop offset=".13" stop-color="#fff" stop-opacity="0"/><stop offset=".82" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".16"/></linearGradient><pattern id="pd${u}" width="11" height="11" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="${k}" opacity=".07"/></pattern></defs>`
+      + `<path d="${SIL}" fill="${p.bg}"/><g clip-path="url(#pc${u})"><rect width="400" height="620" fill="url(#pd${u})"/>`
+      + `<rect x="34" y="22" width="332" height="42" fill="${p.dark}" opacity=".5"/><path d="${crimp}" stroke="${k}" stroke-opacity=".16" stroke-width="1.4"/><path d="M34 84H366" stroke="${k}" stroke-opacity=".22" stroke-width="2" stroke-dasharray="6 5"/>`;
+    const strip = `<text x="60" y="584" font-family="${FB}" font-weight="800" font-size="12.5" letter-spacing="1.6" fill="${p.ink}">SEASONING BLEND</text><text x="340" y="584" text-anchor="end" font-family="${FB}" font-weight="800" font-size="12.5" letter-spacing="1.6" fill="${p.ink}">NET WT. ${g}g</text>`;
+    if (side !== 'back') {
+      const y1 = 292, y2 = y1 + Math.round(p.size * .9);
+      const nm = (t, y) => `<text x="204" y="${y + 4}" text-anchor="middle" font-family="${FD}" font-weight="900" font-size="${p.size}" fill="${p.shadow}">${t}</text><text x="200" y="${y}" text-anchor="middle" font-family="${FD}" font-weight="900" font-size="${p.size}" fill="${p.nameFill}">${t}</text>`;
+      const cy = y2 + 90;
+      s += `<rect x="130" y="102" width="140" height="70" rx="16" fill="#F7F1EC" stroke="${k}" stroke-width="2.5"/><image href="logo.png" x="142" y="108" width="116" height="56"/>`
+        + `<text x="200" y="198" text-anchor="middle" font-family="${FH}" font-weight="700" font-size="16" fill="${p.ink}">Your Snacks. Your Flavour. Your Rules.</text>`
+        + `<use href="#${p.icons[0]}" x="56" y="108" width="58" height="58" transform="rotate(-14 85 137)"/>`
+        + `<use href="#${p.icons[1]}" x="286" y="108" width="58" height="58" transform="rotate(12 315 137)"/>`
+        + nm(p.name[0], y1) + nm(p.name[1], y2)
+        + `<text x="200" y="${y2 + 44}" text-anchor="middle" font-family="${FH}" font-weight="700" font-size="32" fill="${p.ink}">${p.desc}</text>`
+        + `<text x="200" y="${y2 + 72}" text-anchor="middle" font-family="${FB}" font-weight="800" font-size="10.5" letter-spacing="1.4" fill="${p.ink}">PERFECT FOR FRIES · POPCORN · CHIPS · WEDGES</text>`
+        + `<g transform="translate(64 ${cy})" stroke="${k}" stroke-width="2.5" stroke-linejoin="round"><path d="M0 70L36 4 72 70Z" fill="#F2B544"/><path d="M110 72L150 14 178 72Z" fill="#F2B544"/><path d="M52 74L96 10 128 74Z" fill="#F5C258"/><path d="M28 80L80 42 122 82Z" fill="#F7CC6A"/></g>`
+        + `<g fill="${p.dot}"><circle cx="100" cy="${cy + 48}" r="3"/><circle cx="150" cy="${cy + 40}" r="3"/><circle cx="210" cy="${cy + 52}" r="3"/><circle cx="168" cy="${cy + 64}" r="2.6"/><circle cx="124" cy="${cy + 70}" r="2.6"/><circle cx="196" cy="${cy + 30}" r="2.4"/></g>`
+        + `<g transform="translate(314 ${cy + 40})"><circle r="33" fill="#1D2133" stroke="#FFF9EC" stroke-width="3"/><g font-family="${FD}" font-weight="900" font-size="11.5" text-anchor="middle"><text y="-12" fill="#C9E36B">BOLD</text><text y="0" fill="#FFF9EC">FLAVOURS</text><text y="12" fill="#C9E36B">BIGGER</text><text y="24" fill="#FFF9EC">BITES</text></g></g>`
+        + strip;
+    } else {
+      const head = (t, y) => `<text x="70" y="${y}" font-family="${FB}" font-weight="800" font-size="10.5" letter-spacing="1.3" fill="${k}">${t}</text>`;
+      const lines = (arr, y, fs, lh) => arr.map((l, i) => `<text x="70" y="${y + i * lh}" font-family="${FB}" font-size="${fs}" fill="${k}">${l}</text>`).join('');
+      const how = wrapText('Season warm snacks. Start with a light sprinkle, taste, then add more. Great on fries, popcorn and more. Reseal after use.', 52);
+      const ing = wrapText(p.ing, 56);
+      let y = 212;
+      let b = `<rect x="50" y="100" width="300" height="432" rx="18" fill="#FFF9EC" stroke="${k}" stroke-width="2.5"/><rect x="58" y="108" width="284" height="416" rx="13" fill="none" stroke="${k}" stroke-opacity=".3" stroke-dasharray="4 4"/>`
+        + `<image href="logo.png" x="66" y="118" width="88" height="43"/>`
+        + `<text x="332" y="140" text-anchor="end" font-family="${FD}" font-weight="900" font-size="30" fill="${k}">${d.name}</text>`
+        + `<text x="332" y="161" text-anchor="end" font-family="${FH}" font-weight="700" font-size="19" fill="${k}">${p.desc}</text>`
+        + `<text x="332" y="177" text-anchor="end" font-family="${FB}" font-weight="700" font-size="10.5" fill="${k}">${d.vibe}</text>`
+        + `<path d="M70 190H330" stroke="${k}" stroke-width="1.5"/>`;
+      b += head('HOW TO USE', y) + lines(how, y + 16, 10.5, 14); y += 16 + how.length * 14 + 14;
+      b += head('INGREDIENTS', y) + lines(ing, y + 15, 10, 13); y += 15 + ing.length * 13 + 6;
+      if (p.allergy) b += `<rect x="70" y="${y}" width="260" height="26" rx="6" fill="none" stroke="${k}" stroke-width="2"/><text x="200" y="${y + 17}" text-anchor="middle" font-family="${FB}" font-weight="800" font-size="10.5" fill="${k}">${p.allergy}</text>`;
+      const rows = ['Energy', 'Protein', 'Fat', 'Carbohydrate', 'Sodium'];
+      b += `<rect x="70" y="418" width="152" height="84" rx="6" fill="none" stroke="${k}" stroke-width="1.5"/><text x="78" y="432" font-family="${FB}" font-weight="800" font-size="8.5" fill="${k}">NUTRITION INFORMATION</text>`
+        + rows.map((r, i) => `<text x="78" y="${447 + i * 12}" font-family="${FB}" font-size="8" fill="${k}">${r}</text><text x="214" y="${447 + i * 12}" text-anchor="end" font-family="${FB}" font-size="8" fill="${k}">per 100g: —</text>`).join('');
+      let bars = '', bx = 242; [2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 1, 2, 3, 1, 2, 1, 1, 3, 1, 2, 2, 1, 3, 1].forEach((w, i) => { if (i % 2 === 0) bars += `<rect x="${bx}" y="428" width="${w}" height="58" fill="${k}"/>`; bx += w + 1.6; });
+      b += `<rect x="232" y="418" width="98" height="84" rx="6" fill="#fff" stroke="${k}" stroke-width="1.5"/>${bars}`
+        + `<text x="70" y="516" font-family="${FB}" font-size="8.5" fill="${k}">Best before and batch: see top seal.</text>`
+        + `<text x="200" y="560" text-anchor="middle" font-family="${FH}" font-weight="700" font-size="22" fill="${p.ink}">Your Snacks. Your Flavour. Your Rules.</text>` + strip;
+      s += b;
+    }
+    return s + `<rect width="400" height="620" fill="url(#pg${u})"/></g><path d="${SIL}" fill="none" stroke="${INK_}" stroke-width="3"/><path d="M34 70l9 4-9 4M366 70l-9 4 9 4" fill="none" stroke="${INK_}" stroke-width="2"/>`;
+  }
+  const pouchSVG = (f, side = 'front', label, g = 50) =>
+    `<svg class="pouch-svg" viewBox="0 0 400 620" ${label ? `role="img" aria-label="${label}"` : 'aria-hidden="true"'}>${pouchInner(f, side, g)}</svg>`;
+  // Fill every [data-pouch="flavour"] (or "flavour:back") placeholder. Inside SVG it nests an <svg> at data-x/y/w.
+  function fillPouches(root = document) {
+    $$('[data-pouch]', root).forEach(el => {
+      const [f, side] = el.dataset.pouch.split(':');
+      if (el instanceof SVGElement) {
+        const w = +el.dataset.w, h = Math.round(w * 620 / 400);
+        el.innerHTML = `<svg x="${el.dataset.x}" y="${el.dataset.y}" width="${w}" height="${h}" viewBox="0 0 400 620">${pouchInner(f, side)}</svg>`;
+      } else el.innerHTML = pouchSVG(f, side, el.dataset.label);
+    });
+  }
+  fillPouches();
+
+  /* ---------- header: menu + cart ---------- */
+  const menuBtn = $('#menuBtn'), menu = $('#mobileMenu');
+  const setMenu = open => { menu.hidden = !open; menuBtn.setAttribute('aria-expanded', open); menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); };
+  menuBtn.addEventListener('click', () => setMenu(menu.hidden));
+  $$('a', menu).forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); menuBtn.focus(); } });
+  matchMedia('(min-width: 901px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+  const cartDlg = $('#cart');
+  $('#cartBtn').addEventListener('click', () => cartDlg.showModal());
+  $('#cartClose').addEventListener('click', () => cartDlg.close());
+  cartDlg.addEventListener('click', e => { if (e.target === cartDlg) cartDlg.close(); });
+  
+
+  /* ---------- hero stage: scene sequencer ---------- */
+  const stage = $('#stage'), art = $('#art');
+  const scenes = $$('.scene', art);
+  const steps = [
+    { t: 'Pick', c: "Each batch starts with the flavour's ingredients.", d: 4200 },
+    { t: 'Grind', c: 'Milled down into a fine, even powder.', d: 4400 },
+    { t: 'Blend', c: 'Mixed in the lab flask. Stir, taste, tweak.', d: 4600 },
+    { t: 'Pack', c: 'Filled into a resealable pouch, then sealed.', d: 4600 },
+    { t: 'Shake', c: 'A light shake on hot fries. Taste, then add more.', d: 4800 },
+    { t: 'Enjoy', c: 'Three flavours. Zero boring bites.', d: 4200 }
+  ];
+  let cur = -1, timer = null, startedAt = 0, remaining = 0, userPaused = false, offscreen = false, flavour = 'zing';
+  const dotsEl = $('#dots');
+  steps.forEach((s, i) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'dot'; b.setAttribute('aria-label', `Step ${i + 1}: ${s.t}`);
+    b.addEventListener('click', () => { go(i); });
+    dotsEl.appendChild(b);
+  });
+  const dots = $$('.dot', dotsEl);
+
+  function caption(i) {
+    let c = steps[i].c;
+    if (i === 4) c = `${F[flavour].name}: ${F[flavour].vibe} A light shake, then taste.`;
+    $('#capNo').textContent = i + 1;
+    $('#capTitle').textContent = steps[i].t;
+    $('#capText').textContent = c;
+    dots.forEach((d, j) => j === i ? d.setAttribute('aria-current', 'step') : d.removeAttribute('aria-current'));
+  }
+  function show(i) {
+    const prev = scenes[cur];
+    if (prev && cur !== i) {
+      prev.classList.remove('on'); prev.classList.add('leaving');
+      setTimeout(() => prev.classList.remove('leaving'), 400);
+    }
+    const next = scenes[i];
+    next.classList.remove('on'); void next.getBBox(); next.classList.add('on');
+    cur = i; caption(i);
+  }
+  function schedule(ms) {
+    clearTimeout(timer);
+    remaining = ms; startedAt = performance.now();
+    if (reduce || userPaused || offscreen) return;
+    timer = setTimeout(() => go((cur + 1) % steps.length), ms);
+  }
+  // A chosen step always plays through; while paused it just doesn't auto-advance.
+  function go(i) { if (!reduce) stage.classList.remove('paused'); show(i); schedule(steps[i].d); }
+  function pause() {
+    if (timer) { clearTimeout(timer); timer = null; remaining = Math.max(300, remaining - (performance.now() - startedAt)); }
+    stage.classList.add('paused');
+  }
+  function resume() {
+    if (userPaused || offscreen || reduce) return;
+    stage.classList.remove('paused');
+    startedAt = performance.now();
+    clearTimeout(timer);
+    timer = setTimeout(() => go((cur + 1) % steps.length), remaining);
+  }
+  const ppBtn = $('#ppBtn'), ppIcon = $('#ppIcon');
+  ppBtn.addEventListener('click', () => {
+    userPaused = !userPaused;
+    ppBtn.setAttribute('aria-label', userPaused ? 'Play animation' : 'Pause animation');
+    ppIcon.innerHTML = userPaused ? '<path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/>' : '<rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/>';
+    userPaused ? pause() : resume();
+  });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([e]) => { offscreen = !e.isIntersecting; offscreen ? pause() : resume(); }, { threshold: .15 }).observe(stage);
+  }
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); else resume(); });
+
+  // confetti for scene 6
+  const conf = $('#confetti'), confCols = ['#4153D6', '#C9E36B', '#EE8A5B', '#FFF9EC', '#F6C343'];
+  for (let k = 0; k < 22; k++) {
+    const r = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    r.setAttribute('x', 20 + Math.random() * 360); r.setAttribute('y', -10 - Math.random() * 30);
+    r.setAttribute('width', 6 + Math.random() * 5); r.setAttribute('height', 3 + Math.random() * 3); r.setAttribute('rx', 1.5);
+    r.setAttribute('fill', confCols[k % confCols.length]); r.setAttribute('class', 'confetti');
+    r.style.setProperty('--d', (Math.random() * 3).toFixed(2) + 's'); r.style.setProperty('--t', (2.4 + Math.random() * 1.8).toFixed(2) + 's');
+    conf.appendChild(r);
+  }
+
+  function setStageFlavour(f) {
+    flavour = f; stage.dataset.flavour = f;
+    $$('.ing', art).forEach(u => u.setAttribute('href', '#i-' + F[f].set[+u.dataset.i]));
+    
+    $('.pouch-slot', art).dataset.pouch = f; fillPouches($('.pouch-slot', art).parentNode);
+    $('#burstWord').textContent = F[f].burst;
+    stage.setAttribute('aria-label', `How ${F[f].name} is made, an animation in six steps`);
+    $$('#heroSwitch .chip').forEach(c => { const on = c.dataset.f === f; c.setAttribute('aria-checked', on); c.tabIndex = on ? 0 : -1; });
+    if (cur >= 0) caption(cur);
+  }
+  const heroChips = $$('#heroSwitch .chip');
+  heroChips.forEach((c, i) => {
+    c.addEventListener('click', () => setStageFlavour(c.dataset.f));
+    c.addEventListener('keydown', e => {
+      const d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (!d) return; e.preventDefault();
+      const n = heroChips[(i + d + heroChips.length) % heroChips.length]; n.focus(); setStageFlavour(n.dataset.f);
+    });
+  });
+
+  setStageFlavour('zing');
+  if (reduce) { show(5); stage.classList.add('paused'); } else go(0);
+
+  /* ---------- particles (shared) ---------- */
+  // down = a gentle downward pour (shaker) instead of an all-directions burst
+  function burst(canvas, x, y, colours, n = 30, down = false) {
+    if (reduce) return;
+    const ctx = canvas.getContext('2d');
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    if (canvas.width !== Math.round(w * dpr)) { canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr); }
+    const ps = canvas._ps || (canvas._ps = []);
+    for (let i = 0; i < n; i++) {
+      const a = Math.random() * Math.PI * 2, sp = 1.5 + Math.random() * 4;
+      ps.push(down
+        ? { x: x + (Math.random() - .5) * 14, y, vx: (Math.random() - .5) * 1.2, vy: 1 + Math.random() * 1.5, r: 1.2 + Math.random() * 1.8, life: .9, c: colours[i % colours.length] }
+        : { x, y, vx: Math.cos(a) * sp, vy: Math.sin(a) * sp - 2.5, r: 1.6 + Math.random() * 2.6, life: 1, c: colours[i % colours.length] });
+    }
+    if (canvas._raf) return;
+    const tick = () => {
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, w, h);
+      for (let i = ps.length - 1; i >= 0; i--) {
+        const p = ps[i]; p.vy += .18; p.x += p.vx; p.y += p.vy; p.life -= .016;
+        if (p.life <= 0 || p.y > h + 10) { ps.splice(i, 1); continue; }
+        ctx.globalAlpha = Math.max(0, Math.min(1, p.life * 1.4)); ctx.fillStyle = p.c;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill();
+      }
+      canvas._raf = ps.length ? requestAnimationFrame(tick) : (ctx.clearRect(0, 0, w, h), 0);
+    };
+    canvas._raf = requestAnimationFrame(tick);
+  }
+  const spr = $('#sprinkle');
+  art.addEventListener('pointerdown', e => {
+    const r = spr.getBoundingClientRect();
+    burst(spr, e.clientX - r.left, e.clientY - r.top, [...F[flavour].powder, '#FFF9EC']);
+  });
+
+  /* ---------- flavours: viewer + panel ---------- */
+  let pf = 'zing', back = false;
+  const panelHooks = []; // run after every flavour change (cart block adds one)
+  const flip = $('#flip'), tilt = $('#tilt'), zone = $('#pouchZone');
+  function setSide(b) {
+    back = b; flip.classList.toggle('back', b);
+    $('#sideFront').setAttribute('aria-pressed', !b); $('#sideBack').setAttribute('aria-pressed', b);
+    flip.setAttribute('aria-label', `Flip the ${F[pf].name} pack to see the ${b ? 'front' : 'back'}`);
+  }
+  function setPanel(f) {
+    pf = f; const d = F[f];
+    $('#faceFront').innerHTML = pouchSVG(f, 'front', d.altF + `, ${pSize}g`, pSize);
+    $('#faceBack').innerHTML = pouchSVG(f, 'back', d.altB, pSize);
+    $('#blobPath').setAttribute('fill', d.tint);
+    $('#panel').dataset.flavour = f;
+    $('#pName').textContent = d.name; $('#pDesc').textContent = d.desc; $('#pVibe').textContent = d.vibe; $('#pText').textContent = d.text;
+    $('#pTags').innerHTML = '<b>Try it on:</b>' + d.tags.map(t => `<span>${t}</span>`).join('');
+    $('#pIng').innerHTML = d.ing; $('#pAll').textContent = d.all; $('#pAllRow').hidden = !d.all;
+    $$('.thumb').forEach(t => t.setAttribute('aria-pressed', t.dataset.f === f));
+    setSide(back);
+    panelHooks.forEach(h => h());
+  }
+  flip.addEventListener('click', () => setSide(!back));
+  $('#sideFront').addEventListener('click', () => setSide(false));
+  $('#sideBack').addEventListener('click', () => setSide(true));
+  $$('.thumb').forEach(t => t.addEventListener('click', () => setPanel(t.dataset.f)));
+  if (matchMedia('(hover: hover) and (pointer: fine)').matches && !reduce) {
+    zone.addEventListener('pointermove', e => {
+      const r = zone.getBoundingClientRect();
+      tilt.style.setProperty('--ry', ((e.clientX - r.left) / r.width - .5) * 14 + 'deg');
+      tilt.style.setProperty('--rx', -((e.clientY - r.top) / r.height - .5) * 10 + 'deg');
+    });
+    zone.addEventListener('pointerleave', () => { tilt.style.setProperty('--rx', '0deg'); tilt.style.setProperty('--ry', '0deg'); });
+  }
+  $('#watchBtn').addEventListener('click', () => {
+    setStageFlavour(pf);
+    $('#top').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+    if (!reduce) setTimeout(() => go(0), 500);
+  });
+  setPanel('zing');
+
+  /* ---------- quiz ---------- */
+  const Q = [
+    ["It's Friday night. What's the plan?", [['Spontaneous road trip, no map', 'zing'], ['Low lights, great playlist, good company', 'smoke'], ['Group chat chaos, everyone is invited', 'cheese']]],
+    ['Pick a vibe.', [['Citrus sunrise', 'zing'], ['Campfire at midnight', 'smoke'], ['Pizza party that got out of hand', 'cheese']]],
+    ['Which playlist is yours?', [['High-energy pop', 'zing'], ['Lo-fi and late-night', 'smoke'], ['Party anthems everyone sings', 'cheese']]],
+    ['Pick a colour combo.', [['Orange and lime', 'zing'], ['Charcoal and orange', 'smoke'], ['Lime and blue', 'cheese']]]
+  ];
+  const R = {
+    zing: "You're the spark in every room. You love trying new things first, and you can't sit still when there's a new flavour to taste. Your snacks need energy.",
+    smoke: "You don't need the spotlight, but you always get it. You're calm, confident and a little mysterious. Your snacks need depth.",
+    cheese: "You're loud in the best way. You bring the party, the jokes and the snacks. Your snacks need a little mischief."
+  };
+  const qc = $('#quizCard');
+  let qi = 0, score = {};
+  function renderQ(focus) {
+    const [q, as] = Q[qi];
+    qc.innerHTML = `<div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="1" aria-valuemax="4" aria-valuenow="${qi + 1}"><i style="width:${(qi + 1) * 25}%"></i></div>
+      <p class="q-count">Question ${qi + 1} of 4</p>
+      <h3 class="q-title" tabindex="-1">${q}</h3>
+      <div class="answers">${as.map((a, i) => `<button class="answer" type="button" data-f="${a[1]}"><b>${'ABC'[i]}</b>${a[0]}</button>`).join('')}</div>`;
+    $$('.answer', qc).forEach(b => b.addEventListener('click', () => {
+      score[b.dataset.f] = (score[b.dataset.f] || 0) + 1;
+      qi++; qi < Q.length ? renderQ(true) : renderResult();
+    }));
+    if (focus) $('.q-title', qc).focus({ preventScroll: true });
+  }
+  function renderResult() {
+    const max = Math.max(...Object.values(score));
+    const top = Object.keys(score).filter(k => score[k] === max);
+    let html;
+    if (top.length > 1) {
+      html = `<div class="result"><p class="eyebrow">Your result</p><h3 class="q-title" tabindex="-1">You're a double agent</h3>
+        <p>${F[top[0]].name} and ${F[top[1]].name} tied. You don't pick sides, you mix them.</p>
+        <div class="cta-row"><button class="btn" type="button" data-add2="${top[0]},${top[1]}">Add both to cart</button><a class="btn ghost" href="#taste">Taste the mashup</a><button class="btn ghost" type="button" data-retake>Retake</button></div>`;
+    } else {
+      const f = top[0];
+      html = `<div class="result"><div class="result-top"><span class="pk">${pouchSVG(f, 'front', F[f].name + ' pouch')}</span><div><p class="eyebrow">You're</p><h3 class="q-title" tabindex="-1">${F[f].name}</h3><p class="hand" style="font-size:1.5rem">${F[f].vibe}</p></div></div>
+        <p>${R[f]}</p>
+        <div class="cta-row"><button class="btn" type="button" data-add2="${f}">Add ${F[f].name} to cart</button><button class="btn ghost" type="button" data-see="${f}">See it up close</button><button class="btn ghost" type="button" data-retake>Retake</button></div>`;
+    }
+    qc.innerHTML = `<div class="progress" aria-hidden="true"><i style="width:100%"></i></div>${html}<p class="small">For fun. Results are based on vibes, not science.</p></div>`;
+    $('[data-retake]', qc).addEventListener('click', () => { qi = 0; score = {}; renderQ(true); });
+    const see = $('[data-see]', qc);
+    if (see) see.addEventListener('click', () => { setPanel(see.dataset.see); $('#flavours').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }); });
+    const add2 = $('[data-add2]', qc);
+    if (add2) add2.addEventListener('click', () => addToCart(add2.dataset.add2.split(',')));
+    $('.q-title', qc).focus({ preventScroll: true });
+  }
+  renderQ(false);
+
+  /* ---------- cart ---------- */
+  // Prices in PKR. 100g = Rs 299, 50g = half. The trio (one of each flavour) costs a little less than buying three singles.
+  const PRICE = { 50: 150, 100: 299 };
+  const TRIO = { 50: 420, 100: 849 };
+  const SIZES = [50, 100];
+  const MAX_QTY = 20;
+  const pkr = n => 'Rs ' + n.toLocaleString('en-PK');
+  const fKeys = Object.keys(F);
+  // Cart keys: "zing:50", "smoke:100", "trio:50" ...
+  const item = id => {
+    const [f, g0] = id.split(':'), g = +g0;
+    if (f === 'trio') return { f, g, name: 'FULL LAB TRIO', sub: `ZING + SMOKE + CHEESE · 3 × ${g}g pouches`, price: TRIO[g], art: 'smoke', label: `${g}g × 3` };
+    return { f, g, name: F[f].name, sub: `${F[f].desc} · ${g}g pouch`, price: PRICE[g], art: f, label: `${g}g` };
+  };
+  const validId = id => { const [f, g] = id.split(':'); return (f === 'trio' || F[f]) && SIZES.includes(+g); };
+  let cart = {};
+  try {
+    const saved = JSON.parse(localStorage.getItem('flavr-cart') || '{}');
+    if (saved && typeof saved === 'object') Object.keys(saved).forEach(k => {
+      const id = k.includes(':') ? k : k + ':50', q = parseInt(saved[k], 10);
+      if (validId(id) && q > 0) cart[id] = Math.min(MAX_QTY, (cart[id] || 0) + q);
+    });
+  } catch (_) {}
+  const saveCart = () => { try { localStorage.setItem('flavr-cart', JSON.stringify(cart)); } catch (_) {} };
+  const cartCount = () => Object.values(cart).reduce((a, b) => a + b, 0);
+  const cartTotal = () => Object.keys(cart).reduce((s, id) => s + item(id).price * cart[id], 0);
+  const cartIds = () => Object.keys(cart).filter(id => cart[id] > 0).sort((a, b) => (a.startsWith('trio') ? -1 : 0) - (b.startsWith('trio') ? -1 : 0));
+  const cartBtn = $('#cartBtn'), countEl = $('.cart-count', cartBtn);
+
+  const toastEl = $('#toast'), toastBtn = $('#toastBtn');
+  let toastTimer, toastAction = null;
+  function toast(text, btnText, action) {
+    $('#toastMsg').textContent = text;
+    toastBtn.textContent = btnText; toastAction = action;
+    toastEl.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(() => toastEl.classList.remove('show'), 4000);
+  }
+  toastBtn.addEventListener('click', () => { toastEl.classList.remove('show'); if (toastAction) toastAction(); });
+  const cart_ = $('#cart');
+  const openCart = () => { if (!cart_.open) cart_.showModal(); };
+
+  // items: a flavour key, a list of flavour keys, or full ids like "trio:50". g = pack size for plain flavour keys.
+  function addToCart(items, n = 1, g = pSize) {
+    const ids = [].concat(items).map(x => x.includes(':') ? x : `${x}:${g}`);
+    let capped = false;
+    ids.forEach(id => { const next = (cart[id] || 0) + n; capped = capped || next > MAX_QTY; cart[id] = Math.min(MAX_QTY, next); });
+    saveCart(); renderCart();
+    countEl.classList.remove('bump'); void countEl.offsetWidth; countEl.classList.add('bump');
+    const names = ids.map(id => `${item(id).name} ${item(id).label}`).join(' + ');
+    toast(capped ? `Max ${MAX_QTY} per item. Cart updated.` : `Added ${n > 1 ? n + ' × ' : ''}${names}`, 'View cart', openCart);
+  }
+  function setQty(id, q) {
+    if (q <= 0) delete cart[id]; else cart[id] = Math.min(MAX_QTY, q);
+    saveCart(); renderCart();
+  }
+  function renderCart() {
+    const n = cartCount(), ids = cartIds();
+    countEl.textContent = n;
+    cartBtn.setAttribute('aria-label', `Open cart, ${n} item${n === 1 ? '' : 's'}`);
+    $('#cartN').textContent = n ? `(${n})` : '';
+    $('#cartEmpty').hidden = ids.length > 0;
+    $('#cartFoot').hidden = ids.length === 0;
+    if (!ids.length) showCheckout(false);
+    $('#cartItems').innerHTML = ids.map(id => {
+      const it = item(id), q = cart[id];
+      return `<li class="ci"><span class="pk">${pouchSVG(it.art, 'front', '', it.g)}</span>
+        <div><b>${it.name}</b><small>${it.sub} · ${pkr(it.price)} each</small></div>
+        <div class="ci-row">
+          <div class="stepper" role="group" aria-label="${it.name} ${it.label} quantity">
+            <button type="button" data-dec="${id}" aria-label="${q === 1 ? 'Remove' : 'Decrease'} ${it.name} ${it.label}">${q === 1 ? '<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 4.5h10M6.5 4.5V3h3v1.5M4.5 4.5l.7 8.5h5.6l.7-8.5"/></svg>' : '−'}</button>
+            <output aria-live="polite">${q}</output>
+            <button type="button" data-inc="${id}" aria-label="Increase ${it.name} ${it.label}" ${q >= MAX_QTY ? 'disabled' : ''}>+</button>
+          </div>
+          <span class="ci-price">${pkr(it.price * q)}</span>
+        </div></li>`;
+    }).join('');
+    const has = f => ids.some(id => id.startsWith(f + ':'));
+    const missing = fKeys.filter(f => !has(f));
+    $('#quickAdd').hidden = (missing.length === 0 && has('trio')) || !$('#coForm').hidden;
+    $('#stickyBtn').textContent = n ? `View cart (${n})` : 'Shop now';
+    $('#quickH').textContent = ids.length ? 'Add another flavour' : 'Start with a flavour';
+    $('#addAll').hidden = has('trio');
+    $('#addAll').textContent = `Add the trio · 3 × 50g · ${pkr(TRIO[50])}`;
+    $('#quickList').innerHTML = missing.map(k => `<div class="qa-row"><span class="pk">${pouchSVG(k)}</span><span>${F[k].name}<small style="display:block;font-weight:600;color:var(--ink-2)">50g · ${pkr(PRICE[50])}</small></span><button class="btn sm" type="button" data-add="${k}:50" aria-label="Add ${F[k].name} 50g to cart">Add</button></div>`).join('');
+    $('#cartSub').textContent = pkr(cartTotal());
+    if (typeof updatePanelCart === 'function') updatePanelCart();
+  }
+  cart_.addEventListener('click', e => {
+    const t = e.target.closest('button');
+    if (!t) return;
+    if (t.dataset.inc) { const id = t.dataset.inc; setQty(id, cart[id] + 1); $(`[data-inc="${id}"]`, cart_)?.focus(); }
+    else if (t.dataset.dec) {
+      const id = t.dataset.dec; setQty(id, cart[id] - 1);
+      const again = $(`[data-dec="${id}"]`, cart_); (again || $('#cartClose')).focus();
+    }
+    else if (t.dataset.add) { addToCart(t.dataset.add); }
+  });
+  $('#addAll').addEventListener('click', () => addToCart('trio:50'));
+  $('#stickyBtn').addEventListener('click', e => { if (cartCount()) { e.preventDefault(); openCart(); } });
+  /* checkout */
+  const ORDER_WHATSAPP = ''; // business WhatsApp number in international format, digits only, e.g. '923001234567'
+  const coForm = $('#coForm');
+  const PAYMENT_METHODS = ['Cash on delivery', 'Debit / Credit card']; // add more e.g. 'JazzCash', 'Easypaisa'
+  const PAY_NOTES = {
+    'Cash on delivery': 'Pay in cash when your order arrives.',
+    'Debit / Credit card': 'After we confirm your order on WhatsApp, we send you a secure card payment link. We never ask for card numbers in chat.'
+  };
+  $('#coPayList').innerHTML = PAYMENT_METHODS.map((m, i) => `<label class="radio"><input type="radio" name="pay" value="${m}" ${i === 0 ? 'checked' : ''}><span class="pay-ic" aria-hidden="true">${/card/i.test(m) ? '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>' : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6 9.5v5M18 9.5v5"/></svg>'}</span> ${m}</label>`).join('') + '<p class="pay-note" id="payNote"></p>';
+  const payNote = () => { const m = (coForm.querySelector('input[name=pay]:checked') || {}).value; $('#payNote').textContent = PAY_NOTES[m] || ''; };
+  $('#coPayList').addEventListener('change', payNote); payNote();
+  function showCheckout(on) {
+    coForm.hidden = !on;
+    $('#checkoutBtn').hidden = on;
+    $('#quickAdd').hidden = on;
+    if (on) { coForm.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' }); $('#coName').focus({ preventScroll: true }); }
+  }
+  $('#checkoutBtn').addEventListener('click', () => showCheckout(true));
+  $('#coBack').addEventListener('click', () => { showCheckout(false); $('#checkoutBtn').focus(); });
+  coForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const msg = $('#coMsg'), v = id => $(id).value.trim();
+    const phone = v('#coPhone').replace(/[\s-]/g, '');
+    const checks = [['#coName', v('#coName').length >= 2, 'Add your full name.'],
+      ['#coPhone', /^(\+92|0092|92|0)?3\d{9}$/.test(phone), 'Check your mobile number, e.g. 0300 1234567.'],
+      ['#coCity', v('#coCity').length >= 2, 'Add your city.'],
+      ['#coAddr', v('#coAddr').length >= 8, 'Add your full delivery address.']];
+    checks.forEach(([id, ok]) => ok ? $(id).removeAttribute('aria-invalid') : $(id).setAttribute('aria-invalid', 'true'));
+    const bad = checks.find(c => !c[1]);
+    if (bad) { msg.className = 'msg err'; msg.textContent = bad[2]; $(bad[0]).focus(); return; }
+    const lines = cartIds().map(id => { const it = item(id); return `• ${cart[id]} × ${it.name} (${it.label}) – ${pkr(it.price * cart[id])}`; });
+    const text = ['Hi FLAVR LAB! I\'d like to order:', ...lines,
+      `Subtotal: ${pkr(cartTotal())} (delivery confirmed on WhatsApp)`,
+      '', `Name: ${v('#coName')}`, `Phone: ${phone}`, `City: ${v('#coCity')}`, `Address: ${v('#coAddr')}`,
+      (() => { const m = (coForm.querySelector('input[name=pay]:checked') || {}).value || PAYMENT_METHODS[0]; return `Payment: ${m}${/card/i.test(m) ? ' (please send me a card payment link)' : ''}`; })()].filter((l, i, a) => l !== '' || a[i - 1] !== '').join('\n');
+    if (!ORDER_WHATSAPP) {
+      msg.className = 'msg err';
+      msg.textContent = 'Online ordering opens very soon. Join the Lab Crew below and we\'ll tell you the moment it\'s live.';
+      return;
+    }
+    const url = `https://wa.me/${ORDER_WHATSAPP}?text=${encodeURIComponent(text)}`;
+    const w = window.open(url, '_blank', 'noopener');
+    if (!w) location.href = url;
+    msg.className = 'msg ok';
+    msg.textContent = 'WhatsApp opened with your order. Tap send to place it.';
+  });
+  $('#clearCart').addEventListener('click', () => {
+    const before = { ...cart }; cart = {}; saveCart(); renderCart(); $('#cartClose').focus();
+    toast('Cart emptied', 'Undo', () => { cart = before; saveCart(); renderCart(); });
+  });
+  addEventListener('storage', e => { if (e.key === 'flavr-cart') { try { cart = JSON.parse(e.newValue || '{}') || {}; } catch (_) { cart = {}; } renderCart(); } });
+
+  // flavour panel: size + quantity + add to cart
+  let pQty = 1;
+  const pQtyEl = $('#pQty');
+  const setPQty = q => { pQty = Math.max(1, Math.min(MAX_QTY, q)); pQtyEl.textContent = pQty; $('#pMinus').disabled = pQty <= 1; $('#pPlus').disabled = pQty >= MAX_QTY; };
+  $('#pMinus').addEventListener('click', () => setPQty(pQty - 1));
+  $('#pPlus').addEventListener('click', () => setPQty(pQty + 1));
+  $('#pAdd').addEventListener('click', () => { addToCart(pf, pQty, pSize); setPQty(1); });
+  $('#s50').textContent = pkr(PRICE[50]); $('#s100').textContent = pkr(PRICE[100]);
+  function radioGroup(group, onPick) {
+    const btns = $$('.size', group);
+    const pick = (b, focus) => { btns.forEach(x => { const on = x === b; x.setAttribute('aria-checked', on); x.tabIndex = on ? 0 : -1; }); if (focus) b.focus(); onPick(+b.dataset.g); };
+    btns.forEach((b, i) => {
+      b.addEventListener('click', () => pick(b));
+      b.addEventListener('keydown', e => { const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key]; if (d) { e.preventDefault(); pick(btns[(i + d + btns.length) % btns.length], true); } });
+    });
+  }
+  radioGroup($('.size-pick .sizes'), g => { pSize = g; setPanel(pf); });
+  function updatePanelCart() {
+    const q = cart[`${pf}:${pSize}`] || 0;
+    $('#pInCart').textContent = q ? `${q} × ${pSize}g in your cart` : '';
+    $('#pPrice').innerHTML = `${pkr(PRICE[pSize])} <span>· ${pSize}g resealable pouch</span>`;
+    $('#pNet').textContent = `${pSize}g`;
+    $('#pAdd').textContent = `Add ${pSize}g to cart`;
+  }
+  panelHooks.push(() => { setPQty(1); updatePanelCart(); });
+  // trio bundle
+  let bSize = 50;
+  function renderBundle() {
+    const full = PRICE[bSize] * 3, save = full - TRIO[bSize];
+    $('#bundlePrice').innerHTML = `${pkr(TRIO[bSize])}<s aria-label="instead of ${pkr(full)}">${pkr(full)}</s>`;
+    $('#bundleSave').textContent = `You save ${pkr(save)}`;
+    $('#bNet').textContent = `3 × ${bSize}g (${bSize * 3}g total)`;
+    $$('.bundle-packs [data-pouch]').forEach(el => { el.innerHTML = pouchSVG(el.dataset.pouch, 'front', '', bSize); });
+  }
+  radioGroup($('#bSizes'), g => { bSize = g; renderBundle(); });
+  $('#bundleAdd').addEventListener('click', () => addToCart(`trio:${bSize}`));
+  renderBundle();
+  setPQty(1);
+  updatePanelCart();
+  renderCart();
+
+  /* ---------- taste lab ---------- */
+  const SN = {
+    'Fries': ['Hot fries, light sprinkle. Taste, then add more.', 'zing', 'cheese', 'fries'],
+    'Wedges': ['Coat the wedges in a little oil, then season.', 'smoke', 'zing', 'wedges'],
+    'Popcorn': ['Fresh popcorn and a fine, even sprinkle.', 'zing', 'mix', 'popcorn'],
+    'Homemade chips': ['Lightly oiled chips and a fine powder.', 'zing', 'smoke', 'chips'],
+    'Roasted chickpeas': ['Coat them after roasting.', 'smoke', 'zing', 'chickpeas'],
+    'Nachos': ['Sprinkle on the chips, or serve with a dip.', 'cheese', 'smoke', 'nachos'],
+    'Pasta snacks': ['Match the flavour to your recipe, then experiment.', null, null, 'pasta']
+  };
+  const MASH = {
+    'smoke+zing': ['Smoky Zing', 'Smoky depth first, then a tangy chilli-lime snap at the end. Big on fries and wedges.'],
+    'cheese+zing': ['Cheesy Zing', 'Creamy cheese meets a zesty tang. Like loaded nachos, but brighter.'],
+    'cheese+smoke': ['Smoke and Chaos', 'BBQ smoke wrapped in cheese, with a warm jalapeno finish. The late-night fries combo.']
+  };
+  const AXES = [['tangy', 'Tangy'], ['smoky', 'Smoky'], ['cheesy', 'Cheesy'], ['heat', 'Heat'], ['savoury', 'Savoury']];
+  // Dot areas per snack, in the 120×120 art box: [x0, x1, y0, y1]
+  const AREA = { fries: [36, 84, 16, 60], wedges: [24, 96, 64, 96], popcorn: [32, 90, 30, 60], chips: [22, 98, 40, 72], chickpeas: [32, 88, 44, 72], nachos: [20, 92, 32, 70], pasta: [24, 96, 42, 72] };
+  // Optional real photos: put a square-ish photo in  and set it here, e.g. fries: 'fries.jpg'.
+  // Use only photos you own or have a licence for. Empty = the illustration below.
+  const SNACK_PHOTO = { fries: '', wedges: '', popcorn: '', chips: '', chickpeas: '', nachos: '', pasta: '' };
+  // Illustrations (120×120 box). Gradients live in the shared <defs> at the top of .
+  const K = '#1D2133';
+  const fry = (x, y, h, r, b) => `<g transform="rotate(${r} ${x} ${y + h})"><rect x="${x - 4.6}" y="${y}" width="9.2" height="${h}" rx="2.4" fill="url(#${b ? 'gFryB' : 'gFry'})" stroke="${K}" stroke-width="1.5"/><path d="M${x - 2.2} ${y + 4}V${y + h - 4}" stroke="#fff" stroke-opacity=".5" stroke-width="1.4" stroke-linecap="round"/><path d="M${x - 4.6} ${y + 3}h9.2" stroke="#C98425" stroke-opacity=".45" stroke-width="1.6"/></g>`;
+  const bowl = (band) => `<ellipse cx="60" cy="110" rx="44" ry="4.5" fill="${K}" opacity=".12"/><path d="M12 70Q16 108 60 108Q104 108 108 70Z" fill="url(#gBowl)" stroke="${K}" stroke-width="2"/><path d="M15 82Q60 93 105 82" fill="none" stroke="${band}" stroke-width="3.2" stroke-linecap="round"/><path d="M22 88Q30 100 44 104" fill="none" stroke="#fff" stroke-opacity=".7" stroke-width="2.4" stroke-linecap="round"/>`;
+  const rim = `<ellipse cx="60" cy="70" rx="48" ry="10" fill="#F4ECDA" stroke="${K}" stroke-width="2"/>`;
+  const wedge = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><path d="M-24 8C-18-12 14-18 26-4L20 4C10-6-8-4-16 12Z" fill="url(#gWedge)" stroke="${K}" stroke-width="1.7" stroke-linejoin="round"/><path d="M-24 8C-18-12 14-18 26-4" fill="none" stroke="#A25E26" stroke-width="2.6" stroke-linecap="round"/><path d="M-12 2C-6-6 6-8 14-4" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="1.5" stroke-linecap="round"/></g>`;
+  const kernel = (x, y, s) => `<g transform="translate(${x} ${y}) scale(${s})" fill="url(#gPop)" stroke="${K}" stroke-width="1.3"><circle cx="-4" cy="1" r="5.4"/><circle cx="4" cy="0" r="5.8"/><circle cx="0" cy="-5" r="5.4"/><circle cx="1" cy="4" r="4.4"/><circle cx="1.5" cy="5.5" r="1.2" fill="#C98A3B" stroke="none"/></g>`;
+  const chip = (x, y, rx, ry, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><ellipse rx="${rx}" ry="${ry}" fill="url(#gChip)" stroke="${K}" stroke-width="1.5"/><path d="M${-rx * .6} ${-ry * .15}q${rx * .3} ${-ry * .35} ${rx * .6} 0t${rx * .6} 0" fill="none" stroke="#C98A35" stroke-opacity=".55" stroke-width="1.2"/><circle cx="${rx * .3}" cy="${ry * .35}" r="1.3" fill="#B87A2E" opacity=".55"/><circle cx="${-rx * .4}" cy="${ry * .3}" r="1" fill="#B87A2E" opacity=".45"/></g>`;
+  const pea = (x, y) => `<g transform="translate(${x} ${y})"><circle r="6.2" fill="url(#gPea)" stroke="${K}" stroke-width="1.3"/><path d="M-2.5-5.5q3 4 0 11" fill="none" stroke="#9C6A2E" stroke-opacity=".55" stroke-width="1.1"/><circle cx="-2.2" cy="-2.4" r="1.4" fill="#fff" opacity=".55"/></g>`;
+  const nacho = (x, y, r, s) => `<g transform="translate(${x} ${y}) rotate(${r}) scale(${s})"><path d="M0-22Q2-21 20 12Q0 16-20 12Q-2-21 0-22Z" fill="url(#gNacho)" stroke="${K}" stroke-width="1.5" stroke-linejoin="round"/><path d="M-10 4Q0 0 10 4" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1.4"/><g fill="#C98A35" opacity=".55"><circle cx="-4" cy="2" r="1.1"/><circle cx="5" cy="7" r="1"/><circle cx="1" cy="-8" r="1"/></g></g>`;
+  const penne = (x, y, r) => `<g transform="translate(${x} ${y}) rotate(${r})"><path d="M-14-5L12-5L16 5L-10 5Z" fill="url(#gPasta)" stroke="${K}" stroke-width="1.4" stroke-linejoin="round"/><path d="M-8-5L-4 5M-2-5L2 5M4-5L8 5" stroke="#C99A3E" stroke-opacity=".7" stroke-width="1"/><ellipse cx="14" cy="0" rx="2" ry="5" fill="#E2B85A" stroke="${K}" stroke-width="1" transform="rotate(20 14 0)"/></g>`;
+  const ART = {
+    fries: `<ellipse cx="60" cy="110" rx="38" ry="4.5" fill="${K}" opacity=".14"/>`
+      + fry(44, 22, 46, -18, 1) + fry(54, 14, 52, -6, 1) + fry(66, 16, 50, 6, 1) + fry(76, 24, 44, 18, 1)
+      + fry(40, 34, 34, -24) + fry(80, 34, 34, 24) + fry(48, 26, 42, -11) + fry(68, 22, 46, 9) + fry(58, 18, 50, -2)
+      + `<path d="M27 62Q60 71 93 62L86 108Q60 112 34 108Z" fill="url(#gCarton)" stroke="${K}" stroke-width="2.2" stroke-linejoin="round"/>`
+      + `<path d="M29.6 78Q60 86 90.4 78L89.3 86Q60 94 30.7 86Z" fill="#FFF9EC"/><path d="M33 66Q36 88 38 104" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round" fill="none"/>`
+      + `<circle cx="60" cy="99" r="5.5" fill="#C9E36B" stroke="${K}" stroke-width="1.4"/><path d="M58.6 95.6h2.8v2.2l2 3.4h-6.8l2-3.4z" fill="#4153D6"/>`
+      + fry(18, 92, 16, -76) + fry(100, 96, 14, 72)
+      + `<g fill="#fff" stroke="${K}" stroke-width=".6"><rect x="14" y="104" width="2" height="2"/><rect x="104" y="104" width="2" height="2"/><rect x="96" y="108" width="1.6" height="1.6"/></g>`,
+    wedges: `<ellipse cx="60" cy="88" rx="52" ry="17" fill="url(#gBowl)" stroke="${K}" stroke-width="2"/><ellipse cx="60" cy="86" rx="43" ry="12.5" fill="none" stroke="${K}" stroke-opacity=".12" stroke-width="1.5"/>`
+      + `<path d="M24 84l8-12 22 4 18-8 22 6 6 12-10 10-24-2-20 6-18-6z" fill="#FBF4E2" stroke="${K}" stroke-opacity=".25"/>`
+      + wedge(56, 70, -4) + wedge(38, 80, -14) + wedge(80, 78, 14) + wedge(50, 90, 4) + wedge(78, 94, -8)
+      + `<g fill="#6E9B3A"><circle cx="46" cy="74" r="1.1"/><circle cx="66" cy="82" r="1"/><circle cx="58" cy="94" r="1.1"/><circle cx="86" cy="88" r="1"/><circle cx="34" cy="88" r="1"/></g>`,
+    popcorn: `<ellipse cx="60" cy="111" rx="34" ry="4" fill="${K}" opacity=".13"/><path d="M30 60L38 110H82L90 60Z" fill="#FFF9EC" stroke="${K}" stroke-width="2" stroke-linejoin="round"/>`
+      + `<g fill="#5163DD"><path d="M38.5 62h9l2.4 46h-7z"/><path d="M55.6 62h8.8l-.4 46h-8z"/><path d="M72.5 62h9l-5.6 46h-7z"/></g><path d="M34 66L40 106" stroke="#fff" stroke-opacity=".45" stroke-width="2.4" stroke-linecap="round"/>`
+      + kernel(46, 38, .9) + kernel(60, 34, 1) + kernel(74, 38, .9) + kernel(40, 52, 1) + kernel(52, 46, 1.1) + kernel(66, 44, 1.1) + kernel(80, 52, 1) + kernel(34, 58, .85) + kernel(58, 54, 1) + kernel(86, 58, .85)
+      + `<rect x="27" y="57" width="66" height="7" rx="3.5" fill="#FFF9EC" stroke="${K}" stroke-width="2"/>` + kernel(20, 106, .75) + kernel(100, 104, .75),
+    chips: bowl('#5163DD') + rim + chip(36, 60, 18, 12, -20) + chip(84, 58, 18, 12, 18) + chip(60, 50, 20, 13, -4) + chip(46, 66, 17, 11, 10) + chip(74, 67, 17, 11, -12) + chip(60, 40, 15, 10, 6),
+    chickpeas: bowl('#C9E36B') + rim + [[36, 70], [48, 71], [60, 72], [72, 71], [84, 70], [42, 62], [54, 63], [66, 63], [78, 62], [48, 54], [60, 55], [72, 54], [54, 46], [66, 46]].map(([x, y]) => pea(x, y)).join('') + pea(14, 104) + pea(106, 102),
+    nachos: bowl('#C9E36B') + rim + nacho(34, 56, -24, 1) + nacho(76, 50, 16, 1) + nacho(54, 46, -6, 1.05) + nacho(44, 64, 8, .95) + nacho(66, 62, -10, .95) + nacho(88, 62, 28, .85)
+      + `<g transform="translate(96 96)"><path d="M-16 0Q-14 14 0 14Q14 14 16 0Z" fill="url(#gBowl)" stroke="${K}" stroke-width="1.6"/><ellipse rx="16" ry="5" fill="url(#gSalsa)" stroke="${K}" stroke-width="1.6"/><g><circle cx="-6" cy="-1" r="1.4" fill="#6E9B3A"/><circle cx="4" cy="1" r="1.3" fill="#fff" opacity=".7"/><circle cx="8" cy="-1.5" r="1.2" fill="#6E9B3A"/></g></g>`,
+    pasta: bowl('#5163DD') + rim + penne(40, 62, -20) + penne(64, 56, 10) + penne(84, 64, -30) + penne(50, 50, 35) + penne(72, 46, -15) + penne(56, 68, 5) + penne(30, 70, 25) + penne(90, 70, 15)
+      + `<path d="M62 38q6-6 10 0q-6 4-10 0z" fill="#6E9B3A" stroke="${K}" stroke-width="1"/>`
+  };
+  let snack = 'Fries', picks = ['zing'], shakeTimer = null;
+  const snackWrap = $('#snackChips'), flavWrap = $('#flavChips'), plate = $('#plateStage'), plateSvg = $('#plateSvg'), plateCv = $('#plateCanvas');
+  const meters = $('#meters');
+  meters.innerHTML = AXES.map(([k, l]) => `<li data-k="${k}" role="img"><span>${l}</span><span class="bar"><i></i></span><span>0/5</span></li>`).join('');
+
+  Object.keys(SN).forEach(s => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.setAttribute('role', 'radio'); b.textContent = s; b.dataset.s = s;
+    b.addEventListener('click', () => { snack = s; renderTaste(true); });
+    b.addEventListener('keydown', e => {
+      const all = $$('.chip', snackWrap), i = all.indexOf(b);
+      const d = e.key === 'ArrowRight' || e.key === 'ArrowDown' ? 1 : e.key === 'ArrowLeft' || e.key === 'ArrowUp' ? -1 : 0;
+      if (!d) return; e.preventDefault(); const n = all[(i + d + all.length) % all.length]; snack = n.dataset.s; renderTaste(true); n.focus();
+    });
+    snackWrap.appendChild(b);
+  });
+  Object.keys(F).forEach(f => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.dataset.f = f;
+    b.innerHTML = `<i class="sw" style="background:${F[f].swatch}"></i>${F[f].name}`;
+    b.addEventListener('click', () => {
+      if (picks.includes(f)) { if (picks.length > 1) picks = picks.filter(x => x !== f); }
+      else { picks.push(f); if (picks.length > 2) picks.shift(); }
+      renderTaste(true);
+    });
+    flavWrap.appendChild(b);
+  });
+
+  const shakerSVG = (f, cx) => { const d = F[f]; return `<g transform="translate(${cx - 26} 8)"><g class="sh"><rect x="0" y="0" width="52" height="72" rx="13" fill="#FFF9EC" stroke="#1D2133" stroke-width="2.5"/><rect x="0" y="20" width="52" height="28" fill="${d.strong}" stroke="#1D2133" stroke-width="2.5"/><text x="26" y="39" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="13" fill="${d.labelInk}">${d.short}</text><rect x="4" y="70" width="44" height="14" rx="5" fill="#1D2133"/><g fill="#FFF9EC"><circle cx="15" cy="77" r="1.8"/><circle cx="26" cy="77" r="1.8"/><circle cx="37" cy="77" r="1.8"/></g></g></g>`; };
+  const lids = () => picks.length === 2 ? [140, 260] : [200];
+
+  function tasteOf() {
+    const t = {};
+    AXES.forEach(([k]) => { t[k] = Math.round(picks.reduce((s, f) => s + F[f].taste[k], 0) / picks.length); });
+    return t;
+  }
+  function drawPlate() {
+    const key = SN[snack][3], [x0, x1, y0, y1] = AREA[key];
+    const cols = picks.length === 2 ? [F[picks[0]].powder[0], F[picks[1]].powder[0], F[picks[0]].powder[0], F[picks[1]].powder[0], F[picks[0]].powder[1]] : [F[picks[0]].powder[0], F[picks[0]].powder[0], F[picks[0]].powder[1]];
+    let s = (snack.length * 31 + picks.join('').length * 17) % 233280, dots = '';
+    const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 46; i++) dots += `<circle class="seas" style="transition-delay:${(i * 22)}ms" cx="${(x0 + rnd() * (x1 - x0)).toFixed(1)}" cy="${(y0 + rnd() * (y1 - y0)).toFixed(1)}" r="${(1.1 + rnd() * 1.5).toFixed(1)}" fill="${cols[i % cols.length]}"/>`;
+    const photo = SNACK_PHOTO[key];
+    const food = photo
+      ? `<clipPath id="snackClip"><rect x="12" y="14" width="96" height="96" rx="20"/></clipPath><image href="${photo}" x="12" y="14" width="96" height="96" preserveAspectRatio="xMidYMid slice" clip-path="url(#snackClip)"/>`
+      : ART[key];
+    plateSvg.innerHTML = `<ellipse cx="200" cy="300" rx="185" ry="42" fill="#fff" opacity=".4"/><ellipse cx="200" cy="314" rx="128" ry="10" fill="#1D2133" opacity=".1"/>` +
+      `<g transform="translate(95 118) scale(1.75)">${food}${dots}</g>` + lids().map((x, i) => shakerSVG(picks[i], x)).join('');
+    plate.style.setProperty('--t1', F[picks[picks.length - 1]].stage);
+  }
+  function setMeters(on) {
+    const t = tasteOf();
+    $$('li', meters).forEach(li => {
+      const v = t[li.dataset.k];
+      $('i', li).style.width = on ? (v * 20) + '%' : '0%';
+      li.lastElementChild.textContent = `${v}/5`;
+      li.setAttribute('aria-label', `${li.firstElementChild.textContent}: ${v} out of 5`);
+    });
+  }
+  function shake() {
+    clearTimeout(shakeTimer);
+    const dots = $$('.seas', plateSvg);
+    if (reduce) { dots.forEach(d => d.classList.add('on')); setMeters(true); return; }
+    dots.forEach(d => d.classList.remove('on'));
+    setMeters(false);
+    plate.classList.add('shaking');
+    void plate.offsetWidth;
+    requestAnimationFrame(() => dots.forEach(d => d.classList.add('on')));
+    const sc = plateCv.clientWidth / 400, cols = picks.flatMap(f => F[f].powder);
+    let n = 0;
+    const tick = () => {
+      lids().forEach(x => burst(plateCv, x * sc, 94 * sc, cols, 4, true));
+      if (++n < 18) shakeTimer = setTimeout(tick, 65);
+      else { plate.classList.remove('shaking'); setMeters(true); }
+    };
+    tick();
+  }
+  function mixName() {
+    if (picks.length === 1) return [F[picks[0]].name, F[picks[0]].note];
+    return MASH[[...picks].sort().join('+')];
+  }
+  function renderTaste(doShake) {
+    $$('.chip', snackWrap).forEach(b => { const on = b.dataset.s === snack; b.setAttribute('aria-checked', on); b.tabIndex = on ? 0 : -1; });
+    $$('.chip', flavWrap).forEach(b => b.setAttribute('aria-pressed', picks.includes(b.dataset.f)));
+    const [tip, pick, wild] = SN[snack], [name, note] = mixName();
+    $('#vName').textContent = `${name} on ${snack.toLowerCase()}`;
+    $('#vNote').textContent = note;
+    $('#vTip').textContent = tip;
+    $('#vPick').textContent = pick ? `Lab pick for ${snack.toLowerCase()}: ${F[pick].name} · Wild card: ${wild === 'mix' ? 'mix two flavours' : F[wild].name}` : 'No lab pick for this one yet. Experiment and tell us.';
+    $('#mixAdd').textContent = picks.length === 2 ? 'Add both to cart' : `Add ${F[picks[0]].name} to cart`;
+    $('#shareMsg').textContent = '';
+    plateSvg.setAttribute('aria-label', `${name} shaken on ${snack.toLowerCase()}`);
+    drawPlate();
+    if (doShake) shake(); else { $$('.seas', plateSvg).forEach(d => d.classList.add('on')); setMeters(true); }
+  }
+  $('#shakeAgain').addEventListener('click', shake);
+  $('#mixAdd').addEventListener('click', () => addToCart(picks));
+
+  async function shareText(text, msgEl, okMsg) {
+    const url = location.href.split('#')[0] + '#taste';
+    try {
+      if (navigator.share) { await navigator.share({ title: 'FLAVR LAB', text, url }); msgEl.textContent = 'Shared. Tag us so we can see it.'; return; }
+    } catch (e) { if (e && e.name === 'AbortError') return; }
+    try { await navigator.clipboard.writeText(`${text} ${url}`); msgEl.textContent = okMsg; }
+    catch (_) { msgEl.textContent = `Copy this: ${text} ${url}`; }
+  }
+  $('#shareBtn').addEventListener('click', () => {
+    const [name] = mixName();
+    shareText(`I made ${name} ${snack.toLowerCase()} in the FLAVR LAB Taste Lab. ${HASHTAG}`, $('#shareMsg'), 'Copied. Paste it in your story and tag ' + HANDLE + '.');
+  });
+  renderTaste(false);
+  $$('.perfect [data-art]').forEach(el => { el.innerHTML = `<svg viewBox="8 6 104 108" aria-hidden="true">${ART[el.dataset.art]}</svg>`; });
+
+  /* ---------- Lab Crew reels ---------- */
+  // To show real UGC: put a vertical (9:16) MP4 in  and set `video`, e.g. 'ayesha-fries.mp4',
+  // plus the creator's handle in `by`. Only post videos you have written permission to use.
+  // With `video` empty, an illustrated reel shows instead.
+  const HANDLE = '@flavrlab'; // [CONFIRM] your real social handle
+  const HASHTAG = '#NoBoringBites';
+  const REELS = [
+    { video: 'fries-drop.mp4', by: '', caption: 'Hot, crispy and waiting for their first shake.' },
+    { video: 'reel-new.mp4', by: '', caption: 'Snack night set-up: three flavours, zero boring bites.' },
+    { video: 'fries-bowl.mp4', by: '', caption: 'Fresh bowl. Which flavour goes on first?' },
+    { motion: true, by: '', caption: 'POV: your fries were boring. Then the lab happened.' }
+    // illustrated reels also available: { scene: 'shake', who: 'buns', f: 'zing', caption: '...' }, scenes: shake, bite, popcorn, mix
+  ];
+  $$('.handle').forEach(h => h.textContent = HANDLE);
+
+  const INK = '#1D2133';
+  const PEOPLE = {
+    buns: { skin: '#B97A56', hair: '#2A1A13', hood: '#4153D6' },
+    boy: { skin: '#8E5B3E', hair: '#1B120E', hood: '#1D2133' },
+    hijab: { skin: '#C99272', hair: '#F1E4CF', hood: '#4153D6' },
+    curls: { skin: '#A86B4C', hair: '#3A2418', hood: '#262D6B' }
+  };
+  function person(who, face) {
+    const p = PEOPLE[who], S = p.skin, H = p.hair;
+    let behind = '', hair = '';
+    if (who === 'buns') {
+      behind = `<circle cx="46" cy="110" r="21" fill="${H}" stroke="${INK}" stroke-width="2.5"/><circle cx="134" cy="110" r="21" fill="${H}" stroke="${INK}" stroke-width="2.5"/>`;
+      hair = `<path d="M40 162C38 122 62 106 90 106s52 16 50 56c-8-20-24-30-50-30s-42 10-50 30z" fill="${H}"/><path d="M48 148c8-18 30-22 42-12 12-10 34-6 42 12-14-6-28-6-42 2-14-8-28-8-42-2z" fill="${H}"/><rect x="58" y="114" width="14" height="7" rx="3.5" fill="#C9E36B" stroke="${INK}" stroke-width="1.5" transform="rotate(-25 65 117)"/><rect x="108" y="114" width="14" height="7" rx="3.5" fill="#C9E36B" stroke="${INK}" stroke-width="1.5" transform="rotate(25 115 117)"/><path d="M124 132l2 4 4 .5-3 2.6.8 4-3.8-2-3.8 2 .8-4-3-2.6 4-.5z" fill="#FFF9EC" stroke="${INK}" stroke-width="1"/>`;
+    } else if (who === 'boy') {
+      hair = `<path d="M40 158C36 116 62 104 90 104s54 12 50 54c-6-12-14-18-22-18l-6-11-8 10-10-12-10 12-8-9c-14 4-28 13-36 28z" fill="${H}"/>`;
+    } else if (who === 'curls') {
+      const pts = [[44, 150], [42, 132], [50, 116], [64, 106], [80, 100], [98, 100], [114, 106], [128, 116], [136, 132], [136, 150]];
+      hair = pts.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="15" fill="${H}"/>`).join('') + `<path d="M50 150c10-20 26-24 40-18 14-6 30-2 40 18-12-6-26-6-40 0-14-6-28-6-40 0z" fill="${H}"/>`;
+    }
+    const hijab = who === 'hijab';
+    const eyes = face === 'happy'
+      ? `<path d="M63 170q9-10 18 0M99 170q9-10 18 0" fill="none" stroke="${INK}" stroke-width="3.2" stroke-linecap="round"/>`
+      : `<g class="r-eyes"><ellipse cx="72" cy="168" rx="7.5" ry="9" fill="${INK}"/><ellipse cx="108" cy="168" rx="7.5" ry="9" fill="${INK}"/><circle cx="75" cy="164" r="2.6" fill="#fff"/><circle cx="111" cy="164" r="2.6" fill="#fff"/><circle cx="70" cy="171" r="1.3" fill="#fff"/><circle cx="106" cy="171" r="1.3" fill="#fff"/></g>`;
+    const mouth = face === 'bite' ? `<path d="M80 188q10 16 20 0z" fill="${INK}"/><path d="M85 194q5 4 10 0" fill="#E8735E"/>`
+      : face === 'wow' ? `<ellipse cx="90" cy="192" rx="6" ry="7" fill="${INK}"/>`
+      : `<path d="M81 189q9 9 18 0" fill="none" stroke="${INK}" stroke-width="2.6" stroke-linecap="round"/>`;
+    const body = `<path d="M22 330C22 262 50 238 90 238s68 24 68 92z" fill="${p.hood}" stroke="${INK}" stroke-width="2.5"/><path d="M76 244l-4 32M104 244l4 32" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><circle cx="72" cy="278" r="3" fill="#fff"/><circle cx="108" cy="278" r="3" fill="#fff"/><text x="90" y="290" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="10" fill="#FFF9EC">FLAVR</text><text x="90" y="312" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="24" fill="#C9E36B">LAB</text>`;
+    const head = hijab
+      ? `<path d="M26 268C18 198 34 104 90 102s72 96 64 166c-20-16-42-22-64-22s-44 6-64 22z" fill="${H}" stroke="${INK}" stroke-width="2.5"/><ellipse cx="90" cy="166" rx="40" ry="46" fill="${S}" stroke="${INK}" stroke-width="2.5"/><path d="M50 152c6-26 22-38 40-38s34 12 40 38c-12-12-26-18-40-18s-28 6-40 18z" fill="${H}"/><circle cx="127" cy="200" r="5" fill="#C9E36B" stroke="${INK}" stroke-width="1.5"/>`
+      : `<rect x="78" y="206" width="24" height="36" rx="9" fill="${S}"/><circle cx="41" cy="168" r="9" fill="${S}" stroke="${INK}" stroke-width="2.5"/><circle cx="139" cy="168" r="9" fill="${S}" stroke="${INK}" stroke-width="2.5"/><circle cx="90" cy="160" r="50" fill="${S}" stroke="${INK}" stroke-width="2.5"/>`;
+    return `<g class="r-bob">${behind}${body}${head}${hair}${eyes}<ellipse cx="60" cy="184" rx="7" ry="4" fill="#F28B8B" opacity=".5"/><ellipse cx="120" cy="184" rx="7" ry="4" fill="#F28B8B" opacity=".5"/>${mouth}</g>`;
+  }
+  const arm = (hood, d) => `<path d="${d}" stroke="${INK}" stroke-width="27" fill="none" stroke-linecap="round"/><path d="${d}" stroke="${hood}" stroke-width="21" fill="none" stroke-linecap="round"/>`;
+  const hand = (x, y, skin) => `<circle cx="${x}" cy="${y}" r="10" fill="${skin}" stroke="${INK}" stroke-width="2.5"/>`;
+  const miniShaker = (f, x, y) => `<g transform="translate(${x} ${y})"><g class="r-wob"><rect x="0" y="0" width="38" height="54" rx="10" fill="#FFF9EC" stroke="${INK}" stroke-width="2.2"/><rect x="0" y="14" width="38" height="20" fill="${F[f].strong}" stroke="${INK}" stroke-width="2.2"/><rect x="3" y="52" width="32" height="10" rx="4" fill="${INK}"/></g></g>`;
+  const carton = (x, y) => `<g transform="translate(${x} ${y})"><g fill="#F2C14E" stroke="${INK}" stroke-width="2"><rect x="8" y="-30" width="9" height="40" rx="3" transform="rotate(-10 12 -10)"/><rect x="20" y="-38" width="9" height="46" rx="3"/><rect x="32" y="-34" width="9" height="44" rx="3" transform="rotate(8 36 -12)"/><rect x="44" y="-26" width="9" height="38" rx="3" transform="rotate(14 48 -7)"/></g><path d="M0 0h62l-6 56H6z" fill="#4153D6" stroke="${INK}" stroke-width="2.5" stroke-linejoin="round"/><path d="M2 14h58" stroke="#FFF9EC" stroke-width="5"/></g>`;
+  const powderFall = (x, y, cols) => cols.map((c, i) => `<circle class="fall" style="--d:${(i * .18).toFixed(2)}s" cx="${x + (i % 3) * 5 - 5}" cy="${y}" r="2.4" fill="${c}"/>`).join('');
+  const burstWord = (x, y, word, fill) => `<g transform="translate(${x} ${y})"><g class="r-pulse"><path d="M0-34l8 13 15-6-2 16 15 4-12 10 9 13-16 1-1 16-11-10-11 10-1-16-16-1 9-13-12-10 15-4-2-16 15 6z" fill="${fill}" stroke="${INK}" stroke-width="2"/><text y="5" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="14" fill="${INK}">${word}</text></g></g>`;
+  const spark = (x, y, d) => `<path class="twinkle" style="--d:${d}s" d="M${x} ${y - 8}l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="#fff" stroke="${INK}" stroke-width="1.2"/>`;
+
+  function reelArt(r) {
+    const p = PEOPLE[r.who], d = F[r.f];
+    let fg = '', face = 'smile', extra = '';
+    if (r.scene === 'shake') {
+      extra = arm(p.hood, 'M134 256C150 210 152 150 146 118');
+      fg = hand(146, 112, p.skin) + miniShaker(r.f, 128, 112) + powderFall(147, 180, [d.powder[0], d.powder[0], d.powder[1], d.powder[0]]) + carton(116, 250) + burstWord(42, 62, d.burst, d.burstFill) + spark(150, 40, .3) + spark(24, 120, 1);
+    } else if (r.scene === 'bite') {
+      face = 'bite';
+      extra = arm(p.hood, 'M132 258C140 236 128 214 112 206');
+      fg = `<g transform="translate(96 168)"><g class="r-nom"><rect x="-4" y="0" width="10" height="38" rx="3" fill="#E9A93E" stroke="${INK}" stroke-width="2" transform="rotate(-30)"/><circle cx="6" cy="10" r="1.6" fill="${d.powder[0]}"/><circle cx="10" cy="18" r="1.6" fill="${d.powder[0]}"/></g></g>` + hand(110, 206, p.skin) + carton(10, 266) + burstWord(140, 64, d.burst, d.burstFill) + spark(30, 56, .2) + spark(156, 130, .9);
+    } else if (r.scene === 'popcorn') {
+      face = 'wow';
+      const kern = [[60, 262, 0], [84, 256, .4], [106, 262, .8], [72, 258, 1.1], [96, 258, .25]].map(([x, y, dl]) => `<g class="r-toss" style="--d:${dl}s"><circle cx="${x}" cy="${y}" r="8" fill="#FFF3D2" stroke="${INK}" stroke-width="1.8"/><circle cx="${x + 2}" cy="${y - 2}" r="1.6" fill="${d.powder[0]}"/></g>`).join('');
+      fg = kern + `<g fill="#FFF3D2" stroke="${INK}" stroke-width="2"><circle cx="58" cy="270" r="11"/><circle cx="76" cy="264" r="12"/><circle cx="96" cy="264" r="12"/><circle cx="116" cy="270" r="11"/><circle cx="86" cy="276" r="11"/></g><g fill="${d.powder[0]}"><circle cx="60" cy="266" r="1.8"/><circle cx="78" cy="260" r="1.8"/><circle cx="98" cy="262" r="1.8"/><circle cx="114" cy="266" r="1.8"/></g><path d="M36 276l10 50h88l10-50z" fill="#FFF9EC" stroke="${INK}" stroke-width="2.5" stroke-linejoin="round"/><path d="M60 276l4 50M90 276v50M120 276l-4 50" stroke="#4153D6" stroke-width="6"/>` + hand(40, 280, p.skin) + hand(140, 280, p.skin) + burstWord(140, 60, d.burst, d.burstFill) + spark(28, 70, .5);
+    } else if (r.scene === 'mix') {
+      face = 'happy';
+      const m = F[r.mix];
+      extra = arm(p.hood, 'M44 258C30 212 28 160 36 122') + arm(p.hood, 'M136 258C150 212 152 160 144 122');
+      fg = hand(36, 116, p.skin) + hand(144, 116, p.skin) + miniShaker(r.f, 22, 116) + miniShaker(r.mix, 120, 116) + powderFall(41, 184, [d.powder[0], d.powder[0], d.powder[1]]) + powderFall(139, 184, [m.powder[0], m.powder[0], m.powder[1]]) + `<text x="90" y="54" text-anchor="middle" font-family="Caveat,cursive" font-weight="700" font-size="30" fill="${INK}">Smoky Zing?</text>` + spark(30, 70, .1) + spark(150, 76, .7);
+    }
+    return `<svg viewBox="0 0 180 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="180" height="320" fill="${d.stage}"/><circle cx="160" cy="40" r="56" fill="${d.strong}" opacity=".35"/><circle cx="10" cy="250" r="60" fill="#FFF9EC" opacity=".5"/>${person(r.who, face)}${extra}${fg}</svg>`;
+  }
+  const ICON = {
+    heart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/></svg>',
+    chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+    share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5l6 6-6 6M20 11H9a5 5 0 0 0-5 5v2"/></svg>',
+    sound: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg>',
+    muted: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>'
+  };
+  // Animated brand reel (10s loop): plain fries → one shake → pick a flavour → logo
+  function reelMotion() {
+    const nest = (f, x, y, w) => `<svg x="${x}" y="${y}" width="${w}" height="${Math.round(w * 1.55)}" viewBox="0 0 400 620">${pouchInner(f, 'front')}</svg>`;
+    const [x0, x1, y0, y1] = AREA.fries;
+    let s = 3, dots = '';
+    const rnd = () => (s = (s * 9301 + 49297) % 233280) / 233280;
+    for (let i = 0; i < 30; i++) dots += `<circle cx="${(45 + (x0 + rnd() * (x1 - x0)) * .75).toFixed(1)}" cy="${(92 + (y0 + rnd() * (y1 - y0)) * .75).toFixed(1)}" r="${(1 + rnd() * 1.2).toFixed(1)}" fill="${i % 4 ? '#E2733A' : '#6FA83A'}"/>`;
+    const pill = (y, t, cls) => `<g class="${cls}"><rect x="14" y="${y}" width="152" height="26" rx="13" fill="#fff" stroke="${INK}" stroke-width="1.5"/><text x="90" y="${y + 17}" text-anchor="middle" font-family="Figtree,system-ui,sans-serif" font-weight="800" font-size="11.5" fill="${INK}">${t}</text></g>`;
+    return `<svg class="m" viewBox="0 0 180 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs><linearGradient id="mBg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7EAFA"/><stop offset="1" stop-color="#F1F6DC"/></linearGradient></defs>
+      <rect width="180" height="320" fill="url(#mBg)"/>
+      <path d="M150 20l-14 22h12l-16 26" fill="none" stroke="#C9E36B" stroke-width="9" stroke-opacity=".35" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M150 20l-14 22h12l-16 26" fill="none" stroke="#9DBE3A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14 96q10-8 20 0t20 0" fill="none" stroke="#AEB8FF" stroke-width="7" stroke-opacity=".35" stroke-linecap="round"/>
+      <path d="M14 96q10-8 20 0t20 0" fill="none" stroke="#7F8CF0" stroke-width="2.2" stroke-linecap="round"/>
+      <ellipse cx="90" cy="186" rx="80" ry="14" fill="#fff" opacity=".6"/>
+      <g class="m-fries"><g transform="translate(45 92) scale(.75)">${ART.fries}</g><g class="m-dots">${dots}</g></g>
+      <g class="m-zing">${nest('zing', 8, 112, 42)}</g>
+      <g transform="translate(77 52)"><g class="m-shaker"><g class="m-wob"><rect width="26" height="36" rx="7" fill="#FFF9EC" stroke="${INK}" stroke-width="1.8"/><rect y="10" width="26" height="13" fill="${F.zing.strong}" stroke="${INK}" stroke-width="1.8"/><rect x="2" y="35" width="22" height="7" rx="3" fill="${INK}"/></g></g></g>
+      <g class="m-powder">${[0, .2, .4, .6, .1, .5].map((d, i) => `<circle class="fall" style="--d:${d}s" cx="${84 + (i % 3) * 6}" cy="98" r="2" fill="${i % 3 ? '#E2733A' : '#6FA83A'}"/>`).join('')}</g>
+      <g class="m-row">${nest('zing', 18, 98, 46)}${nest('cheese', 116, 98, 46)}${nest('smoke', 60, 86, 60)}</g>
+      <g class="m-end"><rect x="34" y="70" width="112" height="60" rx="14" fill="#F7F1EC" stroke="${INK}" stroke-width="2"/><image href="logo.png" x="42" y="76" width="96" height="47"/>
+        <text x="90" y="160" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="24" fill="${INK}">#NOBORINGBITES</text>
+        <rect x="52" y="170" width="76" height="24" rx="12" fill="#4153D6" stroke="${INK}" stroke-width="1.5"/><text x="90" y="186" text-anchor="middle" font-family="Figtree,system-ui,sans-serif" font-weight="800" font-size="11" fill="#fff">Shop now</text></g>
+      ${pill(22, 'POV: your fries are boring', 'm-ta')}${pill(22, 'One shake of ZING MODE…', 'm-tb')}${pill(22, 'Three flavours. Pick yours.', 'm-tc')}
+    </svg>`;
+  }
+  const PLAY_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>';
+  const reelRow = $('#reelRow');
+  reelRow.innerHTML = REELS.map((r, i) => {
+    const media = r.video
+      ? `<video src="${r.video}#t=0.1" muted loop playsinline preload="metadata" aria-label="${r.caption}"></video>`
+      : r.motion ? reelMotion() : reelArt(r);
+    const side = r.video
+      ? `<button type="button" data-sound="${i}" aria-label="Turn sound on">${ICON.muted}</button>`
+      : `<span aria-hidden="true">${ICON.heart}</span><span aria-hidden="true">${ICON.share}</span>`;
+    return `<figure class="reel${r.motion ? ' motion m-paused' : ''}">${media}
+      <div class="reel-bar" aria-hidden="true"><i></i></div>
+      <button class="reel-play" type="button" aria-label="Play reel ${i + 1}">${PLAY_ICON}</button>
+      <div class="reel-side">${side}</div>
+      <figcaption class="reel-ui"><b>${r.by || HANDLE}</b><p>${r.caption} ${HASHTAG}</p><small>${ICON.sound.replace('<svg', '<svg width="14" height="14"')}original sound · FLAVR LAB</small></figcaption></figure>`;
+  }).join('');
+
+  // Playback: hover plays on desktop, tap toggles everywhere, phones autoplay the reel that's in view.
+  const canHover = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const reelCards = $$('.reel', reelRow);
+  reelCards.forEach(card => {
+    const v = $('video', card), btn = $('.reel-play', card), bar = $('.reel-bar i', card);
+    const n = btn.getAttribute('aria-label').replace('Play ', '');
+    const setState = on => { card.classList.toggle('playing', on); btn.setAttribute('aria-label', `${on ? 'Pause' : 'Play'} ${n}`); };
+    card._play = () => {
+      if (v) v.play().then(() => setState(true)).catch(() => setState(false));
+      else if (card.classList.contains('motion')) { card.classList.remove('m-paused'); setState(true); }
+    };
+    card._pause = () => {
+      if (v) v.pause();
+      else if (card.classList.contains('motion')) card.classList.add('m-paused');
+      setState(false);
+    };
+    btn.addEventListener('click', () => card.classList.contains('playing') ? card._pause() : card._play());
+    if (canHover) { card.addEventListener('pointerenter', card._play); card.addEventListener('pointerleave', card._pause); }
+    if (v) {
+      v.addEventListener('timeupdate', () => { bar.style.transform = `scaleX(${v.duration ? v.currentTime / v.duration : 0})`; });
+      v.addEventListener('pause', () => setState(false));
+      v.addEventListener('playing', () => setState(true));
+    }
+  });
+  if (!canHover && !reduce && 'IntersectionObserver' in window) {
+    const rio = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? e.target._play() : e.target._pause()), { threshold: .7 });
+    reelCards.forEach(c => rio.observe(c));
+  }
+  reelRow.addEventListener('click', e => {
+    const b = e.target.closest('[data-sound]'); if (!b) return;
+    const card = b.closest('.reel'), v = $('video', card); v.muted = !v.muted;
+    b.innerHTML = v.muted ? ICON.muted : ICON.sound; b.setAttribute('aria-label', v.muted ? 'Turn sound on' : 'Turn sound off');
+    if (!v.muted) card._play();
+  });
+  $('#copyTag').addEventListener('click', async () => {
+    const m = $('#tagMsg');
+    try { await navigator.clipboard.writeText(`${HASHTAG} ${HANDLE}`); m.textContent = `Copied ${HASHTAG} ${HANDLE}. See you in the reels.`; }
+    catch (_) { m.textContent = `Copy this: ${HASHTAG} ${HANDLE}`; }
+  });
+
+
+  /* ---------- waitlist + vote ---------- */
+  const form = $('#wlForm'), email = $('#wlEmail'), msg = $('#wlMsg');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const v = email.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) {
+      msg.textContent = 'That email looks off. Check it and try again.'; msg.className = 'msg err';
+      email.setAttribute('aria-invalid', 'true'); email.focus(); return;
+    }
+    // TODO: send `v` to your email tool here. Nothing is saved yet.
+    email.removeAttribute('aria-invalid');
+    msg.textContent = "You're in the Lab Crew. Watch your inbox for new flavour drops."; msg.className = 'msg ok';
+    form.reset();
+  });
+  email.addEventListener('input', () => { if (email.getAttribute('aria-invalid')) { email.removeAttribute('aria-invalid'); msg.textContent = ''; } });
+
+  const vbtns = $$('.vote .chip');
+  const setVote = v => {
+    vbtns.forEach(b => b.setAttribute('aria-pressed', b.dataset.v === v));
+    $('#voteMsg').textContent = `Vote locked in: ${v}. We'll share the results with the Lab Crew.`;
+  };
+  vbtns.forEach(b => b.addEventListener('click', () => {
+    setVote(b.dataset.v);
+    try { localStorage.setItem('flavr-vote', b.dataset.v); } catch (_) {}
+  }));
+  try { const saved = localStorage.getItem('flavr-vote'); if (saved) setVote(saved); } catch (_) {}
+
+  /* ---------- sticky mobile CTA ---------- */
+  const cta = $('#stickyCta');
+  if ('IntersectionObserver' in window) {
+    const vis = { hero: true, join: false, foot: false };
+    const upd = () => cta.classList.toggle('show', !vis.hero && !vis.join && !vis.foot);
+    const io = new IntersectionObserver(es => { es.forEach(e => { vis[e.target.dataset.k] = e.isIntersecting; }); upd(); });
+    [['hero', $('.hero')], ['join', $('#join')], ['foot', $('#foot')]].forEach(([k, el]) => { el.dataset.k = k; io.observe(el); });
+  }
+})();
+</script>
+</body></html>
