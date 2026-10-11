@@ -626,6 +626,55 @@ html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
   .pillars .pi{width:40px;height:40px;font-size:1.2rem}
   .foot{padding-bottom:110px}
 }
+/* Mobile polish: tighter rhythm, one-line chip rows, compact cards */
+h1,h2,h3,.tagline{text-wrap:balance}
+@media (max-width:600px){
+  section{padding-block:56px}
+  .hero{padding-block:28px 48px}
+  .sec-head{gap:10px;margin-bottom:28px}
+  h2{font-size:clamp(2.1rem,9.5vw,2.6rem)}
+  .lede{font-size:1rem}
+  .hero-copy{gap:20px}
+  .hero-grid>*,.taste-grid>*,.pickers,.picker,.switch{min-width:0}
+  .tagline{font-size:1.45rem}
+  /* chip rows scroll sideways on one line instead of breaking 2 + 1 */
+  #heroSwitch,#snackChips,#flavChips,.perfect{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:calc(-1 * var(--gutter));padding:2px var(--gutter) 6px;scroll-padding-inline:var(--gutter)}
+  #heroSwitch::-webkit-scrollbar,#snackChips::-webkit-scrollbar,#flavChips::-webkit-scrollbar,.perfect::-webkit-scrollbar{display:none}
+  #heroSwitch .chip,#snackChips .chip,#flavChips .chip{flex:0 0 auto;min-height:42px;padding:8px 14px;font-size:.84rem}
+  .perfect{gap:8px}
+  .perfect li{flex:0 0 auto;background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:4px 12px 4px 4px;font-size:.8rem}
+  .perfect li+li::before{display:none}
+  .perfect li.more{padding-left:12px}
+  /* flavour picker: three pouches side by side */
+  .thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+  .thumb{min-width:0;padding:8px 4px 10px;font-size:.72rem;letter-spacing:0}
+  /* how it works: picture left, words right */
+  .tiles{gap:22px}
+  .tile{grid-template-columns:92px 1fr;column-gap:16px;row-gap:4px;padding:20px 18px 18px;align-items:center}
+  .tile .plate{grid-row:span 2;height:92px;border-radius:16px}
+  .tile .plate svg{height:68px}
+  .tile .packs{zoom:.5}
+  .tile h3{align-self:end;font-size:1.5rem}
+  .tile p{align-self:start;font-size:.95rem}
+  .num{top:-12px;left:14px;width:32px;height:32px;font-size:1rem}
+  /* prices: label left, value right */
+  .price-cards{gap:22px}
+  .pcard{padding:22px 18px 18px;gap:10px}
+  .pcard h3{font-size:1.7rem}
+  .pc-price{font-size:2rem}
+  .pc-list{gap:0;border-top:1px solid var(--line);font-size:.9rem}
+  .pc-list li{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:9px 0;border-bottom:1px solid var(--line);text-align:right}
+  .pc-list b{display:inline;font-size:.85rem;text-align:left;flex:0 0 auto}
+  .pcard .btn{margin-top:6px}
+  .pc-notes{margin-top:20px;font-size:.85rem}
+  /* trust cards: icon left */
+  .honest{gap:14px}
+  .hcard{grid-template-columns:40px 1fr;column-gap:14px;row-gap:4px;padding:18px}
+  .hcard svg{grid-row:span 2}
+  .hcard h3{font-size:1.3rem;align-self:end}
+  .hcard p{font-size:.92rem}
+  .foot{padding-top:56px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
