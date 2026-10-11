@@ -573,7 +573,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
 <!-- 2. Header -->
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="logo-chip" href="#top" aria-label="FLAVR LAB home"><img src="assets/logo.png" alt="FLAVR LAB" width="404" height="196"></a>
+    <a class="logo-chip" href="#top" aria-label="FLAVR LAB home"><img src="logo.png" alt="FLAVR LAB" width="404" height="196"></a>
     <nav class="nav" aria-label="Main">
       <a href="#flavours">Flavours</a>
       <a href="#taste">Taste Lab</a>
@@ -1082,7 +1082,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   <div class="wrap">
     <p class="giant" aria-hidden="true">No boring <span>bites</span></p>
     <div class="foot-row">
-      <a class="logo-chip" href="#top" aria-label="Back to top, FLAVR LAB"><img src="assets/logo.png" alt="FLAVR LAB" width="404" height="196" loading="lazy"></a>
+      <a class="logo-chip" href="#top" aria-label="Back to top, FLAVR LAB"><img src="logo.png" alt="FLAVR LAB" width="404" height="196" loading="lazy"></a>
       <nav class="foot-links" aria-label="Footer">
         <a href="#flavours">Flavours</a><a href="#quiz">Find your flavour</a><a href="#taste">Taste Lab</a><a href="#reels">Reels</a><a href="#faq">FAQ</a><a href="#join">Newsletter</a>
       </nav>
@@ -1211,7 +1211,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
       const y1 = 292, y2 = y1 + Math.round(p.size * .9);
       const nm = (t, y) => `<text x="204" y="${y + 4}" text-anchor="middle" font-family="${FD}" font-weight="900" font-size="${p.size}" fill="${p.shadow}">${t}</text><text x="200" y="${y}" text-anchor="middle" font-family="${FD}" font-weight="900" font-size="${p.size}" fill="${p.nameFill}">${t}</text>`;
       const cy = y2 + 90;
-      s += `<rect x="130" y="102" width="140" height="70" rx="16" fill="#F7F1EC" stroke="${k}" stroke-width="2.5"/><image href="assets/logo.png" x="142" y="108" width="116" height="56"/>`
+      s += `<rect x="130" y="102" width="140" height="70" rx="16" fill="#F7F1EC" stroke="${k}" stroke-width="2.5"/><image href="logo.png" x="142" y="108" width="116" height="56"/>`
         + `<text x="200" y="198" text-anchor="middle" font-family="${FH}" font-weight="700" font-size="16" fill="${p.ink}">Your Snacks. Your Flavour. Your Rules.</text>`
         + `<use href="#${p.icons[0]}" x="56" y="108" width="58" height="58" transform="rotate(-14 85 137)"/>`
         + `<use href="#${p.icons[1]}" x="286" y="108" width="58" height="58" transform="rotate(12 315 137)"/>`
@@ -1229,7 +1229,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
       const ing = wrapText(p.ing, 56);
       let y = 212;
       let b = `<rect x="50" y="100" width="300" height="432" rx="18" fill="#FFF9EC" stroke="${k}" stroke-width="2.5"/><rect x="58" y="108" width="284" height="416" rx="13" fill="none" stroke="${k}" stroke-opacity=".3" stroke-dasharray="4 4"/>`
-        + `<image href="assets/logo.png" x="66" y="118" width="88" height="43"/>`
+        + `<image href="logo.png" x="66" y="118" width="88" height="43"/>`
         + `<text x="332" y="140" text-anchor="end" font-family="${FD}" font-weight="900" font-size="30" fill="${k}">${d.name}</text>`
         + `<text x="332" y="161" text-anchor="end" font-family="${FH}" font-weight="700" font-size="19" fill="${k}">${p.desc}</text>`
         + `<text x="332" y="177" text-anchor="end" font-family="${FB}" font-weight="700" font-size="10.5" fill="${k}">${d.vibe}</text>`
@@ -1672,7 +1672,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   const AXES = [['tangy', 'Tangy'], ['smoky', 'Smoky'], ['cheesy', 'Cheesy'], ['heat', 'Heat'], ['savoury', 'Savoury']];
   // Dot areas per snack, in the 120×120 art box: [x0, x1, y0, y1]
   const AREA = { fries: [36, 84, 16, 60], wedges: [24, 96, 64, 96], popcorn: [32, 90, 30, 60], chips: [22, 98, 40, 72], chickpeas: [32, 88, 44, 72], nachos: [20, 92, 32, 70], pasta: [24, 96, 42, 72] };
-  // Optional real photos: put a square-ish photo in assets/snacks/ and set it here, e.g. fries: 'assets/snacks/fries.jpg'.
+  // Optional real photos: put a square-ish photo in  and set it here, e.g. fries: 'fries.jpg'.
   // Use only photos you own or have a licence for. Empty = the illustration below.
   const SNACK_PHOTO = { fries: '', wedges: '', popcorn: '', chips: '', chickpeas: '', nachos: '', pasta: '' };
   // Illustrations (120×120 box). Gradients live in the shared <defs> at the top of .
@@ -1824,15 +1824,15 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
   $$('.perfect [data-art]').forEach(el => { el.innerHTML = `<svg viewBox="8 6 104 108" aria-hidden="true">${ART[el.dataset.art]}</svg>`; });
 
   /* ---------- Lab Crew reels ---------- */
-  // To show real UGC: put a vertical (9:16) MP4 in assets/ugc/ and set `video`, e.g. 'assets/ugc/ayesha-fries.mp4',
+  // To show real UGC: put a vertical (9:16) MP4 in  and set `video`, e.g. 'ayesha-fries.mp4',
   // plus the creator's handle in `by`. Only post videos you have written permission to use.
   // With `video` empty, an illustrated reel shows instead.
   const HANDLE = '@flavrlab'; // [CONFIRM] your real social handle
   const HASHTAG = '#NoBoringBites';
   const REELS = [
-    { video: 'assets/ugc/fries-drop.mp4', by: '', caption: 'Hot, crispy and waiting for their first shake.' },
-    { video: 'assets/ugc/reel-new.mp4', by: '', caption: 'Snack night set-up: three flavours, zero boring bites.' },
-    { video: 'assets/ugc/fries-bowl.mp4', by: '', caption: 'Fresh bowl. Which flavour goes on first?' },
+    { video: 'fries-drop.mp4', by: '', caption: 'Hot, crispy and waiting for their first shake.' },
+    { video: 'reel-new.mp4', by: '', caption: 'Snack night set-up: three flavours, zero boring bites.' },
+    { video: 'fries-bowl.mp4', by: '', caption: 'Fresh bowl. Which flavour goes on first?' },
     { motion: true, by: '', caption: 'POV: your fries were boring. Then the lab happened.' }
     // illustrated reels also available: { scene: 'shake', who: 'buns', f: 'zing', caption: '...' }, scenes: shake, bite, popcorn, mix
   ];
@@ -1928,7 +1928,7 @@ dialog.drawer::backdrop{background:rgba(13,16,34,.45)}
       <g transform="translate(77 52)"><g class="m-shaker"><g class="m-wob"><rect width="26" height="36" rx="7" fill="#FFF9EC" stroke="${INK}" stroke-width="1.8"/><rect y="10" width="26" height="13" fill="${F.zing.strong}" stroke="${INK}" stroke-width="1.8"/><rect x="2" y="35" width="22" height="7" rx="3" fill="${INK}"/></g></g></g>
       <g class="m-powder">${[0, .2, .4, .6, .1, .5].map((d, i) => `<circle class="fall" style="--d:${d}s" cx="${84 + (i % 3) * 6}" cy="98" r="2" fill="${i % 3 ? '#E2733A' : '#6FA83A'}"/>`).join('')}</g>
       <g class="m-row">${nest('zing', 18, 98, 46)}${nest('cheese', 116, 98, 46)}${nest('smoke', 60, 86, 60)}</g>
-      <g class="m-end"><rect x="34" y="70" width="112" height="60" rx="14" fill="#F7F1EC" stroke="${INK}" stroke-width="2"/><image href="assets/logo.png" x="42" y="76" width="96" height="47"/>
+      <g class="m-end"><rect x="34" y="70" width="112" height="60" rx="14" fill="#F7F1EC" stroke="${INK}" stroke-width="2"/><image href="logo.png" x="42" y="76" width="96" height="47"/>
         <text x="90" y="160" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="24" fill="${INK}">#NOBORINGBITES</text>
         <rect x="52" y="170" width="76" height="24" rx="12" fill="#4153D6" stroke="${INK}" stroke-width="1.5"/><text x="90" y="186" text-anchor="middle" font-family="Figtree,system-ui,sans-serif" font-weight="800" font-size="11" fill="#fff">Shop now</text></g>
       ${pill(22, 'POV: your fries are boring', 'm-ta')}${pill(22, 'One shake of ZING MODE…', 'm-tb')}${pill(22, 'Three flavours. Pick yours.', 'm-tc')}
