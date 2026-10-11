@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#262D6B">
 <title>FLAVR LAB</title>
+<script>/* Opens in light mode. Dark mode only if the visitor picked it with the header toggle. */try{if(localStorage.getItem('flavr-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(_){}</script>
 <meta name="description" content="FLAVR LAB makes bold snack seasonings you shake on fries, popcorn, wedges and nachos. Three flavours: ZING MODE, SMOKE SHOW and CHEESE CHAOS. Shop online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,6 +111,9 @@ p{margin:0}
 .head-actions{display:flex;align-items:center;gap:10px}
 .icon-btn{position:relative;width:48px;height:48px;border-radius:50%;border:2px solid var(--edge);background:var(--card);display:grid;place-items:center;cursor:pointer;color:var(--ink)}
 .icon-btn svg{width:22px;height:22px}
+.theme-btn .i-sun{display:none}
+:root[data-theme="dark"] .theme-btn .i-sun{display:block}
+:root[data-theme="dark"] .theme-btn .i-moon{display:none}
 .cart-count{position:absolute;top:-6px;right:-6px;min-width:22px;height:22px;border-radius:999px;background:var(--lime);color:#1D2133;border:2px solid var(--edge);font:800 .72rem/18px var(--font-body);text-align:center;padding-inline:4px}
 .menu-btn{display:none}
 .mobile-menu{border-top:1px solid var(--line);padding-block:12px 20px}
@@ -670,6 +674,10 @@ html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
     </nav>
     <div class="head-actions">
       <a class="btn sm wl" href="#flavours">Shop now</a>
+      <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-label="Switch to dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+      </button>
       <button class="icon-btn" id="cartBtn" type="button" aria-label="Open cart, 0 items" aria-haspopup="dialog">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 7h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 7V6a3 3 0 0 1 6 0v1"/></svg>
         <span class="cart-count" aria-hidden="true">0</span>
@@ -1461,6 +1469,16 @@ html{scroll-padding-top:calc(84px + env(safe-area-inset-top,0px))}
 
   const cartDlg = $('#cart');
   $('#cartBtn').addEventListener('click', () => cartDlg.showModal());
+  // Light / dark toggle. The site always opens light; a visitor's choice is remembered on their device.
+  const themeBtn = $('#themeBtn');
+  const setThemeLabel = () => themeBtn.setAttribute('aria-label', document.documentElement.dataset.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  setThemeLabel();
+  themeBtn.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('flavr-theme', next); } catch (_) {}
+    setThemeLabel();
+  });
   $('#cartClose').addEventListener('click', () => cartDlg.close());
   cartDlg.addEventListener('click', e => { if (e.target === cartDlg) cartDlg.close(); });
   
