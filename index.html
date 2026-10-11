@@ -763,6 +763,16 @@ h1,h2,h3,.tagline{text-wrap:balance}
   .panel h3{font-size:3rem}
   .panel>#pText{font-size:.95rem;line-height:1.5}
 }
+/* Sticky add-to-cart bar (phones, while Flavours is on screen) */
+.buy-bar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:12px;padding:10px 10px 10px 12px;background:var(--card);border:2px solid var(--edge);border-radius:20px;box-shadow:4px 4px 0 var(--hard);transform:translateY(calc(100% + 30px));transition:transform .3s ease}
+.buy-bar.show{transform:none}
+.bb-pk{width:30px;flex:0 0 auto}
+.bb-info{display:grid;flex:1;min-width:0;line-height:1.25}
+.bb-info b{font:900 1.15rem/1 var(--font-display);text-transform:uppercase;letter-spacing:.01em}
+.bb-info span{font-size:.85rem;color:var(--ink-2);font-weight:600;margin-top:3px}
+.buy-bar .btn{min-height:44px;padding:8px 18px;font-size:.95rem;flex:0 0 auto}
+@media (min-width:981px){.buy-bar{display:none}}
+body.has-buybar .toast{bottom:calc(100px + env(safe-area-inset-bottom,0px))}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
@@ -1473,6 +1483,11 @@ h1,h2,h3,.tagline{text-wrap:balance}
   </div>
 </dialog>
 
+<div class="buy-bar" id="buyBar" role="region" aria-label="Quick add to cart">
+  <span class="bb-pk" id="bbPk" aria-hidden="true"></span>
+  <div class="bb-info"><b id="bbName">ZING MODE</b><span id="bbMeta">50g · Rs 150</span></div>
+  <button class="btn" type="button" id="bbAdd">Add to cart</button>
+</div>
 <div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button class="btn sm lime" type="button" id="toastBtn">View cart</button></div>
 
 <script>
@@ -2004,6 +2019,27 @@ h1,h2,h3,.tagline{text-wrap:balance}
   $('#pMinus').addEventListener('click', () => setPQty(pQty - 1));
   $('#pPlus').addEventListener('click', () => setPQty(pQty + 1));
   $('#pAdd').addEventListener('click', () => { addToCart(pf, pQty, pSize); setPQty(1); });
+
+  /* ---------- phones: sticky add-to-cart bar while the Flavours section is on screen ---------- */
+  const bar = $('#buyBar'), phone = matchMedia('(max-width: 980px)');
+  let inFlavours = false, addVisible = true;
+  const syncBar = () => {
+    $('#bbName').textContent = F[pf].name;
+    $('#bbMeta').textContent = `${pSize}g · ${pkr(PRICE[pSize])}`;
+    $('#bbPk').innerHTML = pouchSVG(pf, 'front', '', 50);
+    const on = phone.matches && inFlavours && !addVisible;
+    bar.classList.toggle('show', on);
+    bar.inert = !on;
+    document.body.classList.toggle('has-buybar', on);
+  };
+  panelHooks.push(syncBar);
+  phone.addEventListener('change', syncBar);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(es => { inFlavours = es[0].isIntersecting; syncBar(); }, { rootMargin: '-30% 0px -30% 0px' }).observe($('#flavours .flv-grid'));
+    new IntersectionObserver(es => { addVisible = es[0].isIntersecting; syncBar(); }).observe($('#pAdd'));
+  }
+  $('#bbAdd').addEventListener('click', () => addToCart(pf, 1, pSize));
+  syncBar();
   $('#s50').textContent = pkr(PRICE[50]); $('#s100').textContent = pkr(PRICE[100]);
   function radioGroup(group, onPick) {
     const btns = $$('.size', group);
