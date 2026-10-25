@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 260" width="260" height="260">
+<title>POSTHUE</title>
+<defs><linearGradient id="hue" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#7B2FF7"/><stop offset="0.35" stop-color="#F107A3"/>
+  <stop offset="0.7" stop-color="#FF6A3D"/><stop offset="1" stop-color="#FFC233"/></linearGradient>
+<linearGradient id="hueText" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+  <stop offset="0" stop-color="#F107A3"/><stop offset="0.55" stop-color="#FF6A3D"/><stop offset="1" stop-color="#FFB020"/></linearGradient></defs>
+<g transform="translate(30 20) scale(1)">
+  <path d="M40 0H160A40 40 0 0 1 200 40V150A40 40 0 0 1 160 190H70L28 222C22 226 14 222 15 214L20 186A40 40 0 0 1 0 150V40A40 40 0 0 1 40 0Z" fill="url(#hue)"/>
+  <path d="M63.859375 150.0H94.328125V117.041015625H110.2216796875C136.2958984375 117.041015625 152.62890625 102.3193359375 152.62890625 78.955078125C152.62890625 55.5908203125 136.2958984375 40.869140625 110.2216796875 40.869140625H63.859375ZM94.328125 91.9921875V65.91796875H107.951171875C117.1064453125 65.91796875 122.892578125 70.9716796875 122.892578125 78.955078125C122.892578125 86.9384765625 117.1064453125 91.9921875 107.951171875 91.9921875Z" fill="#FFFFFF"/>
+  <circle cx="166" cy="34" r="11" fill="#FFFFFF" opacity="0.9"/>
+</g>
+</svg>
